@@ -4,7 +4,7 @@
   <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
 @import './style/reset.css';
 @import './style/font.css';
 </style>

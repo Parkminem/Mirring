@@ -5,6 +5,7 @@ import AboutUsView from '../views/AboutUsView.vue';
 import BusinessView from '../views/BusinessView.vue';
 import CareersView from '../views/CareersView.vue';
 import ContactView from '../views/ContactView.vue';
+import ContentsView from '../views/ContentsView.vue';
 import OurTechView from '../views/OurTechView.vue';
 
 const routes = [
@@ -34,6 +35,10 @@ const routes = [
         component: ContactView,
       },
       {
+        path: '/contents',
+        component: ContentsView,
+      },
+      {
         path: '/tech',
         component: OurTechView,
       },
@@ -41,6 +46,9 @@ const routes = [
   },
 ];
 
-const router = createRouter({ history: createWebHistory(), routes });
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
 export default router;

@@ -1,7 +1,7 @@
-<script setup></script>
-
 <template>
   <h1>Main</h1>
 </template>
+
+<script setup></script>
 
 <style scoped></style>
