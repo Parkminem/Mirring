@@ -1,10 +1,9 @@
-<script setup></script>
-
 <template>
   <router-view></router-view>
 </template>
+<script setup></script>
 
-<style scoped>
-@import './style/reset.css';
-@import './style/font.css';
+<style>
+@import "./style/reset.css";
+@import "./style/font.css";
 </style>
