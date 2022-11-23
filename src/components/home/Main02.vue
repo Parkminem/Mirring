@@ -26,7 +26,7 @@
     <p class="bg_text">About</p>
     <div class="container_1076 position">
       <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-        <Swiper @swiper="onSwiper" @slide-change="onSlideChange" class="box_animation" :loop="true" :slides-per-view="4" :space-between="28" :touch-ratio="0">
+        <Swiper @swiper="onSwiper" @slide-change="onSlideChange" class="box_animation" :loop="true" :slides-per-view="4" :space-between="28" :touch-ratio="0" navigation>
           <SwiperSlide data-swiper-slide-index="0" class="css">
             <div class="effect_area">
               <div class="image_box" style="background-image: url(/assets/images/home/202208051658270390.jpg)"></div>
@@ -80,18 +80,18 @@
       </div>
 
       <!-- Add Arrows -->
-      ><img class="swiper_button_prev swiper_navigation" src="/assets/images/home/swiper_prev.png" alt="prev" title="prev" tabindex="0" role="button" aria-label="Previous slide" />
-      <img class="swiper_button_next swiper_navigation" src="/assets/images/home/swiper_next.png" alt="next" title="next" tabindex="0" role="button" aria-label="Next slide" />
+      <!-- <img class="swiper_button_prev swiper_navigation" src="/assets/images/home/swiper_prev.png" alt="prev" title="prev" tabindex="0" role="button" aria-label="Previous slide" />
+      <img class="swiper_button_next swiper_navigation" src="/assets/images/home/swiper_next.png" alt="next" title="next" tabindex="0" role="button" aria-label="Next slide" /> -->
 
       <a class="more" href="/about#about_news">더 보기 &gt;</a>
-      <a class="page_move" href="/about">About Us 바로가기 &gt;</a>
+      <router-link to="/about" class="page_move">About Us 바로가기 &gt;</router-link>
     </div>
   </section>
 </template>
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 // import { ref } from "vue";
-// import { Navigation } from "swiper";
+import { Navigation } from "swiper";
 const onSwiper = (swiper) => {
   console.log(swiper);
 };
