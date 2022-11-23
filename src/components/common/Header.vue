@@ -42,9 +42,7 @@
       <div class="mobile">
         <ul class="content">
           <li class="logo">
-            <a href="/"
-              ><img src="assets/images/common/logo.png" alt="logo" title="logo"
-            /></a>
+            <a href="/"><img src="assets/images/common/logo.png" alt="logo" title="logo" /></a>
           </li>
           <li class="menu_img" onclick="headerMobileMenuActive()">
             <img src="assets/images/common/menu.png" alt="menu" title="menu" />
