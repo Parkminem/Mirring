@@ -3,6 +3,7 @@
     <input type="hidden" name="_csrf" value="14e8b693-5005-45a0-9f0f-8293485b3942" />
     <input type="hidden" name="news_pk" id="news_pk" value="" />
     <input type="hidden" name="curPage" id="curPage" value="" /> -->
+
   <!-- department -->
   <section class="section" data-name="about_department">
     <div class="container_1076">
