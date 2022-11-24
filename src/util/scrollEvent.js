@@ -106,8 +106,8 @@ function settingNavigationByClick() {
  */
 function settingNavigationByScroll() {
   $(window).on('scroll', function () {
-    var scroll_top = $(this).scrollTop();
-    var i = '';
+    let scroll_top = $(this).scrollTop();
+    let i = '';
     if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;
     if (scroll_top >= $('.dot2').offset().top - $('.dot2').innerHeight() / 2) i = 1;
     if (scroll_top >= $('.dot3').offset().top - $('.dot3').innerHeight() * 1.5) i = 2;
