@@ -1,8 +1,13 @@
 <template>
-  <section class="section section_animation dot4" data-name="main_contact" style="margin-top: 0px; opacity: 1">
+  <section class="section section_animation dot4" data-name="main_contact" style="margin-top: -100px; opacity: 1">
     <div class="container_1076">
       <div class="content">
-        <img class="character mobile" src="/assets/images/home/character_contact.png" alt="character_contact" title="character_contact" />
+        <img
+          class="character mobile"
+          src="/assets/images/home/character_contact.png"
+          alt="character_contact"
+          title="character_contact"
+        />
         <div class="box">
           <p class="title">Contact</p>
           <p class="sub_title">아이디어 콘서트와 만나보세요.</p>
@@ -14,7 +19,12 @@
           </p>
           <router-link to="/contact" class="page_move">문의하기 &gt;</router-link>
         </div>
-        <img class="character" src="/assets/images/home/character_contact.png" alt="character_contact" title="character_contact" />
+        <img
+          class="character"
+          src="/assets/images/home/character_contact.png"
+          alt="character_contact"
+          title="character_contact"
+        />
       </div>
     </div>
   </section>

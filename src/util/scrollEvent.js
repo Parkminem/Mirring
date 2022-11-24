@@ -1,17 +1,20 @@
 import $ from 'jquery';
 
+/**
+섹션이 밑에서 위로 올라오는 애니메이션
+ */
 function sectionAnimationByscroll() {
-  var controller = new ScrollMagic.Controller();
+  const controller = new ScrollMagic.Controller();
   $('.section_animation').each(function () {
-    var before_margin_top = parseInt($(this).css('margin-top')); // before
-    var after_margin_top = before_margin_top + 100; // after
-    var tween = new TimelineMax().fromTo(
+    const before_margin_top = parseInt($(this).css('margin-top')); // before
+    const after_margin_top = before_margin_top + 100; // after
+    const tween = new TimelineMax().fromTo(
       this,
       0.8,
       { opacity: 0, marginTop: after_margin_top + 'px' }, // after
       { opacity: 1, marginTop: before_margin_top + 'px' } // before
     );
-    var scene = new ScrollMagic.Scene({
+    const scene = new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.8,
       reverse: false
@@ -22,7 +25,7 @@ function sectionAnimationByscroll() {
 }
 
 function boxAnimationByscroll() {
-  var element = $('.box_animation');
+  const element = $('.box_animation');
   element.each(function () {
     settingBoxAnimation(this);
   });
@@ -33,10 +36,10 @@ function boxAnimationByscroll() {
 인수로는 박스들의 부모요소가 들어감(ref로 지정 후 onMounted에서 호출하여 사용)
 */
 function settingBoxAnimation(element) {
-  var controller = new ScrollMagic.Controller();
-  var item = $(element).children();
+  const controller = new ScrollMagic.Controller();
+  const item = $(element).children();
   item.each(function (i) {
-    var tween = new TimelineMax({
+    const tween = new TimelineMax({
       delay: '0.' + i
     }).fromTo(
       this,
@@ -44,7 +47,7 @@ function settingBoxAnimation(element) {
       { opacity: 0 }, // after
       { opacity: 1 } // before
     );
-    var scene = new ScrollMagic.Scene({
+    const scene = new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.8,
       reverse: false
@@ -54,27 +57,33 @@ function settingBoxAnimation(element) {
   });
 }
 
+/**
+스와이퍼 네비게이션 버튼 없애는 함수(메인 뉴스 4개 이하일 때)
+ */
 function settingNewsSlider() {
-  var element = $(".section[data-name='main_about'] .swiper-slide");
-  var element_length = element.length;
+  const element = $(".section[data-name='main_about'] .swiper-slide");
+  const element_length = element.length;
   if (element_length <= 4) {
     $('.swiper_navigation').hide();
     element.addClass('css');
-  } else {
-    swiperSlide();
-    $(window).on('resize', () => {
-      console.log(swiper);
-      swiperSlide();
-    });
   }
+  // swiperSlide() 에러떠서 주석처리
+  // else {
+  //   swiperSlide();
+  //   $(window).on('resize', () => {
+  //     swiperSlide();
+  //   });
+  // }
 }
 
+/**
+ * 메인 네비게이션 클릭이벤트
+ */
 function settingNavigationByClick() {
   $('.dot').on('click', function () {
-    var target = $(this).attr('data-target');
-    var element = $('.' + target);
-    var element_offset_top = element.offset().top;
-
+    const target = $(this).attr('data-target');
+    const element = $('.' + target);
+    const element_offset_top = element.offset().top;
     if (target == 'dot2' || target == 'dot4' || target == 'dot5') {
       if (element.css('opacity') == '0') {
         $('body, html').animate({ scrollTop: element_offset_top - 100 - 100 }, 400);
@@ -92,11 +101,27 @@ function settingNavigationByClick() {
     }
   });
 }
+/**
+ * 메인 네비게이션 스크롤 이벤트
+ */
+function settingNavigationByScroll() {
+  $(window).on('scroll', function () {
+    var scroll_top = $(this).scrollTop();
+    var i = '';
+    if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;
+    if (scroll_top >= $('.dot2').offset().top - $('.dot2').innerHeight() / 2) i = 1;
+    if (scroll_top >= $('.dot3').offset().top - $('.dot3').innerHeight() * 1.5) i = 2;
+    if (scroll_top >= $('.dot4').offset().top - $('.dot4').innerHeight()) i = 3;
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) i = 4;
+    $('.dot').stop().eq(i).addClass('active').siblings().removeClass('active');
+  });
+}
 const scrollEvent = {
   boxAnimationByscroll,
   settingNewsSlider,
   sectionAnimationByscroll,
   settingNavigationByClick,
-  settingBoxAnimation
+  settingBoxAnimation,
+  settingNavigationByScroll
 };
 export default scrollEvent;

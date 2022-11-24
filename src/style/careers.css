@@ -41,10 +41,13 @@ background-position: center;}
 background-repeat: no-repeat ;
 background-size: cover ;
 background-position: center}
+.section[data-name="careers_office"] .swiper-button-prev,
+.section[data-name="careers_office"] .swiper-button-next {position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 1;}
 .section[data-name="careers_office"] .swiper_area .swiper-button-prev {left: 15px;}
 .section[data-name="careers_office"] .swiper_area .swiper-button-next {right: 15px;}
 .section[data-name="careers_office"] .swiper_area .swiper-button-next:after,
 .section[data-name="careers_office"] .swiper_area .swiper-button-prev:after {content:''; width: 40px; height: 40px;
+	display: block;
 background-repeat: no-repeat ;
 background-size: auto ;
 background-position: center}

@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <ul class="content box_animation">
+      <ul class="content box_animation" ref="boxes">
         <li class="white_box">
           <div class="round"></div>
           <p class="title">감상 플랫폼 개발</p>
@@ -43,5 +43,13 @@
     </div>
   </section>
 </template>
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import scrollEvent from '../../util/scrollEvent';
+const boxes = ref();
+onMounted(() => {
+  scrollEvent.sectionAnimationByscroll();
+  scrollEvent.settingBoxAnimation(boxes.value);
+});
+</script>
 <style></style>

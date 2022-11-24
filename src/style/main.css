@@ -7,7 +7,7 @@ body {overflow-x: hidden;}
 #navigation .dot:last-child {margin-bottom: 0;}
 #navigation .dot.active {position: relative; background-color: transparent;}
 #navigation .dot.active:before {content:''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 23px; height: 23px;
-background-image: url(/resources/common/images/nav.png);
+background-image: url(/assets/images/home/nav.png);
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;}
@@ -59,14 +59,14 @@ right: 50px;}
 cursor: pointer;
 display: flex;
 flex-direction: column;}
-.section[data-name="main_about"] .swiper-container .swiper-slide.css {margin-right: 28px;}
+/* .section[data-name="main_about"] .swiper-container .swiper-slide.css {margin-right: 28px;} */
 .section[data-name="main_about"] .swiper-container .swiper-slide.css:last-child {margin-right: 0;}
 .section[data-name="main_about"] .swiper-container .swiper-slide .images {width: 248px; height: 248px; object-fit: cover; overflow: hidden; }
 .section[data-name="main_about"] .swiper-container .swiper-slide .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; padding: 20px 10px 0 10px; }
 .section[data-name="main_about"] .position .swiper-button-prev,
-.section[data-name="main_about"] .position .swiper-button-next {position: absolute; top: 50%; transform: translateY(-50%); z-index: 99; cursor: pointer;}
-.section[data-name="main_about"] .position .swiper-button-prev {left: -85px; background-image: url(/assets/images/home/swiper_prev.png);}
-.section[data-name="main_about"] .position .swiper-button-next {right: -85px; background-image: url(/assets/images/home/swiper_next.png);}
+.section[data-name="main_about"] .position .swiper-button-next {position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 1;}
+.section[data-name="main_about"] .position .swiper-button-prev {left: -85px;}
+.section[data-name="main_about"] .position .swiper-button-next {right: -85px;}
 .section[data-name="main_about"] .position .more {position: absolute; top: -38px; right: 0; font-family: 'Noto Sans', sans-seri; font-weight: bold; font-size: 14px; line-height: 1.36; color:#5a5a5a;}
 .section[data-name="main_about"] .position .page_move {width: 248px;height: 46px; margin: 0 auto; margin-top: 63.4px;}
 

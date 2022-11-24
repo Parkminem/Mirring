@@ -1,8 +1,13 @@
 <template>
-  <section class="section section_animation dot5" data-name="main_careers">
+  <section class="section section_animation dot5" data-name="main_careers" style="margin-top: -100px">
     <div class="container_1076">
       <div class="content">
-        <img class="character" src="/assets/images/home/character_careers.png" alt="character_careers" title="character_careers" />
+        <img
+          class="character"
+          src="/assets/images/home/character_careers.png"
+          alt="character_careers"
+          title="character_careers"
+        />
         <div class="box">
           <p class="title">Careers</p>
           <p class="sub_title">아이디어 콘서트와 함께하세요.</p>

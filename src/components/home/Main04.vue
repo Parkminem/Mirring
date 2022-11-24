@@ -16,7 +16,7 @@
         </div>
         <div class="images" style="background-image: url(/assets/images/home/business_1.png)"></div>
       </div>
-      <ul class="content box_animation">
+      <ul class="content box_animation" ref="boxes">
         <li class="white_box" style="opacity: 1">
           <div class="round"></div>
           <p class="title">영상 외주 제작</p>
@@ -39,5 +39,14 @@
     <p class="bg_text">Business</p>
   </section>
 </template>
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import scrollEvent from '../../util/scrollEvent';
+
+const boxes = ref();
+
+onMounted(() => {
+  scrollEvent.settingBoxAnimation(boxes.value);
+});
+</script>
 <style scoped></style>
