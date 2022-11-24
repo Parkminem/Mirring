@@ -1,0 +1,885 @@
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/*layout*/
+
+.container {
+    max-width: 1076px;
+    margin: 0 auto;
+}
+/* header h1 .logo { */
+/*     display: block; */
+/*     background: url("/resources/common/images/tech/111 copy@2x.png") no-repeat; */
+/*     background-size : cover; */
+/*     background-position: center; */
+/*     width: 138px; */
+/*     height: 38px; */
+/* } */
+
+/* header .main__menu { */
+/*     display: flex; */
+/*     align-items: flex-end; */
+    
+/* } */
+
+/* header .main__menu li { */
+/*     margin-right: 58px; */
+/*     line-height: 24px; */
+/* } */
+
+/* header .main__menu li a { */
+/*     font-family: NotoSans; */
+/*     font-size: 18px; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     letter-spacing: normal; */
+/*     color: #292929; */
+/* } */
+
+/* header .main__menu li a:hover { */
+/*     font-family: NotoSans; */
+/*     font-size: 18px; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.33; */
+/*     letter-spacing: normal; */
+/*     color: #ec6c00; */
+/* } */
+
+/* header .main__menu li:last-child { */
+/*     display: flex; */
+/* } */
+
+/* header .main__menu li:last-child a { */
+/*     margin-right: 58px; */
+/* } */
+
+/* header .langBtn { */
+/*     display: flex; */
+/*     height: 25px; */
+/*     font-size: 14px; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     color: #969696; */
+/*     border: solid 1px #969696; */
+/*     padding: 3px 11px; */
+/*     border-radius: 15px; */
+/*     box-sizing: border-box; */
+/* } */
+
+/* header .langBtn span { */
+/*     display: inline-block; */
+/*     margin-right: 4px; */
+/* } */
+
+/* header .toggle { */
+/*     display: none; */
+/*     font-size: 3.5rem; */
+/* } */
+
+/* #langBtn { */
+/*     display: inline-block; */
+/*     width: 49px; */
+/*     height: 25px; */
+/*     font-family: NotoSans; */
+/*     font-size: 14px; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     text-align: left; */
+/*     color: #969696; */
+/*     border-radius: 15px; */
+/*     border: solid 1px #969696; */
+/*     background-color: #ffffff; */
+/*     padding-left: 7px; */
+/*     outline : none; */
+/*     cursor : pointer; */
+/* } */
+
+/* .on { */
+/*     display: block !important; */
+/* } */
+
+
+/*content*/
+
+/* content common */
+
+.content__title {
+    font-family: NotoSans;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #292929;
+    margin-bottom: 16px;
+}
+
+.content__subtitle {
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #292929;
+}
+
+.content__notice {
+    display: inline-block;
+    padding: 4px 4.2rem;
+    background-color: #ff943a;
+    font-family: NotoSans;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+
+.content .button {
+    display: inline-block;
+    font-family: NotoSans;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #ec6c00;
+    padding: 10px 79px;
+    border-radius: 28px;
+    border: solid 1px #ec6c00;
+    transition : 0.5s all ease;
+    cursor : pointer;
+}
+
+.content .button:hover {
+   color : #fff;
+   background-color: #ec6c00;
+   font-weight: 900;
+}
+
+.content .container {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.content .bg__gray {
+    background-color: #f9f9f9;
+}
+
+/* cartoon cut */
+.content .container {
+    position: relative;
+}
+
+#first__notice {
+    position: absolute;
+    margin-top: 0;
+    top: 0;
+    left: 10.8%;
+}
+
+#first__notice.content__notice {
+    width: 29%;
+    display: block;
+    padding: 4px 0;
+    background-color: #ff943a;
+    font-family: NotoSans;
+    font-size: 2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.reditoon__image_kr {
+	padding-bottom: 41.8%;
+	margin-top: 70px;
+	background : url("../../../public/assets/images/ourTech/blackToon.png") no-repeat;
+	background-position: center;
+}
+.reditoon__image_en {
+    padding-bottom: 41.8%;
+    margin-top: 70px;
+    background : url("/resources/common/images/tech/흑백만화-자동-웹툰화툴(영문).png") no-repeat;
+    background-position: center;
+}
+
+.content .cut__images {
+    margin: 70px 0;
+    display: flex;
+    position: relative;
+    padding-top: 52px;
+    box-sizing: border-box;
+}
+
+.cut__images .cut__image {
+    width: 51.7%;
+    padding-bottom: 41.8%;
+    background : url("/resources/common/images/tech/image.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 22px;
+}
+
+.cut__images .cut__process {
+    position: absolute;
+    top: 0;
+    left: 51.7%;
+    width : 48.7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.process {
+    width: 47.3%;
+    height: 47%;
+    margin: 0 5.4% 12.1% 0;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+.shadow {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.peocess__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #ec6c00;
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process:nth-child(2n) {
+    margin-right: 0;
+}
+
+.process:nth-child(n+3) {
+    margin-bottom: 0;
+}
+
+.process__image {
+    padding-bottom: 56.5%;
+}
+
+.process__text {
+    height: 97px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #292929;
+}
+
+.process:nth-child(1) .process__image {
+    background: url("/resources/common/images/tech/peocess1.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.process:nth-child(2) .process__image {
+    background: url("/resources/common/images/tech/process2.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.process:nth-child(3) .process__image {
+    background: url("/resources/common/images/tech/process3.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.process:nth-child(3) .process__text span {
+    display: inline-block;
+    max-width: 155px;
+}
+
+.process:nth-child(4) .process__image {
+    background: url("/resources/common/images/tech/peocess4.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.process:nth-child(4) .process__text span {
+    display: inline-block;
+    max-width: 230px;
+}
+
+/* translate */
+
+.cartoon__translate .translate__main {
+    max-width: 85.6%;
+    padding-bottom: 50%;
+    margin: 70px auto 16.8px;
+    background: url("/resources/common/images/tech/translateMain.png") no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
+
+.cartoon__translate .translate__sub {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.translate__sub .subimage {
+    width: 48.7%;
+    padding-bottom: 32%;
+    margin-right: 2.6%;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.translate__sub .subimage::before {
+    content : "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #ec6c00;
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translate__sub .subimage:nth-child(1)::before {
+    content : "1";
+}
+
+.translate__sub .subimage:nth-child(2)::before {
+    content : "2";
+}
+
+.translate__sub .subimage:nth-child(3)::before {
+    content : "3";
+}
+
+.translate__sub .subimage:nth-child(4)::before {
+    content : "4";
+}
+
+.translate__sub .subimage:nth-child(5)::before {
+    content : "5";
+}
+
+.translate__sub .subimage:nth-child(6)::before {
+    content : "6";
+}
+
+/* position: absolute;
+top: 0;
+left: 0;
+width: 30px;
+height: 30px;
+background-color: #ec6c00;
+font-family: NotoSans;
+font-size: 1.6rem;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.38;
+letter-spacing: normal;
+color: #f9f9f9;
+display: flex;
+align-items: center;
+justify-content: center; */
+
+.translate__sub .subimage:nth-child(2n) {
+    margin-right: 0;
+}
+
+.translate__sub .subimage:nth-child(n+5) {
+    margin-bottom: 0;
+}
+
+.translate__sub .subimage:nth-child(1) {
+    /*background: url("/resources/common/images/tech/translate1.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;
+}
+
+.translate__sub .subimage:nth-child(2) {
+    /*background: url("/resources/common/images/tech/kr/translate2.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;  
+}
+
+.translate__sub .subimage:nth-child(3) {
+    /*background: url("/resources/common/images/tech/kr/translate3.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;  
+}
+
+.translate__sub .subimage:nth-child(4) {
+    /*background: url("/resources/common/images/tech/kr/translate4.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;  
+}
+
+.translate__sub .subimage:nth-child(5) {
+    /*background: url("/resources/common/images/tech/kr/translate5.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;  
+}
+
+.translate__sub .subimage:nth-child(6) {
+    /*background: url("/resources/common/images/tech/kr/translate6.png") no-repeat;*/
+    background-position: center;
+    background-size: cover;  
+}
+
+.cartoon__translate .button {
+    display: inline-block;
+    margin: 93px 0 100px;
+}
+
+#prev, #next, #current__slide {
+    display: none;
+}
+
+/*viewer*/ 
+
+.content .viewer__images {
+    max-width: 100%;
+    margin: 85px 0 183px;
+    display: flex;
+    align-items: center;
+}
+
+.viewer__images .viewer__process {
+    width : 48.7%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5.8%;
+}
+
+.viewer__process .process:nth-child(1) .process__image {
+    background: url("/resources/common/images/tech/가로세로_01@2x.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.viewer__process .process:nth-child(1) .process__text span {
+    max-width: 165px;
+}
+
+.viewer__process .process:nth-child(2) .process__image {
+    background: url("/resources/common/images/tech/가로세로_02@2x.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.viewer__process .process:nth-child(2) .process__text span {
+    max-width: 165px;
+}
+
+.viewer__process .process:nth-child(3) .process__image {
+    background: url("/resources/common/images/tech/가로세로_03@2x.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.viewer__process .process:nth-child(3) .process__text span {
+    max-width: 180px;
+}
+
+.viewer__process .process:nth-child(4) .process__image {
+    background: url("/resources/common/images/tech/가로세로_04@2x.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.viewer__process .process:nth-child(4) .process__text span {
+    max-width: 180px;
+}
+
+.viewer__images .viewer__image {
+    width: 45.5%;
+}
+
+.viewer__images .viewer__process .process {
+    width: 47.3%;
+    margin-right: 5.4%;
+}
+
+.viewer__images .viewer__process .process:nth-child(2n) {
+    margin-right: 0;
+}
+
+
+.viewer__image .horizon {
+    width: 100%;
+    padding-bottom: 52%;
+    margin-bottom: 22.2px;
+    background: url("/resources/common/images/tech/캡처.PNG") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.viewer__image p {
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #292929;
+}
+
+/*damda */
+.damda .damda__images {
+    display: flex;
+    margin: 74px 0 70.4px;
+    align-items: center;
+}
+
+.damda .main__image {
+    width: 61.5%;
+    padding-bottom: 36%;
+    margin-right: 1%;
+    background: url("/resources/common/images/tech/담다메인.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.damda .sub__image {
+    width: 37.5%;
+    padding-bottom: 44.4%;
+    background: url("/resources/common/images/tech/담다서브.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*toonibe*/
+.toonibe .toonibe__images {
+    display: flex;
+    margin-top: 26.7px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 229px;
+}
+
+.toonibe .steps {
+    background: url("/resources/common/images/tech/투니비서브.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 43.6%;
+    padding-bottom: 26.8%;
+    margin-right: 2.7%;
+}
+
+.toonibe .sub__image {
+    background: url("/resources/common/images/tech/투니비메인.PNG") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 53.7%;
+    padding-bottom: 32%;
+}
+
+.toonibe__text {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   max-width: 43%;
+   height: 75px;
+   text-align: left;
+}
+
+.toonibe__text span {
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+    color: #969696;
+    
+
+}
+
+.toonibe__text p {
+    max-width: 475px;
+    font-family: NotoSans;
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: #969696;
+    
+}
+
+/*advertisement*/
+.advertisement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 248px;
+    background: url("/resources/common/images/tech/하단배너.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor : pointer;
+}
+
+.advertise__text {
+    margin: 55px 0 50px;
+}
+
+
+.advertise__text h2 {
+    font-family: NotoSans;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #292929;
+    margin-bottom: 8px;
+}
+
+.advertise__text p {
+    font-family: NotoSans;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #292929;
+    margin-bottom: 37px;
+}
+
+.advertise__text a {
+    display: inline-block;
+    padding: 11px 42px;
+    font-family: NotoSans;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #ffffff;
+    border-radius: 28px;
+    background-color: #ec6c00;
+}
+
+.recruit {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: center;
+    height: 248px;
+    background: url("/resources/common/images/tech/하단배너1.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor : pointer;
+}
+
+.question,
+.recruit {
+    transition : 1s all ease;
+}
+
+.question:hover::before,
+.recruit:hover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content : "";
+    background : #ec6c00;
+    opacity : 0.2;
+}
+
+.recruit .advertise__text {
+    text-align: right;
+}
+
+.advertisement .character {
+    display: block;
+    width: 161px;
+    height: 148px;
+}
+
+.advertisement .character.qa {
+    background: url("/resources/common/images/tech/ACON문의.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 50px 62px 50px 0;
+}
+
+.advertisement .character.cruit {
+    background: url("/resources/common/images/tech/ACON지원.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 187px;
+    height: 150px;
+    margin: 55px 0 43px 62px;
+}
+
+
+/*footer*/
+
+/* footer { */
+/*     background-color: #292929; */
+/*     font-family: 'Noto Sans', sans-serif; */
+/*     font-size: 1.4rem; */
+/*     font-weight: normal; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     color: #d2d2d2; */
+/* } */
+
+/* footer .container { */
+/*     padding: 22px 0 37.5px; */
+/*     position: relative; */
+/* } */
+
+/* footer .text__bold { */
+/*     font-family: 'Noto Sans', sans-serif; */
+/*     font-size: 1.4rem; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     color: #d2d2d2; */
+/* } */
+
+/* footer .company__address p { */
+/*     margin-top: 10px; */
+/* } */
+
+/* footer .contact { */
+/*     display: flex; */
+/*     margin-top: 10.5px; */
+/* } */
+
+/* footer .contact .tel { */
+/*     margin-right: 47px; */
+/* } */
+
+/* footer .contact span { */
+/*     margin-right: 9px; */
+/* } */
+
+/* footer .copyright { */
+/*     margin-top: 30px; */
+/* } */
+
+/* .family__site { */
+/*     display: flex; */
+/*     align-items: center; */
+/*     font-family: 'Noto Sans', sans-serif; */
+/*     font-size: 1.4rem; */
+/*     font-weight: normal; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     color: #d2d2d2; */
+/*     position: absolute; */
+/*     top: 51px; */
+/*     left: 100%; */
+/*     padding: 5px 12px 8px 17px; */
+/*     border: solid 2px #969696; */
+/*     width: 109px; */
+/* } */
+
+/* .family__site .site__up { */
+/*     margin-left: 24px; */
+/*     display: inline-block; */
+/*     width: 9px; */
+/*     height: 7px; */
+/*     color : #d2d2d2; */
+/* } */
+
+/* #site__group { */
+/*     position: absolute; */
+/*     top: 51px; */
+/*     left: 100%; */
+/*     width: 138px; */
+/*     height: 32px; */
+/*     border: solid 2px #969696; */
+/*     font-family: 'Noto Sans', sans-serif; */
+/*     font-size: 14px; */
+/*     font-weight: normal; */
+/*     font-stretch: normal; */
+/*     font-style: normal; */
+/*     line-height: 1.36; */
+/*     letter-spacing: normal; */
+/*     text-align: left; */
+/*     color: #d2d2d2; */
+/*     padding: 3px 0 3px 17px; */
+/*     box-sizing: border-box; */
+/*     background : transparent; */
+/*     outline : none; */
+/* } */
+
+/* #site__group option { */
+/*     color : black !important; */
+/* } */
