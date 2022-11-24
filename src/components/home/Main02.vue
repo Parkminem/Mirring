@@ -2,12 +2,7 @@
   <section class="section section_animation dot2" data-name="main_about" style="margin-top: 0px; opacity: 1">
     <div class="container_1076">
       <div class="content">
-        <img
-          class="character mobile"
-          src="/assets/images/home/character_about.png"
-          alt="character_about"
-          title="character_about"
-        />
+        <img class="character mobile" src="/assets/images/home/character_about.png" alt="character_about" title="character_about" />
         <div class="box">
           <p class="title">
             IDEACONCERT is<br />
@@ -25,27 +20,13 @@
           </p>
           <a class="page_move" href="https://makevu.me/d355cee78b" target="_blank">브로슈어 보기</a>
         </div>
-        <img
-          class="character"
-          src="/assets/images/home/character_about.png"
-          alt="character_about"
-          title="character_about"
-        />
+        <img class="character" src="/assets/images/home/character_about.png" alt="character_about" title="character_about" />
       </div>
     </div>
     <p class="bg_text">About</p>
     <div class="container_1076 position">
       <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-        <Swiper
-          @swiper="onSwiper"
-          @slide-change="onSlideChange"
-          class="box_animation"
-          :loop="true"
-          :slides-per-view="4"
-          :space-between="28"
-          :touch-ratio="0"
-          navigation
-        >
+        <Swiper @swiper="onSwiper" @slide-change="onSlideChange" class="box_animation" :loop="true" :slides-per-view="4" :space-between="28" :touch-ratio="0" navigation>
           <SwiperSlide data-swiper-slide-index="0" class="css">
             <div class="effect_area">
               <div class="image_box" style="background-image: url(/assets/images/home/202208051658270390.jpg)"></div>
@@ -108,19 +89,17 @@
   </section>
 </template>
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 // import { ref } from "vue";
-import { Navigation } from 'swiper';
-import $ from 'jquery';
-
+import { Navigation } from "swiper";
 const onSwiper = (swiper) => {
   console.log(swiper);
 };
 const onSlideChange = () => {
-  console.log('slide change');
+  console.log("slide change");
 };
 </script>
 <style>
-@import '../../../node_modules/swiper/swiper.min.css';
-@import '../../../node_modules/swiper/modules/navigation/navigation.min.css';
+@import "../../../node_modules/swiper/swiper.min.css";
+@import "../../../node_modules/swiper/modules/navigation/navigation.min.css";
 </style>
