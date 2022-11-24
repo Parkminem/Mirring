@@ -52,7 +52,6 @@ function settingBoxAnimation(element) {
       .setTween(tween)
       .addTo(controller);
   });
-  console.log(item);
 }
 
 function settingNewsSlider() {
