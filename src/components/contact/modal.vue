@@ -1,8 +1,14 @@
 <template>
   <div id="modal" style="display: block">
-    <div class="fade" onclick="modalHide()"></div>
+    <div class="fade" @click="modalStore.infoModalClose"></div>
     <div class="modal_box">
-      <img class="close" src="/assets/images/contact/close_gray.png" title="close" alt="close" onclick="modalHide()" />
+      <img
+        class="close"
+        src="/assets/images/contact/close_gray.png"
+        title="close"
+        alt="close"
+        @click="modalStore.infoModalClose"
+      />
       <p class="title">개인정보처리방침</p>
       <div class="area">
         <p>
@@ -467,4 +473,7 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { useModalStore } from '../../store/modal';
+const modalStore = useModalStore();
+</script>

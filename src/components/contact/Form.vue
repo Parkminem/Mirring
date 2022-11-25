@@ -113,7 +113,7 @@
             <input type="checkbox" id="privacy_agree" data-name="개인정보처리방침" />
             <label class="label" for="privacy_agree"></label>
             <label class="text" for="privacy_agree">개인정보처리방침에 동의합니다.</label>
-            <b class="bold_text" onclick="modalShow()">전문보기</b>
+            <b class="bold_text" @click="modalStore.infoModalOpen">전문보기</b>
           </div>
           <input type="button" class="btn btn_hover" value="문의 신청하기" onclick="insertQuestion()" />
         </div>
@@ -123,6 +123,9 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useModalStore } from '../../store/modal';
+const modalStore = useModalStore();
+
 const selectState = ref(false);
 const name = ref('');
 const company = ref('');
