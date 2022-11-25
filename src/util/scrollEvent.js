@@ -123,6 +123,7 @@ function settingNavigationByScroll() {
     return false;
   }
 }
+
 const scrollEvent = {
   boxAnimationByscroll,
   settingNewsSlider,
