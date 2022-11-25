@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { useRoute } from 'vue-router';
 
 /**
 섹션이 밑에서 위로 올라오는 애니메이션
@@ -105,16 +106,22 @@ function settingNavigationByClick() {
  * 메인 네비게이션 스크롤 이벤트
  */
 function settingNavigationByScroll() {
-  $(window).on('scroll', function () {
-    let scroll_top = $(this).scrollTop();
-    let i = '';
-    if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;
-    if (scroll_top >= $('.dot2').offset().top - $('.dot2').innerHeight() / 2) i = 1;
-    if (scroll_top >= $('.dot3').offset().top - $('.dot3').innerHeight() * 1.5) i = 2;
-    if (scroll_top >= $('.dot4').offset().top - $('.dot4').innerHeight()) i = 3;
-    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) i = 4;
-    $('.dot').stop().eq(i).addClass('active').siblings().removeClass('active');
-  });
+  const route = useRoute();
+  if (route.path == '/') {
+    $(window).on('scroll', function () {
+      console.log('scroll');
+      let scroll_top = $(this).scrollTop();
+      let i = '';
+      if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;
+      if (scroll_top >= $('.dot2').offset().top - $('.dot2').innerHeight() / 2) i = 1;
+      if (scroll_top >= $('.dot3').offset().top - $('.dot3').innerHeight() * 1.5) i = 2;
+      if (scroll_top >= $('.dot4').offset().top - $('.dot4').innerHeight()) i = 3;
+      if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) i = 4;
+      $('.dot').stop().eq(i).addClass('active').siblings().removeClass('active');
+    });
+  } else {
+    return false;
+  }
 }
 const scrollEvent = {
   boxAnimationByscroll,

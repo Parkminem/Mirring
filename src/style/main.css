@@ -2,7 +2,7 @@
 
 body {overflow-x: hidden;}
 
-#navigation {position: fixed; left: 74px; top: 50%; transform: translateY(-50%); z-index: 1;}
+#navigation {position: fixed; left: 74px; top: 50%; transform: translateY(-50%); z-index: 100;}
 #navigation .dot {width: 13px; height: 13px; background-color: #fff; background-color: #d2d2d2; border-radius:50%; margin-bottom: 34px; cursor: pointer;}
 #navigation .dot:last-child {margin-bottom: 0;}
 #navigation .dot.active {position: relative; background-color: transparent;}

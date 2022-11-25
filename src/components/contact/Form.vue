@@ -30,7 +30,7 @@
                 @click="openSelect"
               >
                 <li value="0" class="placeholder active">문의유형을 선택하세요.</li>
-                <li value="1">데이터 가공</li>
+                <li value="1" class="">데이터 가공</li>
                 <li value="2">사업 제휴 및 제안</li>
                 <li value="3">웹툰, 콘텐츠 관련</li>
                 <li value="4">채용관련</li>
