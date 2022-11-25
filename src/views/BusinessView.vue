@@ -1,9 +1,23 @@
 <template>
   <SubTitle :title="title" :subTitle="subTitle" :text="text" :bg="bg" />
+  <List />
+  <Sales />
+  <Tech />
+  <Team />
+  <Cost />
+  <Portfolio />
+  <QuickBanner />
 </template>
 
 <script setup>
 import SubTitle from '../components/common/SubTitle.vue';
+import List from '../components/business/List.vue';
+import Sales from '../components/business/Sales.vue';
+import Tech from '../components/business/Tech.vue';
+import Team from '../components/business/Team.vue';
+import Cost from '../components/business/Cost.vue';
+import Portfolio from '../components/business/Portfolio.vue';
+import QuickBanner from '../components/common/QuickBanner.vue';
 
 const title = `A Webtoon Movie That \n Connect The World`;
 const subTitle = '저작기술과 콘텐츠가 만나 새로운 비즈니스가 열립니다.';
@@ -11,4 +25,6 @@ const text = `아이디어 콘서트는 웹툰 동영상화 저작툴, 투니비
 const bg = '/assets/images/business/business.jpg';
 </script>
 
-<style scoped></style>
+<style>
+@import '../style/business.css';
+</style>
