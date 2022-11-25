@@ -11,6 +11,7 @@
 </template>
 <script setup>
 import NavigationBar from '../components/home/NavigationBar.vue';
+
 import Main01 from '../components/home/Main01.vue';
 import Main02 from '../components/home/Main02.vue';
 import Main03 from '../components/home/Main03.vue';
