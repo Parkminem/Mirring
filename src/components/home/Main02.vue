@@ -39,8 +39,9 @@
         <Swiper
           :loop="true"
           :slides-per-view="4"
-          :space-between="28"
+          :space-between="0"
           :touch-ratio="0"
+          :breakpoints="breakPoints"
           @swiper="onSwiper"
           class="box_animation"
         >
@@ -144,26 +145,17 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { ref, onMounted } from 'vue';
 const swiper = ref(null);
+const breakPoints = {
+  1024: {
+    spaceBetween: 28,
+    slidesPerView: 4
+  }
+};
 
 let onSwiper = (swiperInstance) => {
   swiper.value = swiperInstance;
 };
 onMounted(() => {
-  let screenWidth = window.innerWidth;
-  function swiperMaker() {
-    if (screenWidth < 1024) {
-      swiper.value.destroy();
-    } else {
-      // swiper.value.init();
-      // console.log(swiper.value);
-    }
-  }
-  swiperMaker();
-  window.addEventListener('resize', () => {
-    screenWidth = window.innerWidth;
-    swiperMaker();
-  });
-
   const box = $('.swiper').children();
   scrollEvent.settingBoxAnimation(box);
   scrollEvent.sectionAnimationByscroll();

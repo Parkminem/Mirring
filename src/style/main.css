@@ -209,7 +209,7 @@ left: 50px;}
 	.section[data-name="main_about"] .bg_text {display: none;}
 	.section[data-name="main_about"] .position {position: static; transform: none; left: auto; bottom: auto;}
 	.section[data-name="main_about"] .swiper-container .swiper-wrapper {flex-wrap:wrap;}
-	.section[data-name="main_about"] .swiper-container .swiper-slide {width: 49%; margin-right: 1%; margin-top: 1%; min-height: 0;}
+	.section[data-name="main_about"] .swiper-container .swiper-slide {width: 49% !important; margin-right: 1% !important; margin-top: 1%; min-height: 0;}
 	.section[data-name="main_about"] .image_box {width: 100%;}
 	.section[data-name="main_about"] .swiper-container .swiper-slide:nth-child(n+5) {display: none;}
 	.section[data-name="main_about"] .position .more {display: none;}
