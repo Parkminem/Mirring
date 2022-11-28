@@ -1,9 +1,19 @@
 <template>
   <SubTitle :title="title" :subTitle="subTitle" :text="text" :bg="bg" />
+<<<<<<< HEAD
+=======
+  <Form />
+  <Map />
+>>>>>>> contanct
 </template>
 
 <script setup>
 import SubTitle from '../components/common/SubTitle.vue';
+<<<<<<< HEAD
+=======
+import Form from '../components/contact/Form.vue';
+import Map from '../components/contact/Map.vue';
+>>>>>>> contanct
 
 const title = `Contact`;
 const subTitle = '아이디어 콘서트와 만나보세요.';
@@ -11,4 +21,10 @@ const text = `아이디어 콘서트의 문을 두드려주세요. \n원천 콘�
 const bg = '/assets/images/contact/contact.jpg';
 </script>
 
+<<<<<<< HEAD
 <style scoped></style>
+=======
+<style>
+@import '../style/contact.css';
+</style>
+>>>>>>> contanct
