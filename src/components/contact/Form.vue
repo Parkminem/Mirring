@@ -84,6 +84,7 @@
               placeholder="연락처를 '-' 없이 입력하세요."
               data-name="연락처"
               v-model="tel"
+              @keydown="testTel"
             />
           </div>
           <div class="question_form">
@@ -125,9 +126,14 @@
 import { ref, onMounted } from 'vue';
 import clickEvent from '../../util/clickEvent';
 import { useModalStore } from '../../store/modal';
+import { useFormStore } from '../../store/form';
 
 const modalStore = useModalStore();
+const formStore = useFormStore();
 
+const mailReg = new RegExp(
+  "([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])"
+);
 const selectState = ref(false);
 let type = ref('');
 const name = ref('');
@@ -141,19 +147,47 @@ const checkPrivacy = ref();
 onMounted(() => {
   clickEvent.settingQuestionSelectByClick();
 });
+
+//데이터 전송
 function sendForm() {
+  if (type.value < 1) {
+    alert('문의유형을 입력해주세요.');
+    return false;
+  }
+  if (name.value.length < 1) {
+    alert('이름을 입력해주세요.');
+    return false;
+  }
+  if (tel.value == '') {
+    alert('연락처를 입력해주세요.');
+    return false;
+  }
+  if (!mailReg.test(email.value)) {
+    alert('이메일을 입력해주세요.');
+    return false;
+  }
+  if (desc.value == '') {
+    alert('문의내용을 입력해주세요.');
+    return false;
+  }
   if (!checkPrivacy.value) {
     alert('개인정보처리방침에 동의해주세요.');
     return false;
   }
-  if (type.value < 1) {
-    alert('문의유형을 입력해주세요');
-    return false;
-  }
-  if (name.value.length < 1) {
-    alert('이름을 입력해주세요');
-    return false;
-  }
+  tel.value = tel.value.replace(/[^0-9]/g, '');
+  const formData = {
+    type: type.value,
+    name: name.value.replace(/ /gi, ''),
+    company: company.value.replace(/ /gi, ''),
+    team: team.value.replace(/ /gi, ''),
+    tel: tel.value.replace(/ /gi, ''),
+    email: email.value.replace(/ /gi, ''),
+    desc: desc.value,
+    checkPrivacy: checkPrivacy.value
+  };
+  console.log(formData);
+
+  //폼 데이터 전송 액션 사용해야함
 }
 
 function openSelect() {
