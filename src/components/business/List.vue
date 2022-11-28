@@ -3,10 +3,10 @@
     <div class="business_list_menu">
       <div class="container_1076">
         <ul class="content">
-          <li class="menu">콘텐츠 제작</li>
-          <li class="menu">문화기술 연구</li>
-          <li class="menu">현지화 및 번역</li>
-          <li class="menu">플랫폼 비즈니스</li>
+          <li class="menu" :class="{ active: actives.contents }" @click="onActive('contents')">콘텐츠 제작</li>
+          <li class="menu" :class="{ active: actives.culture }" @click="onActive('culture')">문화기술 연구</li>
+          <li class="menu" :class="{ active: actives.translation }" @click="onActive('translation')">현지화 및 번역</li>
+          <li class="menu" :class="{ active: actives.platform }" @click="onActive('platform')">플랫폼 비즈니스</li>
         </ul>
       </div>
     </div>
@@ -167,6 +167,16 @@ import { ref, onMounted } from 'vue';
 import scrollEvent from '../../util/scrollEvent';
 
 const boxes = ref();
+const actives = ref({
+  contents: true,
+  culture: false,
+  translation: false,
+  platform: false
+});
+
+const onActive = (active) => {
+  console.log(active);
+};
 
 onMounted(() => {
   const boxesVal = boxes.value;
