@@ -13,7 +13,7 @@
     <div class="business_list_box">
       <div class="container_1076">
         <!-- 01 -->
-        <ul class="content active box_animation" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.contents }" ref="boxes">
           <li class="box" style="opacity: 1">
             <div class="round" style="background-image: url(/assets/images/business/list_1_1.png)"></div>
             <div class="text_box">
@@ -57,7 +57,7 @@
         </ul>
         <!-- //01 -->
         <!-- 02 -->
-        <ul class="content box_animation" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.culture }" ref="boxes">
           <li class="box" style="opacity: 1">
             <div class="images" style="background-image: url(/assets/images/business/list_2_1.jpg)"></div>
             <div class="text_box">
@@ -101,7 +101,7 @@
         </ul>
         <!-- //02 -->
         <!-- 03 -->
-        <ul class="content box_animation" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.translation }" ref="boxes">
           <li class="box" style="opacity: 1">
             <div class="round" style="background-image: url(/assets/images/business/list_3_1.png)"></div>
             <div class="text_box">
@@ -135,7 +135,7 @@
         </ul>
         <!-- //03 -->
         <!-- 04 -->
-        <ul class="content box_animation" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.platform }" ref="boxes">
           <li class="box" style="opacity: 1">
             <div class="images" style="background-image: url(/assets/images/business/list_4_1.jpg)"></div>
             <div class="text_box">
@@ -175,7 +175,12 @@ const actives = ref({
 });
 
 const onActive = (active) => {
-  console.log(active);
+  for (let active in actives.value) {
+    if (actives.value[active] === true) {
+      actives.value[active] = false;
+    }
+  }
+  actives.value[active] = !actives.value[active];
 };
 
 onMounted(() => {
