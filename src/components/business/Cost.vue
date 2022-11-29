@@ -8,7 +8,7 @@
       </p>
       <div class="content">
         <div class="white_box_head">
-          <ul class="arrow_box box_animation" ref="boxes">
+          <ul class="arrow_box box_animation">
             <li style="opacity: 1">
               <p class="regular_text">원천 콘텐츠 제공</p>
               <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
@@ -18,13 +18,13 @@
               <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
             </li>
           </ul>
-          <ul class="bold_text_box box_animation" ref="boxes">
+          <ul class="bold_text_box box_animation">
             <li style="opacity: 1">창작가</li>
             <li style="opacity: 1">저작툴 (영상제작)</li>
             <li style="opacity: 1">플랫폼</li>
           </ul>
         </div>
-        <ul class="white_box_list box_animation" ref="boxes">
+        <ul class="white_box_list box_animation">
           <li class="box" style="opacity: 1">
             <img class="images" src="/assets/images/business/cost_1.png" alt="cost_1" title="cost_1" />
             <p class="text">웹툰 작가<br />단행본 만화 작가<br />그림동화 작가<br />학습만화 작가</p>
@@ -38,12 +38,12 @@
           </li>
         </ul>
         <div class="white_box_foot">
-          <ul class="bold_text_box box_animation" ref="boxes">
+          <ul class="bold_text_box box_animation">
             <li style="opacity: 1">IP 원본 제공</li>
             <li style="opacity: 1">웹툰무비 제작</li>
             <li style="opacity: 1">웹툰무비 판매</li>
           </ul>
-          <ul class="arrow_box box_animation" ref="boxes">
+          <ul class="arrow_box box_animation">
             <li style="opacity: 1">
               <img src="/assets/images/business/cost_arrow_3.png" alt="arrow" title="arrow" />
               <p class="regular_text">수익쉐어</p>

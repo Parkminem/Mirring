@@ -57,7 +57,7 @@
         </ul>
         <!-- //01 -->
         <!-- 02 -->
-        <ul class="content box_animation" :class="{ active: actives.culture }" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.culture }">
           <li class="box" style="opacity: 1">
             <div class="images" style="background-image: url(/assets/images/business/list_2_1.jpg)"></div>
             <div class="text_box">
@@ -101,7 +101,7 @@
         </ul>
         <!-- //02 -->
         <!-- 03 -->
-        <ul class="content box_animation" :class="{ active: actives.translation }" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.translation }">
           <li class="box" style="opacity: 1">
             <div class="round" style="background-image: url(/assets/images/business/list_3_1.png)"></div>
             <div class="text_box">
@@ -135,7 +135,7 @@
         </ul>
         <!-- //03 -->
         <!-- 04 -->
-        <ul class="content box_animation" :class="{ active: actives.platform }" ref="boxes">
+        <ul class="content box_animation" :class="{ active: actives.platform }">
           <li class="box" style="opacity: 1">
             <div class="images" style="background-image: url(/assets/images/business/list_4_1.jpg)"></div>
             <div class="text_box">
