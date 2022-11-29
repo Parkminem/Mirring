@@ -5,7 +5,8 @@ transition: all .3s ease-in-out;
 -webkit-transition: all .3s ease-in-out;
 -moz-transition: all .3s ease-in-out;
 -webkit-transform: translateY(0);
- transform: translateY(0);}
+transform: translateY(0);}
+#header.active {transform: translateY(-100%); transition-delay: .3s;}
 #header .content {display: flex; align-items: center;}
 #header .content .logo {margin-right: auto;}
 #header .content .logo img {width: 138px; height: 38px; padding: 32px 0 28px 0;}

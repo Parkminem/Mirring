@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="">
+  <header id="header" :class="{ active: scrollActive }">
     <div class="container_1539">
       <ul class="content pc">
         <li class="logo">
@@ -97,9 +97,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import $ from 'jquery';
 
+// changeLanguage에서 Active를 반영하기 위한 상태들
 const isActive = ref(false);
 const changeActives = ref({
   kr: true,
@@ -107,7 +108,22 @@ const changeActives = ref({
   id: false,
   pt: false
 });
+const scrollActive = ref(false);
+let scrollPosition = ref(0);
 
+const handleScorll = () => {
+  scrollPosition = document.documentElement.scrollTop;
+  console.log(scrollPosition);
+  if (scrollPosition >= 101) {
+    scrollActive.value = true;
+  } else {
+    scrollActive.value = false;
+  }
+};
+onMounted(() => {
+  document.addEventListener('scroll', handleScorll);
+});
+// 언어를 선택하는 함수
 const changeLanguage = (language) => {
   for (let active in changeActives.value) {
     if (changeActives.value[active] === true) {
@@ -117,10 +133,12 @@ const changeLanguage = (language) => {
   changeActives.value[language] = !changeActives.value[language];
 };
 
+// 언어 토글(클릭하면 열리고 마우스가 벗어나면 사라지는 기능)
 const settingHeaderChangeLanguage = () => {
   isActive.value = !isActive.value;
 };
 
+// 모바일 슬라이드 메뉴
 const headerMobileMenuActive = () => {
   $('.mobile .menu').slideToggle();
 };
