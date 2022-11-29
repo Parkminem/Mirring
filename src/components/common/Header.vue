@@ -109,19 +109,16 @@ const changeActives = ref({
   pt: false
 });
 const scrollActive = ref(false);
-let scrollPosition = ref(0);
 
-const handleScorll = () => {
-  scrollPosition = document.documentElement.scrollTop;
-  console.log(scrollPosition);
-  if (scrollPosition >= 101) {
-    scrollActive.value = true;
-  } else {
-    scrollActive.value = false;
-  }
-};
 onMounted(() => {
-  document.addEventListener('scroll', handleScorll);
+  document.addEventListener('wheel', (e) => {
+    const scrollDirection = e.deltaY;
+    if (scrollDirection > 0) {
+      scrollActive.value = true;
+    } else {
+      scrollActive.value = false;
+    }
+  });
 });
 // 언어를 선택하는 함수
 const changeLanguage = (language) => {
