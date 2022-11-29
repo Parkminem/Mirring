@@ -30,11 +30,16 @@
         </li>
 
         <li class="language_change">
-          <ul class="animation_language_change">
-            <li class="active" onclick="changeLanguage('kr')">KR</li>
-            <li onclick="changeLanguage('us')">EN</li>
-            <li onclick="changeLanguage('id')">ID</li>
-            <li onclick="changeLanguage('pt')">PT</li>
+          <ul
+            class="animation_language_change"
+            :class="{ active: isActive }"
+            @click="settingHeaderChangeLanguage"
+            @mouseleave="isActive = false"
+          >
+            <li :class="{ active: changeActives.kr }" @click="changeLanguage('kr')">KR</li>
+            <li :class="{ active: changeActives.us }" @click="changeLanguage('us')">EN</li>
+            <li :class="{ active: changeActives.id }" @click="changeLanguage('id')">ID</li>
+            <li :class="{ active: changeActives.pt }" @click="changeLanguage('pt')">PT</li>
           </ul>
         </li>
       </ul>
@@ -44,7 +49,7 @@
           <li class="logo">
             <a href="/"><img src="assets/images/common/logo.png" alt="logo" title="logo" /></a>
           </li>
-          <li class="menu_img" onclick="headerMobileMenuActive()">
+          <li class="menu_img" @click="headerMobileMenuActive">
             <img src="assets/images/common/menu.png" alt="menu" title="menu" />
           </li>
         </ul>
@@ -72,11 +77,16 @@
           </li>
 
           <li class="language_change">
-            <ul class="animation_language_change">
-              <li class="active" onclick="changeLanguage('kr')">KR</li>
-              <li onclick="changeLanguage('us')">EN</li>
-              <li onclick="changeLanguage('id')">ID</li>
-              <li onclick="changeLanguage('pt')">PT</li>
+            <ul
+              class="animation_language_change"
+              :class="{ active: isActive }"
+              @click="settingHeaderChangeLanguage"
+              @mouseleave="isActive = false"
+            >
+              <li :class="{ active: changeActives.kr }" @click="changeLanguage('kr')">KR</li>
+              <li :class="{ active: changeActives.us }" @click="changeLanguage('us')">EN</li>
+              <li :class="{ active: changeActives.id }" @click="changeLanguage('id')">ID</li>
+              <li :class="{ active: changeActives.pt }" @click="changeLanguage('pt')">PT</li>
             </ul>
           </li>
         </ul>
@@ -86,7 +96,35 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import $ from 'jquery';
+
+const isActive = ref(false);
+const changeActives = ref({
+  kr: true,
+  us: false,
+  id: false,
+  pt: false
+});
+
+const changeLanguage = (language) => {
+  for (let active in changeActives.value) {
+    if (changeActives.value[active] === true) {
+      changeActives.value[active] = false;
+    }
+  }
+  changeActives.value[language] = !changeActives.value[language];
+};
+
+const settingHeaderChangeLanguage = () => {
+  isActive.value = !isActive.value;
+};
+
+const headerMobileMenuActive = () => {
+  $('.mobile .menu').slideToggle();
+};
+</script>
 
 <style scoped>
 @import '../../style/header.css';

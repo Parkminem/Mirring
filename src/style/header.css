@@ -68,7 +68,7 @@ background-position: center;}
 	#header .mobile .menu {display: none; background-color: #f9f9f9; padding: 0 2.5%; position: relative;}
 	#header .mobile .menu .quick_menu {text-align: right; cursor: pointer; padding: 10px 0;}
 	#header .mobile .menu .quick_menu.active a {color:#ec6c00;}
-	#header .mobile .menu .quick_menu a {font-size: 18px; color: #292929; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
+	#header .mobile .menu .quick_menu a {font-size: 18px; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
 	#header .mobile li.language_change {margin: 0; position: absolute; bottom: 10px;}
 }
 
