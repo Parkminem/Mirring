@@ -5,7 +5,8 @@ transition: all .3s ease-in-out;
 -webkit-transition: all .3s ease-in-out;
 -moz-transition: all .3s ease-in-out;
 -webkit-transform: translateY(0);
- transform: translateY(0);}
+transform: translateY(0);}
+#header.active {transform: translateY(-100%); transition-delay: .3s;}
 #header .content {display: flex; align-items: center;}
 #header .content .logo {margin-right: auto;}
 #header .content .logo img {width: 138px; height: 38px; padding: 32px 0 28px 0;}
@@ -68,7 +69,7 @@ background-position: center;}
 	#header .mobile .menu {display: none; background-color: #f9f9f9; padding: 0 2.5%; position: relative;}
 	#header .mobile .menu .quick_menu {text-align: right; cursor: pointer; padding: 10px 0;}
 	#header .mobile .menu .quick_menu.active a {color:#ec6c00;}
-	#header .mobile .menu .quick_menu a {font-size: 18px; color: #292929; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
+	#header .mobile .menu .quick_menu a {font-size: 18px; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
 	#header .mobile li.language_change {margin: 0; position: absolute; bottom: 10px;}
 }
 

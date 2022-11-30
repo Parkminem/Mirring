@@ -10,12 +10,16 @@
         <li class="tel"><b>Tel</b><span class="country_number">070-8825-5004</span></li>
         <li class="mail"><b>e-Mail</b><span>info@ideaconcert.com</span></li>
       </ul>
-      <p class="copyright"><span onclick="location.href='/admin'">ⓒ</span> 2015 - 2021 IDEACONCERT Co., Ltd. All Right Reserved.</p>
+      <p class="copyright">
+        <span onclick="location.href='/admin'">ⓒ</span> 2015 - 2021 IDEACONCERT Co., Ltd. All Right Reserved.
+      </p>
       <div class="family_site">
         <div class="trick_box">
           <ul class="link_box">
             <li><a href="http://kreami.co.kr/" target="_blank">Kream</a></li>
-            <li><a href="https://www.youtube.com/channel/UChWHJjTGDc4314owWJ7KGCw" target="_blank">Youtube</a></li>
+            <li>
+              <a href="https://www.youtube.com/channel/UChWHJjTGDc4314owWJ7KGCw" target="_blank">Youtube</a>
+            </li>
           </ul>
           <div class="hover_box">
             <span>Family sites</span>
@@ -29,5 +33,5 @@
 <script setup></script>
 
 <style scoped>
-@import "../../style/footer.css";
+@import '../../style/footer.css';
 </style>
