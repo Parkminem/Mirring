@@ -6,10 +6,8 @@
           Let’s PLAY your<span class="orange_circle"></span><br />
           Webtoons &amp; Comics
         </p>
-        <p class="text">
-          웹툰과 만화책을 움직이는 영상 콘텐츠로 재탄생시키고<br />
-          저작기술을 연구하는 문화·기술 융합 기업입니다.
-        </p>
+        <!-- <p class="text">{{ t('home.mainText') }}</p> -->
+        <p class="text" v-html="t('home.mainText').replace('\n', '<br/>')"></p>
         <div class="img_box">
           <p class="bg_text">IDEACONCERT</p>
           <!-- <img class="earth" src="/resources/common/images/main/banner_earth.png" alt="earth" title="earth"/>
@@ -23,5 +21,11 @@
     </div>
   </section>
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+console.log(t('home.mainText').replace('\n', '<br/>'));
+const text = t('home.mainText').replace('\n', '<br/>');
+</script>
 <style scoped></style>

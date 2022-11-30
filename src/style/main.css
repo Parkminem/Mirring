@@ -15,7 +15,7 @@ background-position: center;}
 /* main_home */
 .section[data-name="main_home"] {background-color: #ff943a; padding-top: 130px; overflow: hidden;}
 .section[data-name="main_home"] .content {position: relative;}
-.section[data-name="main_home"] .content .title {position: relative; font-family: 'GmarketSansBold'; font-weight: bold; font-size: 5.85em; color:#fff; text-align: center; margin-bottom: 36px;}
+.section[data-name="main_home"] .content .title {position: relative; font-family: 'GmarketSansBold'; font-weight: bold; font-size: 4.4em; color:#fff; text-align: center; margin-bottom: 36px; line-height: 93px;}
 .section[data-name="main_home"] .content .text {font-family: 'Noto Sans', sans-serif; font-size: 18px; line-height: 1.7; color:#292929; text-align: center; margin-top: 10px;}
 .section[data-name="main_home"] .content .img_box {position: relative; margin: 221px auto 0 auto; width: 447px; height: 139px;}
 .section[data-name="main_home"] .content .img_box .earth2 {position: absolute; top: -165px;  width: 100%; transform-origin: 50% 50%; padding: 20px; box-sizing: border-box;
@@ -185,7 +185,7 @@ left: 50px;}
 	
 	/* main_home */
 	.section[data-name="main_home"] {padding: 119px 0 100px 0;}
-	.section[data-name="main_home"] .content .title {font-size: 2.45em; margin-bottom: 33px;}
+	.section[data-name="main_home"] .content .title {font-size: 1.8em; margin-bottom: 33px;line-height: 39px;}
 	.section[data-name="main_home"] .content .text {margin-top: 0; font-size: 12px;}
 	.orange_circle:before {left: 0; width: 17px; height: 17px;}
 	.section[data-name="main_home"] .content .img_box {margin-top: 177px; width: 184px; height: 185px;}
