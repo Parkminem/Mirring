@@ -6,9 +6,8 @@
           Let’s PLAY your<span class="orange_circle"></span><br />
           Webtoons &amp; Comics
         </p>
-        <p class="text">
-          {{ t(mainText) }}
-        </p>
+        <!-- <p class="text">{{ t('home.mainText') }}</p> -->
+        <p class="text" v-html="t('home.mainText').replace('\n', '<br/>')"></p>
         <div class="img_box">
           <p class="bg_text">IDEACONCERT</p>
           <!-- <img class="earth" src="/resources/common/images/main/banner_earth.png" alt="earth" title="earth"/>
@@ -26,5 +25,7 @@
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+console.log(t('home.mainText').replace('\n', '<br/>'));
+const text = t('home.mainText').replace('\n', '<br/>');
 </script>
 <style scoped></style>
