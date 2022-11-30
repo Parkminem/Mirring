@@ -7,8 +7,7 @@
           Webtoons &amp; Comics
         </p>
         <p class="text">
-          웹툰과 만화책을 움직이는 영상 콘텐츠로 재탄생시키고<br />
-          저작기술을 연구하는 문화·기술 융합 기업입니다.
+          {{ t(mainText) }}
         </p>
         <div class="img_box">
           <p class="bg_text">IDEACONCERT</p>
@@ -23,5 +22,9 @@
     </div>
   </section>
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 <style scoped></style>
