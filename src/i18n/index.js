@@ -1,23 +1,12 @@
-// const requireLang = require.context('./locales', true, /\.json$/);
-// const messages = {};
+import { createI18n } from 'vue-i18n';
 
-// for (const file of requireLang.keys()) {
-//   if (file === './index.js') continue;
-//   const path = file.replace(/(\.\/|\.json$)/g).split('/');
-//   path.reduce((o, s, i) => {
-//     if (o[s]) return o[s];
-//     o[s] = i + 1 === path.length ? requireLang(file) : {};
-//     return o[s];
-//   }, messages);
-// }
+const modules = import.meta.glob(`./locales/en/views/*.json`);
 
-// Vue.use(VueI18n);
-
-// const i18n = new VueI18n({
-//   locale: 'ko',
-//   fallbackLocale: 'ko',
-//   messages,
-//   silentFallbackWarn: true
-// });
-
-// export default i18n;
+const i18n = createI18n({
+  locale: 'ko',
+  legacy: false,
+  allowComposition: true,
+  fallbackLocale: 'en',
+  silentFallbackWarn: true
+});
+export default i18n;
