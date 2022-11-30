@@ -8,25 +8,25 @@
           </router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/">Home</router-link>
+          <router-link to="/">{{ t('common.header.home') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/tech">Our Tech</router-link>
+          <router-link to="/tech">{{ t('common.header.tech') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/about">About Us</router-link>
+          <router-link to="/about">{{ t('common.header.about') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/business">Business</router-link>
+          <router-link to="/business">{{ t('common.header.business') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/contents">Contents</router-link>
+          <router-link to="/contents">{{ t('common.header.contents') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/contact">Contact</router-link>
+          <router-link to="/contact">{{ t('common.header.contact') }}</router-link>
         </li>
         <li class="quick_menu">
-          <router-link to="/careers">Careers</router-link>
+          <router-link to="/careers">{{ t('common.header.careers') }}</router-link>
         </li>
 
         <li class="language_change">
@@ -99,6 +99,9 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import $ from 'jquery';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 // changeLanguage에서 Active를 반영하기 위한 상태들
 const isActive = ref(false);

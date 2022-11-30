@@ -1,10 +1,9 @@
 <template>
   <div class="catroon__reditoon">
     <div class="container">
-      <h2 class="content__title">종이만화 자동 웹툰화툴</h2>
+      <h2 class="content__title">{{ t('tech.autoToolTitle') }}</h2>
       <p class="content__subtitle">
-        추억의 흑백만화책을 웹툰으로 변환해주는 툴입니다.<br />
-        스캔본을 업로드하면 자동/수동으로 이미지를 분리하여 웹툰으로 제작해주는 저작툴입니다.
+        {{ t('tech.autoToolText') }}
       </p>
 
       <div class="content__notice">
@@ -19,3 +18,8 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

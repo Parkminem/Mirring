@@ -1,7 +1,7 @@
 <template>
   <div class="catroon__cut bg__gray">
     <div class="container">
-      <h2 class="content__title">자동만화컷분리</h2>
+      <h2 class="content__title">{{ t('tech.separateTitle') }}</h2>
       <p class="content__subtitle">
         만화의 컷을 AI기술을 이용하여 자동으로 분리하고,<br />
         텍스트와 장면을 인지하여 다양한 연출효과를 주는 영상 제작기술입니다.
@@ -44,3 +44,9 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
+<style scoped></style>
