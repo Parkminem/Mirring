@@ -1,0 +1,35 @@
+{
+  "header": {
+    "home": "Página Inicial",
+    "tech": "Tecnologia nos",
+    "about": "Sobre",
+    "business": "Business",
+    "contents": "conteúdo",
+    "contact": "Contato",
+    "careers": "Carreiras"
+  },
+  "footer": {
+    "company": "IDEACONCERT Co. Ltd",
+    "pangyo": "815 Daewangpangyo-ro, Sujeong-gu, Seongnam-si, Gyeonggi-do, South Korea,",
+    "yangjea": "Maeheon-ro 8-gil, 47, Seocho-gu, Seul, Coreia do Sul, Sala 407",
+    "jeju": "217 Jungang-ro, Jeju-si, Jeju-do, South Korea, Jeju Venture Maru sala 701",
+    "copyright": "ⓒ 2015 - 2021 IDEACONCERT Co., Ltd Todos os direitos reservados."
+  },
+  "button": {
+    "brochure": "Ver Brochura",
+    "more": "Mais",
+    "aboutLink": "Sobre",
+    "businessLink": "Business",
+    "contactLink": "Contato",
+    "careersLink": "Aplicar",
+    "youtubeLink": "Ir para o canal de YouTube",
+    "inquery": "Enviar",
+    "downLoad": "Baixar Formulário de Aplicação"
+  },
+  "banner": {
+    "leftSubTitle": "Produção de Webtoons·Publicação de quadrinhos,<br/>Distribuição de conteúdos·Plataforma digital",
+    "leftTitle": "Transforme meus webtoons em vídeos!",
+    "rightSubTitle": "Faça parte da equipe IDEACONCERT",
+    "rightTitle": "Com a nossa ajuda você chega mais longe,<br/>tente!"
+  }
+}
