@@ -1,14 +1,12 @@
 <template>
   <div class="content__viewer bg__gray">
     <div class="container">
-      <h2 class="content__title" v-html="t('tech.viewerTItle')"></h2>
+      <h2 class="content__title">{{ t('tech.viewerTItle') }}</h2>
       <p class="content__subtitle" v-html="t('tech.viewerText')"></p>
       <div class="content__notice">
-        <a
-          style="color: white; font-family: NotoSans"
-          href="http://222.239.218.187:5009"
-          v-html="t('tech.translateBtn')"
-        ></a>
+        <a style="color: white; font-family: NotoSans" href="http://222.239.218.187:5009">{{
+          t('tech.translateBtn')
+        }}</a>
       </div>
       <div class="viewer__images">
         <ul class="viewer__process">
@@ -29,7 +27,7 @@
           <li class="process process3 shadow">
             <div class="process__image"></div>
             <div class="process__text">
-              <span v-html="t('tech.viewerBox03')"></span>
+              <span>{{ t('tech.viewerBox03') }}</span>
             </div>
             <div class="peocess__number">3</div>
           </li>
@@ -43,7 +41,7 @@
         </ul>
         <div class="viewer__image">
           <div class="horizon"></div>
-          <p v-html="t('tech.viewerDesc')"></p>
+          <p>{{ t('tech.viewerDesc') }}</p>
         </div>
       </div>
     </div>

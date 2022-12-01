@@ -7,33 +7,33 @@
   <!-- department -->
   <section class="section" data-name="about_department">
     <div class="container_1076">
-      <p class="title" v-html="t('about.teams')"></p>
-      <p class="text" v-html="t('about.teamsDesc')"></p>
+      <p class="title">{{ t('about.teams') }}</p>
+      <p class="text">{{ t('about.teamsDesc') }}</p>
       <div class="content box_animation">
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title" v-html="t('about.teamBox01Title')"></p>
-          <p class="text" v-html="t('about.teamBox01Text')"></p>
+          <p class="title">{{ t('about.teamBox01Title') }}</p>
+          <p class="text">{{ t('about.teamBox01Text') }}</p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title" v-html="t('about.teamBox02Title')"></p>
-          <p class="text" v-html="t('about.teamBox02Text')"></p>
+          <p class="title">{{ t('about.teamBox02Title') }}</p>
+          <p class="text">{{ t('about.teamBox02Text') }}</p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title" v-html="t('about.teamBox03Title')"></p>
-          <p class="text" v-html="t('about.teamBox03Text')"></p>
+          <p class="title">{{ t('about.teamBox03Title') }}</p>
+          <p class="text">{{ t('about.teamBox03Text') }}</p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title" v-html="t('about.teamBox04Title')"></p>
-          <p class="text" v-html="t('about.teamBox04Text')"></p>
+          <p class="title">{{ t('about.teamBox04Title') }}</p>
+          <p class="text">{{ t('about.teamBox04Text') }}</p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title" v-html="t('about.teamBox05Title')"></p>
-          <p class="text" v-html="t('about.teamBox05Text')"></p>
+          <p class="title">{{ t('about.teamBox05Title') }}</p>
+          <p class="text">{{ t('about.teamBox05Text') }}</p>
         </div>
       </div>
     </div>

@@ -2,8 +2,8 @@
   <!-- news -->
   <section id="about_news" class="section" data-name="about_news">
     <div class="container_1076">
-      <p class="title" v-html="t('about.news')"></p>
-      <p class="text" v-html="t('about.newsText')"></p>
+      <p class="title">{{ t('about.news') }}</p>
+      <p class="text">{{ t('about.newsText') }}</p>
       <div class="news_list_box">
         <div class="content news_content box_animation">
           <!-- item -->

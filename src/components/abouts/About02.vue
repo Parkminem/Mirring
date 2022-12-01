@@ -2,8 +2,8 @@
   <!-- history -->
   <section class="section" data-name="about_history">
     <div class="container_1358">
-      <p class="title" v-html="t('about.history')"></p>
-      <p class="text" v-html="t('about.teamsDesc')"></p>
+      <p class="title">{{ t('about.history') }}</p>
+      <p class="text">{{ t('about.historyDesc') }}</p>
       <div class="history_area">
         <!-- item -->
 

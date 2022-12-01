@@ -25,9 +25,9 @@
             alt="character_contact"
           />
           <div class="box">
-            <p class="sub_title" v-html="t('common.banner.leftSubTitle')"></p>
-            <p class="title" v-html="t('common.banner.leftTitle')"></p>
-            <a class="quick_move" href="/contact" v-html="t('common.button.contactLink')"></a>
+            <p class="sub_title">{{ t('common.banner.leftSubTitle') }}</p>
+            <p class="title">{{ t('common.banner.leftTitle') }}</p>
+            <a class="quick_move" href="/contact">{{ t('common.button.contactLink') }}</a>
           </div>
         </div>
         <div
@@ -36,9 +36,9 @@
           @mouseleave="actives.careersActive = false"
         >
           <div class="box">
-            <p class="sub_title" v-html="t('common.banner.rightSubTitle')"></p>
-            <p class="title" v-html="t('common.banner.rightTitle')"></p>
-            <a class="quick_move" href="/careers" v-html="t('common.button.careersLink')"></a>
+            <p class="sub_title">{{ t('common.banner.rightSubTitle') }}</p>
+            <p class="title">{{ t('common.banner.rightTitle') }}</p>
+            <a class="quick_move" href="/careers">{{ t('common.button.careersLink') }}</a>
           </div>
           <img
             class="character"
