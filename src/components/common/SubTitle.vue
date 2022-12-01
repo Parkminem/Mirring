@@ -5,13 +5,9 @@
     :style="{ backgroundImage: `url(${bg})` }"
   >
     <div class="container_1076">
-      <p class="title">
-        {{ title }}
-      </p>
+      <p class="title" v-html="title"></p>
       <p class="sub_title">{{ subTitle }}</p>
-      <p class="text">
-        {{ text }}
-      </p>
+      <p class="text" v-html="text"></p>
     </div>
   </section>
 </template>

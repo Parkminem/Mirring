@@ -4,108 +4,96 @@
     <section class="section" data-name="contact_question">
       <p class="bg_text">Q&amp;A</p>
       <div class="container_1076">
-        <p class="title">
-          아이디어 콘서트에<br />
-          궁금한 점이 있으신가요?
-        </p>
-        <p class="text">
-          문의 글을 작성해주시면 작성한 메일 주소로<br />
-          빠른 시일 내에 답변 드리겠습니다.
-        </p>
-        <a class="company_profile" href="https://makevu.me/d355cee78b" target="_blank">회사소개서 보기 &gt;</a>
+        <p class="title" v-html="t('contact.qnaTitle')"></p>
+        <p class="text" v-html="t('contact.qnaText')"></p>
+        <a class="company_profile" href="https://makevu.me/d355cee78b" target="_blank"
+          >{{ t('contact.qnaLink') }} &gt;</a
+        >
         <div class="question_box">
           <div class="question_form">
-            <label class="title">문의유형 *</label>
-            <!-- <select id="select_question_type" name="question_type_pk" class="question_select" data-name="문의유형">
-              <option value="0" selected="">문의유형을 선택하세요.</option>
-              <option value="1">데이터 가공</option>
-              <option value="2">사업 제휴 및 제안</option>
-              <option value="3">웹툰, 콘텐츠 관련</option>
-              <option value="4">채용관련</option>
-              <option value="5">기타</option>
-            </select> -->
+            <label class="title">{{ t('contact.type') }} *</label>
             <div class="animation_question_select_box">
               <ul
                 :class="[selectState ? ['animation_question_select', 'active'] : 'animation_question_select']"
                 @click="openSelect"
               >
-                <li data-value="0" @click="type = 0" class="placeholder active">문의유형을 선택하세요.</li>
-                <li data-value="1" @click="type = 1">데이터 가공</li>
-                <li data-value="2" @click="type = 2">사업 제휴 및 제안</li>
-                <li data-value="3" @click="type = 3">웹툰, 콘텐츠 관련</li>
-                <li data-value="4" @click="type = 4">채용관련</li>
-                <li data-value="5" @click="type = 5">기타</li>
+                <li data-value="0" @click="type = 0" class="placeholder active">{{ t('contact.typePlaceHolder') }}</li>
+                <li data-value="1" @click="type = 1">{{ t('contact.type01') }}</li>
+                <li data-value="2" @click="type = 2">{{ t('contact.type02') }}</li>
+                <li data-value="3" @click="type = 3">{{ t('contact.type03') }}</li>
+                <li data-value="4" @click="type = 4">{{ t('contact.type04') }}</li>
+                <li data-value="5" @click="type = 5">{{ t('contact.type05') }}</li>
               </ul>
             </div>
           </div>
           <div class="question_form">
-            <label class="title">이름 *</label>
+            <label class="title">{{ t('contact.name') }} *</label>
             <input
               id="name"
               name="name"
               class="question_input"
               type="text"
-              placeholder="담당자 성함을 입력하세요."
+              :placeholder="t('contact.namePlaceHolder')"
               data-name="이름"
               v-model="name"
             />
           </div>
           <div class="question_form">
-            <label class="title">회사명</label>
+            <label class="title">{{ t('contact.company') }}</label>
             <input
               id="company"
               name="company"
               class="question_input"
               type="text"
-              placeholder="회사명을 입력하세요."
+              :placeholder="t('contact.companyPlaceHolder')"
               data-name="회사명"
               v-model="company"
             />
           </div>
           <div class="question_form">
-            <label class="title">부서/직급</label>
+            <label class="title">{{ t('contact.team') }}</label>
             <input
               id="department_position"
               name="department_position"
               class="question_input"
               type="text"
-              placeholder="부서/직급을 입력하세요."
+              :placeholder="t('contact.teamPlaceHolder')"
               data-name="부서/직급"
               v-model="team"
             />
           </div>
           <div class="question_form">
-            <label class="title">연락처 *</label>
+            <label class="title">{{ t('contact.tel') }} *</label>
             <input
               id="phone"
               name="phone"
               class="question_input"
               type="text"
-              placeholder="연락처를 '-' 없이 입력하세요."
+              :placeholder="t('contact.telPlaceHolder')"
               data-name="연락처"
               v-model="tel"
               @keydown="testTel"
             />
           </div>
           <div class="question_form">
-            <label class="title">E-mail *</label>
+            <label class="title">{{ t('contact.mail') }} *</label>
             <input
               id="email"
               name="email"
               class="question_input"
               type="text"
-              placeholder="E-mail 을 입력하세요."
+              :placeholder="t('contact.mailPlaceHolder')"
               data-name="E-mail"
               v-model="email"
             />
           </div>
           <div class="question_form last">
-            <label class="title">문의내용 *</label>
+            <label class="title">{{ t('contact.desc') }} *</label>
             <textarea
               id="content"
               name="content"
               class="question_textarea"
-              placeholder="문의하실 내용을 입력하세요."
+              :placeholder="t('contact.descPlaceHolder')"
               data-name="문의내용"
               v-model="desc"
             ></textarea>
@@ -113,10 +101,10 @@
           <div class="question_check">
             <input type="checkbox" id="privacy_agree" data-name="개인정보처리방침" v-model="checkPrivacy" />
             <label class="label" for="privacy_agree"></label>
-            <label class="text" for="privacy_agree">개인정보처리방침에 동의합니다.</label>
-            <b class="bold_text" @click="modalStore.infoModalOpen">전문보기</b>
+            <label class="text" for="privacy_agree">{{ t('contact.privacyCheck') }}</label>
+            <b class="bold_text" @click="modalStore.infoModalOpen">{{ t('contact.privacyLink') }}</b>
           </div>
-          <input type="button" class="btn btn_hover" value="문의 신청하기" @click="sendForm" />
+          <input type="button" class="btn btn_hover" :value="t('common.button.inquery')" @click="sendForm" />
         </div>
       </div>
     </section>
@@ -127,6 +115,8 @@ import { ref, onMounted } from 'vue';
 import clickEvent from '../../util/clickEvent';
 import { useModalStore } from '../../store/modal';
 import { useFormStore } from '../../store/form';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const modalStore = useModalStore();
 const formStore = useFormStore();
@@ -134,6 +124,8 @@ const formStore = useFormStore();
 const mailReg = new RegExp(
   "([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])"
 );
+const numReg = new RegExp(/[0-9]/g);
+const chaReg = new RegExp(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g);
 const selectState = ref(false);
 let type = ref('');
 const name = ref('');
@@ -154,7 +146,7 @@ function sendForm() {
     alert('문의유형을 입력해주세요.');
     return false;
   }
-  if (name.value.length < 1) {
+  if (name.value.length < 1 || numReg.test(name.value) || chaReg.test(name.value)) {
     alert('이름을 입력해주세요.');
     return false;
   }
@@ -185,7 +177,6 @@ function sendForm() {
     desc: desc.value,
     checkPrivacy: checkPrivacy.value
   };
-  console.log(formData);
 
   //폼 데이터 전송 액션 사용해야함
 }

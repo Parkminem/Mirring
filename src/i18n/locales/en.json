@@ -373,5 +373,13 @@
     "community04Text": "You can work self-regulating but with responsibility at the same time.",
     "community05Title": "Communication and Mutual Respect",
     "community05Text": "Openly communicate with a respectful attitude."
+  },
+  "alert": {
+    "privacy": "Please agree to the Privacy Policy",
+    "type": "Please enter the inquiry type",
+    "name": "Please input your name",
+    "tel": "Please enter your contact information",
+    "mail": "Please enter your e-mail",
+    "desc": "Please enter your inquiry details"
   }
 }

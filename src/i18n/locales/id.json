@@ -373,5 +373,13 @@
     "community04Text": "Anda dapat bekerja mengatur diri sendiri tetapi dengan rasa tanggung jawab pada saat yang bersamaan.",
     "community05Title": "komunikasi dan Saling Menghargai",
     "community05Text": "Terbuka atas semua komunikasi dan sikap saling menghargai satu sama lain."
+  },
+  "alert": {
+    "privacy": "Harap setujui Kebijakan Privasi",
+    "type": "Harap masukkan jenis pertanyaan",
+    "name": "Silakan masukkan nama Anda",
+    "tel": "Silakan masukkan informasi kontak Anda",
+    "mail": "Masukkan email Anda",
+    "desc": "Silakan masukkan detail pertanyaan Anda"
   }
 }
