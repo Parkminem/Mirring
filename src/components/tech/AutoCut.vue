@@ -2,7 +2,7 @@
   <div class="catroon__cut bg__gray">
     <div class="container">
       <h2 class="content__title">{{ t('tech.separateTitle') }}</h2>
-      <p class="content__subtitle" v-html="t('tech.separateText').replace('\n', '<br>')"></p>
+      <p class="content__subtitle" v-html="t('tech.separateText')"></p>
 
       <div class="cut__images">
         <div id="first__notice" class="content__notice">{{ t('tech.separateBtn') }}</div>
@@ -21,14 +21,14 @@
           <li class="process process3 shadow">
             <div class="process__image"></div>
             <div class="process__text">
-              <span v-html="t('tech.separateBox03').replace('\n', '<br>')"></span>
+              <span v-html="t('tech.separateBox03')"></span>
             </div>
             <div class="peocess__number">3</div>
           </li>
           <li class="process process4 shadow">
             <div class="process__image"></div>
             <div class="process__text">
-              <span v-html="t('tech.separateBox04').replace('\n', '<br>')"></span>
+              <span v-html="t('tech.separateBox04')"></span>
             </div>
             <div class="peocess__number">4</div>
           </li>
