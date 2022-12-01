@@ -81,8 +81,8 @@ background-position: center;}
 	.section[data-name="careers_support"] .content .left_box .title {font-size: 12px; margin-bottom: 10px; text-align: center;}
 	.section[data-name="careers_support"] .content .left_box .text {font-size: 12px; text-align: center; margin: 0;}
 	.section[data-name="careers_support"] .content .left_box .contact_info {display: none;}
-	.section[data-name="careers_support"] .content .contact_info.mobile {display: block; text-align: center; margin-top: 35px;}
-	.section[data-name="careers_support"] .content .contact_info.mobile b {display: block; margin-bottom: 5px;}
+	.section[data-name="careers_support"] .content .contact_info.mobile {display: block; text-align: center; margin-top: 35px; font-size: 12px; font-family: 'Noto-Sans';}
+	.section[data-name="careers_support"] .content .contact_info.mobile b {display: block; margin-bottom: 5px; font-weight: 700;}
 	.section[data-name="careers_support"] .content .contact_info.mobile .tel {margin-bottom: 30px;}
 	.section[data-name="careers_support"] .content .contact_info.mobile .page_move {width: 227px; height: 47px; margin: 25px auto 0 auto; font-size: 15px;}
 	.section[data-name="careers_support"] .content .right_box {margin-top: 35px; flex-wrap:wrap;}

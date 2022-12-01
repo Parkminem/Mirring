@@ -1,7 +1,7 @@
 <template>
   <section class="section" data-name="careers_office">
     <div class="container_1076">
-      <p class="title">업무공간</p>
+      <p class="title">{{ t('careers.place') }}</p>
       <div class="swiper_area">
         <ul class="swiper_menu">
           <li :class="{ active: pangyo }" data-name="pangyo" @click="activeTab(true, false, false)">판교</li>
@@ -121,6 +121,8 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const pangyo = ref(true);
 const yangjae = ref(false);
 const jeju = ref(false);

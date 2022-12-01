@@ -143,27 +143,30 @@ onMounted(() => {
 //데이터 전송
 function sendForm() {
   if (type.value < 1) {
-    alert('문의유형을 입력해주세요.');
+    alert(t('alert.type'));
     return false;
   }
   if (name.value.length < 1 || numReg.test(name.value) || chaReg.test(name.value)) {
-    alert('이름을 입력해주세요.');
+    alert(t('alert.name'));
+    name.value = '';
     return false;
   }
-  if (tel.value == '') {
-    alert('연락처를 입력해주세요.');
+  if (tel.value == '' || !numReg.test(tel.value)) {
+    alert(t('alert.tel'));
+    tel.value = '';
     return false;
   }
   if (!mailReg.test(email.value)) {
-    alert('이메일을 입력해주세요.');
+    alert(t('alert.mail'));
+    email.value = '';
     return false;
   }
   if (desc.value == '') {
-    alert('문의내용을 입력해주세요.');
+    alert(t('alert.desc'));
     return false;
   }
   if (!checkPrivacy.value) {
-    alert('개인정보처리방침에 동의해주세요.');
+    alert(t('alert.privacy'));
     return false;
   }
   tel.value = tel.value.replace(/[^0-9]/g, '');

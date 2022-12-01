@@ -1,8 +1,8 @@
 <template>
   <section class="section" data-name="business_portfolio">
     <div class="container_1076">
-      <p class="title">포트폴리오</p>
-      <p class="text">다양한 콘텐츠를 만나보세요.</p>
+      <p class="title">{{ t('business.portfolio') }}</p>
+      <p class="text">{{ t('business.portfolioText') }}</p>
       <div class="portfolio_box">
         <div class="youtube_area">
           <iframe
@@ -350,9 +350,13 @@
         </div>
         <!-- slide -->
         <a class="page_move" href="https://www.youtube.com/channel/UChWHJjTGDc4314owWJ7KGCw" target="_blank"
-          >유튜브채널 바로가기 &gt;</a
+          >{{ t('common.button.youtubeLink') }} &gt;</a
         >
       </div>
     </div>
   </section>
 </template>
+<script setup>
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+</script>

@@ -27,7 +27,7 @@ background-image: url('/assets/images/common/arrow_up_gray.png');
 /* #footer .family_site .trick_box .link_box li {} */
 #footer .family_site .trick_box .link_box li a {display: flex; opacity: 0; align-items: center; padding: 0 10px; height: 32px; color: #d2d2d2; font-family: 'Noto Sans', sans-serif; font-size: 14px;}
 #footer .family_site .trick_box:hover {background-color: #fff;}
-#footer .family_site .trick_box:hover .link_box {height: 64px;}
+#footer .family_site .trick_box:hover .link_box {height: 32px;}
 #footer .family_site .trick_box:hover .link_box li a {opacity: 1; color:#292929;}
 #footer .family_site .trick_box:hover .hover_box span {color:#292929;}
 #footer .family_site .trick_box:hover .hover_box .arrow {background-image: url('/assets/images/common/arrow_up_black.png');}

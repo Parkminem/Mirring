@@ -1,8 +1,8 @@
 <template>
   <section class="section" data-name="contact_address">
     <div class="container_1076">
-      <p class="title">찾아오시는 길</p>
-      <p class="sub_title">아이디어 콘서트의 회사 위치입니다.</p>
+      <p class="title">{{ t('contact.mapTitle') }}</p>
+      <p class="sub_title">{{ t('contact.mapDesc') }}</p>
       <div class="content">
         <div class="address_box">
           <div class="kakao_map" id="map01"></div>
@@ -51,7 +51,10 @@
   </section>
 </template>
 <script setup>
+//지도 부분 다 data로 교체해야함!!!!!!!!!!!
 import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 onMounted(() => {
   const script = document.createElement('script');
 
