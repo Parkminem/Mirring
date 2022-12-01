@@ -20,10 +20,12 @@ import Translate from '../components/tech/Translate.vue';
 import ContentViewer from '../components/tech/Contentviewer.vue';
 import Damda from '../components/tech/Damda.vue';
 import Toonibe from '../components/tech/Toonibe.vue';
+import { useI18n } from 'vue-i18n';
 
-const title = `Technology That\nConnect The Contents`;
-const subTitle = '콘텐츠x문화기술이 만나 새로움이 창조됩니다';
-const text = `아이디어 콘서트는 꾸준히 웹툰과 만화를 위한 기술들을 연구하고 있습니다.\n 콘텐츠와 기술이 만나 더 큰 미래를 꿈꿉니다.\n기술을 통해 더 즐거워진 콘텐츠를 만납니다.`;
+const { t } = useI18n();
+const title = t('tech.mainTitle');
+const subTitle = t('tech.subTitle');
+const text = t('tech.mainText');
 const bg = '/assets/images/ourTech/banner.png';
 </script>
 

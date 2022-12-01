@@ -1,13 +1,10 @@
 <template>
   <div class="damda">
     <div class="container">
-      <h2 class="content__title">담다 - 매일 나의 일상을 4컷으로 정리하는 사진일기 APP</h2>
-      <p class="content__subtitle">
-        사진 자판기에서만 찍던 네 컷을 더 쉽고 예쁘게 즐겨보세요.<br />
-        다양한 꾸미기 스티커와 템플릿을 제공합니다.
-      </p>
+      <h2 class="content__title" v-html="t('tech.damdaTitle')"></h2>
+      <p class="content__subtitle" v-html="t('tech.damdaText')"></p>
       <div class="content__notice">
-        <a style="color: white; font-family: NotoSans" href="https://www.hidamda.com">담다 바로가기</a>
+        <a style="color: white; font-family: NotoSans" href="https://www.hidamda.com" v-html="t('tech.damdaBtn')"></a>
       </div>
       <div class="damda__images">
         <div class="main__image"></div>
@@ -17,3 +14,8 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

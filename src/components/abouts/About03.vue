@@ -2,8 +2,8 @@
   <!-- news -->
   <section id="about_news" class="section" data-name="about_news">
     <div class="container_1076">
-      <p class="title">소식</p>
-      <p class="text">아이디어 콘서트의 소식을 만나보세요.</p>
+      <p class="title" v-html="t('about.news')"></p>
+      <p class="text" v-html="t('about.newsText')"></p>
       <div class="news_list_box">
         <div class="content news_content box_animation">
           <!-- item -->
@@ -172,5 +172,9 @@
   </section>
   <!-- //news -->
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 <style></style>

@@ -25,9 +25,9 @@
             alt="character_contact"
           />
           <div class="box">
-            <p class="sub_title">웹툰제작·만화출판사, 콘텐츠유통·플랫폼사</p>
-            <p class="title">나의 웹툰이 영상으로 실현됩니다!</p>
-            <a class="quick_move" href="/contact">문의하기</a>
+            <p class="sub_title" v-html="t('common.banner.leftSubTitle')"></p>
+            <p class="title" v-html="t('common.banner.leftTitle')"></p>
+            <a class="quick_move" href="/contact" v-html="t('common.button.contactLink')"></a>
           </div>
         </div>
         <div
@@ -36,9 +36,9 @@
           @mouseleave="actives.careersActive = false"
         >
           <div class="box">
-            <p class="sub_title">아이디어 콘서트와 함께할 인재를 찾습니다</p>
-            <p class="title">함께 성장할 수 있는곳, 지금 도전하세요!</p>
-            <a class="quick_move" href="/careers">지원하기</a>
+            <p class="sub_title" v-html="t('common.banner.rightSubTitle')"></p>
+            <p class="title" v-html="t('common.banner.rightTitle')"></p>
+            <a class="quick_move" href="/careers" v-html="t('common.button.careersLink')"></a>
           </div>
           <img
             class="character"
@@ -53,6 +53,9 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const actives = ref({
   contactActive: false,

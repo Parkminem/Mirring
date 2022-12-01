@@ -1,14 +1,15 @@
 <template>
   <div class="cartoon__translate">
     <div class="container">
-      <h2 class="content__title">웹툰·만화 번역기술</h2>
-      <p id="translate__subtitle" class="content__subtitle">
-        만화의 말풍선내 텍스트 이미지를 추출하여 글자를 출력하고<br />
-        AI번역을 한 후 해당 텍스트를 말풍선내에 재배치하는 기술입니다.
-      </p>
+      <h2 class="content__title" v-html="t('tech.translateTitle')"></h2>
+      <p id="translate__subtitle" class="content__subtitle" v-html="t('tech.translateText')"></p>
       <div class="content__notice">
         <!-- 2021년 상용화 준비 중 -->
-        <a style="color: white; font-family: NotoSans" href="http://www.toontra.com">웹툰·만화 번역기술 보러가기</a>
+        <a
+          style="color: white; font-family: NotoSans"
+          href="http://www.toontra.com"
+          v-html="t('tech.translateBtn')"
+        ></a>
       </div>
       <div class="translate__main"></div>
       <div class="slide__container">
@@ -27,3 +28,8 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

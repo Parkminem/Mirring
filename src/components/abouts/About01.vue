@@ -7,38 +7,42 @@
   <!-- department -->
   <section class="section" data-name="about_department">
     <div class="container_1076">
-      <p class="title">부서 현황</p>
-      <p class="text">여러 부서들이 협업해나가며 성장하고 있습니다.</p>
+      <p class="title" v-html="t('about.teams')"></p>
+      <p class="text" v-html="t('about.teamsDesc')"></p>
       <div class="content box_animation">
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title">기업부설연구소</p>
-          <p class="text">콘텐츠 저작기술을 연구하며 플랫폼과 앱을 개발합니다.</p>
+          <p class="title" v-html="t('about.teamBox01Title')"></p>
+          <p class="text" v-html="t('about.teamBox01Text')"></p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title">콘텐츠창작연구소</p>
-          <p class="text">웹툰, 만화, 그림동화, 이미지를 영상으로 연출합니다.</p>
+          <p class="title" v-html="t('about.teamBox02Title')"></p>
+          <p class="text" v-html="t('about.teamBox02Text')"></p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title">디자인팀</p>
-          <p class="text">사용자 경험을 디자인하며 회사의 가치를 디자인합니다.</p>
+          <p class="title" v-html="t('about.teamBox03Title')"></p>
+          <p class="text" v-html="t('about.teamBox03Text')"></p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title">기획/마케팅팀</p>
-          <p class="text">확실한 사업 목표를 가지고 사업기획 및 영업활동을 합니다.</p>
+          <p class="title" v-html="t('about.teamBox04Title')"></p>
+          <p class="text" v-html="t('about.teamBox04Text')"></p>
         </div>
         <div class="box" style="opacity: 1">
           <div class="round"></div>
-          <p class="title">경영지원팀</p>
-          <p class="text">회사의 경영에 필요한 업무를 든든하게 지원합니다.</p>
+          <p class="title" v-html="t('about.teamBox05Title')"></p>
+          <p class="text" v-html="t('about.teamBox05Text')"></p>
         </div>
       </div>
     </div>
   </section>
   <!-- //department -->
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 <style scoped></style>

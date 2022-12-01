@@ -2,8 +2,8 @@
   <!-- history -->
   <section class="section" data-name="about_history">
     <div class="container_1358">
-      <p class="title">연혁</p>
-      <p class="text">아이디어 콘서트가 걸어온 연혁 입니다.</p>
+      <p class="title" v-html="t('about.history')"></p>
+      <p class="text" v-html="t('about.teamsDesc')"></p>
       <div class="history_area">
         <!-- item -->
 
@@ -232,5 +232,9 @@
   </section>
   <!-- //history -->
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 <style></style>

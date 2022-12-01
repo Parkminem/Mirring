@@ -2,8 +2,8 @@
   <!-- partner -->
   <section class="section" data-name="about_partner">
     <div class="container_1076">
-      <p class="title">파트너사</p>
-      <p class="text">아이디어 콘서트의 협력사 입니다.</p>
+      <p class="title" v-html="t('about.partner')"></p>
+      <p class="text" v-html="t('about.partnerText')"></p>
       <div class="content">
         <!-- item -->
         <div
@@ -427,5 +427,10 @@
   </section>
   <!-- //partner -->
 </template>
-<script setup></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
+
 <style></style>
