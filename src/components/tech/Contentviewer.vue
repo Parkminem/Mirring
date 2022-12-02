@@ -4,9 +4,7 @@
       <h2 class="content__title">{{ t('tech.viewerTItle') }}</h2>
       <p class="content__subtitle" v-html="t('tech.viewerText')"></p>
       <div class="content__notice">
-        <a style="color: white; font-family: NotoSans" href="http://222.239.218.187:5009">{{
-          t('tech.translateBtn')
-        }}</a>
+        <a style="color: white; font-family: NotoSans" href="http://222.239.218.187:5009">{{ t('tech.viewerBtn') }}</a>
       </div>
       <div class="viewer__images">
         <ul class="viewer__process">

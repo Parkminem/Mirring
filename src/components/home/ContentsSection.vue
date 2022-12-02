@@ -122,7 +122,7 @@
         role="button"
         aria-label="Next slide"
       />
-      <router-link to="" class="more">{{ t('common.button.more') }} &gt;</router-link>
+      <a href="#" class="more" @click.prevent="goNews">{{ t('common.button.more') }} &gt;</a>
       <router-link to="/about" class="page_move">{{ t('common.button.aboutLink') }} &gt;</router-link>
     </div>
   </section>
@@ -134,7 +134,10 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const { t } = useI18n();
+
 const swiper = ref(null);
 const breakPoints = {
   1024: {
@@ -146,6 +149,15 @@ const breakPoints = {
 let onSwiper = (swiperInstance) => {
   swiper.value = swiperInstance;
 };
+
+//더보기 클릭 시 뉴스 컴포넌트로 이동
+function goNews() {
+  router.push({
+    path: '/about',
+    query: { section: 'about_news' },
+    hash: '#about_news'
+  });
+}
 onMounted(() => {
   const box = $('.swiper').children();
   scrollEvent.settingBoxAnimation(box);

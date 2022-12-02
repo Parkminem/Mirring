@@ -18,6 +18,7 @@ import { useModalStore } from '../store/modal';
 const modalStore = useModalStore();
 const { infoModalState } = storeToRefs(modalStore);
 
+//모달창 on/off
 watch(infoModalState, (newInfoModalState) => {
   const body = document.querySelector('body');
   if (newInfoModalState) body.style.overflow = 'hidden';

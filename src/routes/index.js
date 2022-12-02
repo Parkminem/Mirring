@@ -48,7 +48,13 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  //뒤로가기 시 이동 전 스크롤로 뒤로가게 됨, 그 이외는 스크롤탑 0
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition;
+    else if (to.hash) return { el: to.hash };
+    else return { top: 0 };
+  }
 });
 
 export default router;

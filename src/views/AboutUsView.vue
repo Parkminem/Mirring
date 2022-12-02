@@ -19,7 +19,6 @@ import QuickBanner from '../components/common/QuickBanner.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-
 const title = t('about.mainTitle');
 const subTitle = t('about.subTitle');
 const text = t('about.mainText');
