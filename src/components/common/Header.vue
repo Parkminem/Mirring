@@ -120,9 +120,7 @@ const handleHeader = () => {
   });
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
-    if (scrollTop <= 100) {
-      scrollActive.value = false;
-    }
+    if (scrollTop <= 100) scrollActive.value = false;
   });
 };
 
