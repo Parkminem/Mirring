@@ -113,16 +113,21 @@ const changeActives = ref({
 });
 const scrollActive = ref(false);
 
-onMounted(() => {
+const handleHeader = () => {
   document.addEventListener('wheel', (e) => {
     const scrollDirection = e.deltaY;
-    if (scrollDirection > 0) {
-      scrollActive.value = true;
-    } else {
+    scrollDirection > 0 ? (scrollActive.value = true) : (scrollActive.value = false);
+  });
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    if (scrollTop <= 100) {
       scrollActive.value = false;
     }
   });
-});
+};
+
+onMounted(handleHeader);
+
 // 언어를 선택하는 함수
 const changeLanguage = (language) => {
   for (let active in changeActives.value) {
