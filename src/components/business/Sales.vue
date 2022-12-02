@@ -41,7 +41,7 @@
         <a
           class="page_move"
           style="width: 248px; height: 46px; margin-top: 50px"
-          href="http://ko.kwavewebtoon.com"
+          href="https://makevu.me/d355cee78b"
           target="_blank"
           >{{ t('common.button.brochure') }}</a
         >

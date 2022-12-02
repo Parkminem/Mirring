@@ -6,7 +6,7 @@ import en from './locales/en.json';
 import id from './locales/id.json';
 
 const i18n = createI18n({
-  locale: 'kr',
+  locale: localStorage.getItem('locale') ?? 'kr',
   legacy: false,
   allowComposition: true,
   fallbackLocale: 'en',

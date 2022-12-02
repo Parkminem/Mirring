@@ -15,7 +15,7 @@
               <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
             </li>
           </ul>
-          <ul class="bold_text_box box_animation">
+          <ul :class="['bold_text_box', 'box_animation', lang]">
             <li style="opacity: 1">{{ t('business.creator') }}</li>
             <li style="opacity: 1">{{ t('business.tool') }}</li>
             <li style="opacity: 1">{{ t('business.platforms') }}</li>
@@ -35,7 +35,7 @@
           </li>
         </ul>
         <div class="white_box_foot">
-          <ul class="bold_text_box box_animation">
+          <ul :class="['bold_text_box', 'box_animation', lang]">
             <li style="opacity: 1">{{ t('business.ip') }}</li>
             <li style="opacity: 1">{{ t('business.makingMovie') }}</li>
             <li style="opacity: 1">{{ t('business.sellingMovie') }}</li>
@@ -58,12 +58,18 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import scrollEvent from '../../util/scrollEvent';
 import { useI18n } from 'vue-i18n';
+import i18n from '../../i18n';
 const { t } = useI18n();
+const lang = i18n.global.locale;
 
 const boxes = ref();
+
+watch(lang, (newLang) => {
+  lang = newLang;
+});
 
 onMounted(() => {
   const boxesVal = boxes.value;

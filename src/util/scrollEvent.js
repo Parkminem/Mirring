@@ -109,7 +109,6 @@ function settingNavigationByScroll() {
   const route = useRoute();
   if (route.path == '/') {
     $(window).on('scroll', function () {
-      console.log('scroll');
       let scroll_top = $(this).scrollTop();
       let i = '';
       if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;

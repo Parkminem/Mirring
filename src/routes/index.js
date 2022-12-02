@@ -11,44 +11,44 @@ import OurTechView from '../views/OurTechView.vue';
 const routes = [
   {
     path: '/',
-    name: '/layout',
+    name: 'layout',
     component: Layout,
     children: [
       {
         path: '/',
-        component: MainView,
+        component: MainView
       },
       {
         path: '/about',
-        component: AboutUsView,
+        component: AboutUsView
       },
       {
         path: '/business',
-        component: BusinessView,
+        component: BusinessView
       },
       {
         path: '/careers',
-        component: CareersView,
+        component: CareersView
       },
       {
         path: '/contact',
-        component: ContactView,
+        component: ContactView
       },
       {
         path: '/contents',
-        component: ContentsView,
+        component: ContentsView
       },
       {
         path: '/tech',
-        component: OurTechView,
-      },
-    ],
-  },
+        component: OurTechView
+      }
+    ]
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 });
 
 export default router;

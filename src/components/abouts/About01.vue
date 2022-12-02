@@ -8,7 +8,7 @@
   <section class="section" data-name="about_department">
     <div class="container_1076">
       <p class="title">{{ t('about.teams') }}</p>
-      <p class="text">{{ t('about.teamsDesc') }}</p>
+      <p class="text" v-html="t('about.teamsDesc')"></p>
       <div class="content box_animation">
         <div class="box" style="opacity: 1">
           <div class="round"></div>

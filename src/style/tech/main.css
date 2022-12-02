@@ -7,105 +7,6 @@
     max-width: 1076px;
     margin: 0 auto;
 }
-/* header h1 .logo { */
-/*     display: block; */
-/*     background: url("/assets/images/ourTech/111 copy@2x.png") no-repeat; */
-/*     background-size : cover; */
-/*     background-position: center; */
-/*     width: 138px; */
-/*     height: 38px; */
-/* } */
-
-/* header .main__menu { */
-/*     display: flex; */
-/*     align-items: flex-end; */
-    
-/* } */
-
-/* header .main__menu li { */
-/*     margin-right: 58px; */
-/*     line-height: 24px; */
-/* } */
-
-/* header .main__menu li a { */
-/*     font-family: NotoSans; */
-/*     font-size: 1x; */
-/*     font-weight: bold; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     letter-spacing: normal; */
-/*     color: #292929; */
-/* } */
-
-/* header .main__menu li a:hover { */
-/*     font-family: NotoSans; */
-/*     font-size: 1x; */
-/*     font-weight: bold; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.33; */
-/*     letter-spacing: normal; */
-/*     color: #ec6c00; */
-/* } */
-
-/* header .main__menu li:last-child { */
-/*     display: flex; */
-/* } */
-
-/* header .main__menu li:last-child a { */
-/*     margin-right: 58px; */
-/* } */
-
-/* header .langBtn { */
-/*     display: flex; */
-/*     height: 25px; */
-/*     font-size: 1x; */
-/*     font-weight: bold; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     color: #969696; */
-/*     border: solid 1px #969696; */
-/*     padding: 3px 11px; */
-/*     border-radius: 15px; */
-/*     box-sizing: border-box; */
-/* } */
-
-/* header .langBtn span { */
-/*     display: inline-block; */
-/*     margin-right: 4px; */
-/* } */
-
-/* header .toggle { */
-/*     display: none; */
-/*     font-size: 1rem; */
-/* } */
-
-/* #langBtn { */
-/*     display: inline-block; */
-/*     width: 49px; */
-/*     height: 25px; */
-/*     font-family: NotoSans; */
-/*     font-size: 1x; */
-/*     font-weight: bold; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     text-align: left; */
-/*     color: #969696; */
-/*     border-radius: 15px; */
-/*     border: solid 1px #969696; */
-/*     background-color: #ffffff; */
-/*     padding-left: 7px; */
-/*     outline : none; */
-/*     cursor : pointer; */
-/* } */
-
-/* .on { */
-/*     display: block !important; */
-/* } */
 
 
 /*content*/
@@ -212,18 +113,21 @@
     color: #ffffff;
     margin-top: 15px;
 }
-
-.reditoon__image_kr {
-	padding-bottom: 41.8%;
-	margin-top: 70px;
-	background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴(국문).png") no-repeat;
-	background-position: center;
+.reditoon__image {
+   	padding-bottom: 41.8%;
+	margin-top: 70px; 
 }
-.reditoon__image_en {
-    padding-bottom: 41.8%;
-    margin-top: 70px;
-    background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") no-repeat;
-    background-position: center;
+.reditoon__image.kr {
+	background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴(국문).png") center center no-repeat ;
+}
+.reditoon__image.en {
+    background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat;
+}
+.reditoon__image.pt {
+    background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat;
+}
+.reditoon__image.id {
+    background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat;
 }
 
 .content .cut__images {
@@ -637,19 +541,18 @@ justify-content: center; */
    text-align: left;
 }
 
-.toonibe__text span {
+.toonibe__text .material-icons {
     display: inline-block;
     width: 10px;
     height: 8px;
     color: #969696;
-    
-
+    font-size: 18px;
 }
 
 .toonibe__text p {
     max-width: 475px;
     font-family: NotoSans;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -778,108 +681,3 @@ justify-content: center; */
     height: 150px;
     margin: 55px 0 43px 62px;
 }
-
-
-/*footer*/
-
-/* footer { */
-/*     background-color: #292929; */
-/*     font-family: 'Noto Sans', sans-serif; */
-/*     font-size: 1rem; */
-/*     font-weight: normal; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     color: #d2d2d2; */
-/* } */
-
-/* footer .container { */
-/*     padding: 22px 0 37.5px; */
-/*     position: relative; */
-/* } */
-
-/* footer .text__bold { */
-/*     font-family: 'Noto Sans', sans-serif; */
-/*     font-size: 1rem; */
-/*     font-weight: bold; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     color: #d2d2d2; */
-/* } */
-
-/* footer .company__address p { */
-/*     margin-top: 10px; */
-/* } */
-
-/* footer .contact { */
-/*     display: flex; */
-/*     margin-top: 10.5px; */
-/* } */
-
-/* footer .contact .tel { */
-/*     margin-right: 47px; */
-/* } */
-
-/* footer .contact span { */
-/*     margin-right: 9px; */
-/* } */
-
-/* footer .copyright { */
-/*     margin-top: 30px; */
-/* } */
-
-/* .family__site { */
-/*     display: flex; */
-/*     align-items: center; */
-/*     font-family: 'Noto Sans', sans-serif; */
-/*     font-size: 1rem; */
-/*     font-weight: normal; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     color: #d2d2d2; */
-/*     position: absolute; */
-/*     top: 51px; */
-/*     left: 100%; */
-/*     padding: 5px 12px 8px 17px; */
-/*     border: solid 2px #969696; */
-/*     width: 109px; */
-/* } */
-
-/* .family__site .site__up { */
-/*     margin-left: 24px; */
-/*     display: inline-block; */
-/*     width: 9px; */
-/*     height: 7px; */
-/*     color : #d2d2d2; */
-/* } */
-
-/* #site__group { */
-/*     position: absolute; */
-/*     top: 51px; */
-/*     left: 100%; */
-/*     width: 138px; */
-/*     height: 32px; */
-/*     border: solid 2px #969696; */
-/*     font-family: 'Noto Sans', sans-serif; */
-/*     font-size: 1x; */
-/*     font-weight: normal; */
-/*     font-stretch: normal; */
-/*     font-style: normal; */
-/*     line-height: 1.36; */
-/*     letter-spacing: normal; */
-/*     text-align: left; */
-/*     color: #d2d2d2; */
-/*     padding: 3px 0 3px 17px; */
-/*     box-sizing: border-box; */
-/*     background : transparent; */
-/*     outline : none; */
-/* } */
-
-/* #site__group option { */
-/*     color : black !important; */
-/* } */

@@ -36,10 +36,15 @@
             @click="settingHeaderChangeLanguage"
             @mouseleave="isActive = false"
           >
-            <li :class="{ active: changeActives.kr }" @click="changeLanguage('kr')">KR</li>
-            <li :class="{ active: changeActives.us }" @click="changeLanguage('us')">EN</li>
-            <li :class="{ active: changeActives.id }" @click="changeLanguage('id')">ID</li>
-            <li :class="{ active: changeActives.pt }" @click="changeLanguage('pt')">PT</li>
+            <li
+              :class="{ active: $i18n.locale == l }"
+              v-for="l in languages"
+              :key="l"
+              style="text-transform: uppercase"
+              @click="language = l"
+            >
+              {{ l }}
+            </li>
           </ul>
         </li>
       </ul>
@@ -83,10 +88,15 @@
               @click="settingHeaderChangeLanguage"
               @mouseleave="isActive = false"
             >
-              <li :class="{ active: changeActives.kr }" @click="changeLanguage('kr')">KR</li>
-              <li :class="{ active: changeActives.us }" @click="changeLanguage('us')">EN</li>
-              <li :class="{ active: changeActives.id }" @click="changeLanguage('id')">ID</li>
-              <li :class="{ active: changeActives.pt }" @click="changeLanguage('pt')">PT</li>
+              <li
+                :class="{ active: $i18n.locale == l }"
+                v-for="l in languages"
+                :key="l"
+                style="text-transform: uppercase"
+                @click="language = l"
+              >
+                {{ l }}
+              </li>
             </ul>
           </li>
         </ul>
@@ -97,20 +107,16 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import $ from 'jquery';
 import { useI18n } from 'vue-i18n';
-
+import i18n from '../../i18n/index';
 const { t } = useI18n();
+const languages = ['kr', 'en', 'id', 'pt'];
+const language = ref('');
 
-// changeLanguage에서 Active를 반영하기 위한 상태들
 const isActive = ref(false);
-const changeActives = ref({
-  kr: true,
-  us: false,
-  id: false,
-  pt: false
-});
+
 const scrollActive = ref(false);
 
 onMounted(() => {
@@ -123,15 +129,13 @@ onMounted(() => {
     }
   });
 });
-// 언어를 선택하는 함수
-const changeLanguage = (language) => {
-  for (let active in changeActives.value) {
-    if (changeActives.value[active] === true) {
-      changeActives.value[active] = false;
-    }
-  }
-  changeActives.value[language] = !changeActives.value[language];
-};
+
+//로컬스토리지에 언어 저장
+watch(language, (newLanguage) => {
+  localStorage.setItem('locale', newLanguage);
+  i18n.global.locale.value = newLanguage;
+  window.location.reload();
+});
 
 // 언어 토글(클릭하면 열리고 마우스가 벗어나면 사라지는 기능)
 const settingHeaderChangeLanguage = () => {

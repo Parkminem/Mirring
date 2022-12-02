@@ -89,7 +89,6 @@ background-position: center;}
 .section[data-name="business_cost"] .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 22px; line-height: 1.36; color:#292929; text-align: center;}
 .section[data-name="business_cost"] .text {font-family: 'Noto Sans', sans-serif; font-size: 16px; line-height: 1.75; color:#292929; margin-top: 10px; text-align: center;}
 .section[data-name="business_cost"] .content {margin: 60px 0;}
-.section[data-name="business_cost"] .content .white_box_head {}
 .section[data-name="business_cost"] .content .white_box_head .regular_text_box {display: flex; justify-content: center; margin-bottom: 14.4px;}
 .section[data-name="business_cost"] .content .white_box_head .regular_text_box li {font-family: 'Noto Sans', sans-serif; font-size: 16px; line-height: 1.38; color:#292929; margin-right: 307px;}
 .section[data-name="business_cost"] .content .white_box_head .regular_text_box li:last-child {margin-right: 0;}
@@ -100,9 +99,9 @@ background-position: center;}
 .section[data-name="business_cost"] .content .white_box_head .arrow_box p {font-family: 'Noto Sans', sans-serif; font-size: 16px; line-height: 1.38; color:#292929; text-align: center; margin-bottom: 14.4px;}
 .section[data-name="business_cost"] .content .white_box_head .bold_text_box {display: flex; justify-content: center; margin-bottom: 21px;}
 .section[data-name="business_cost"] .content .white_box_head .bold_text_box li {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; margin-right: 326px;}
-.section[data-name="business_cost"] .content .white_box_head .bold_text_box li:last-child {margin-right: 0;}
-.section[data-name="business_cost"] .content .white_box_head .bold_text_box.us li {margin-right: 245px;} 
-.section[data-name="business_cost"] .content .white_box_head .bold_text_box.us li:last-child {margin-right: 0;}
+.section[data-name="business_cost"] .content .white_box_head .bold_text_box.kr li:last-child {margin-right: 0;}
+.section[data-name="business_cost"] .content .white_box_head .bold_text_box.en li {margin-right: 245px;} 
+.section[data-name="business_cost"] .content .white_box_head .bold_text_box.en li:last-child {margin-right: 0;}
 .section[data-name="business_cost"] .content .white_box_head .bold_text_box.id li {margin-right: 265px;} 
 .section[data-name="business_cost"] .content .white_box_head .bold_text_box.id li:last-child {margin-right: 0;}
 .section[data-name="business_cost"] .content .white_box_head .bold_text_box.pt li {width: 248px; text-align: center; margin-right: 166px;} 
@@ -113,7 +112,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;}
-.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.pt li {width: 248px; text-align: center; margin-right: 166px;}
 .section[data-name="business_cost"] .content .white_box_list .box:last-child {margin-right: 0;}
 .section[data-name="business_cost"] .content .white_box_list .box .text {font-family: 'Noto Sans', sans-serif; font-size: 14px; line-height: 1.64; color:#5a5a5a; margin-top: 37px;}
 .section[data-name="business_cost"] .content .white_box_list .box:nth-child(1), 
@@ -127,11 +125,13 @@ background-position: center;
 }
 .section[data-name="business_cost"] .content .white_box_foot .bold_text_box {display: flex; justify-content: center; margin-top: 24px;}
 .section[data-name="business_cost"] .content .white_box_foot .bold_text_box li {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; margin-right: 326px;}
-.section[data-name="business_cost"] .content .white_box_foot .bold_text_box li:last-child {margin-right: 0;}
-.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.us li {margin-right: 220px;}
-.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.us li:last-child {margin-right: 0;}
+.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.kr li:last-child {margin-right: 0;}
+.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.en li {margin-right: 220px;}
+.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.en li:last-child {margin-right: 0;}
 .section[data-name="business_cost"] .content .white_box_foot .bold_text_box.id li {margin-right: 220px;}
 .section[data-name="business_cost"] .content .white_box_foot .bold_text_box.id li:last-child {margin-right: 0;}
+.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.pt li {width: 248px; text-align: center; margin-right: 166px;}
+.section[data-name="business_cost"] .content .white_box_foot .bold_text_box.pt li:last-child {margin-right: 0;} 
 .section[data-name="business_cost"] .content .white_box_foot .arrow_box {display: flex; justify-content: center; margin-top: 14.4px;}
 .section[data-name="business_cost"] .content .white_box_foot .arrow_box li {margin-right: 40px;}
 .section[data-name="business_cost"] .content .white_box_foot .arrow_box li:last-child {margin-right: 0;}
@@ -151,10 +151,7 @@ background-position: center;
 .section[data-name="business_portfolio"] .portfolio_box .youtube_area {width: 1076px; height: 604px; margin: 0 auto;}
 .section[data-name="business_portfolio"] .portfolio_box .youtube_area iframe {width: 100%; height: 100%;}
 .section[data-name="business_portfolio"] .portfolio_box .slider_area {position: relative; margin-top: 31px;}
-.section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-container {}
-.section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-slide {}
 .section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-slide .images {width: 100%;}
-.section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-slide .text_box {}
 .section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-slide .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; margin-top: 10px; text-align: left;}
 .section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper-slide .text {font-family: 'Noto Sans', sans-serif; margin-top: 8px; font-size: 12px; line-height: 1.92; color:#969696; text-align: left;}
 .section[data-name="business_portfolio"] .portfolio_box .slider_area .swiper_button_prev,

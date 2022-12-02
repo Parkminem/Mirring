@@ -26,7 +26,7 @@ background-image: url(/assets/images/contact/arrow_bottom.png);
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;}
-.section[data-name="contact_question"] .question_form .animation_question_select .placeholder {position: absolute !important; top: 0; left: 0; width: 100%; height: 100%;}
+.section[data-name="contact_question"] .question_form .animation_question_select .placeholder {position: absolute !important; top: 0; left: 0; width: 100%; height: 100%; }
 .section[data-name="contact_question"] .question_form .animation_question_select li {width: 100%; font-family: 'Noto Sans', sans-serif; font-size: 16px; color:#5a5a5a; opacity: 0; height: 0; transition: all 0.5s ease; box-sizing: border-box; padding: 0 15px;}
 .section[data-name="contact_question"] .question_form .animation_question_select li.active {opacity: 1; height: auto; transition: background 0.5s ease; padding: 11px 15px; position: relative; z-index: 100;}
 
@@ -35,10 +35,13 @@ background-position: center;}
 .section[data-name="contact_question"] .question_form .animation_question_select.active li {opacity: 1; height: auto; padding: 11px 15px;}
 .section[data-name="contact_question"] .question_form .animation_question_select.active li.active {background-color: #e8e8e8;}
 
-.section[data-name="contact_question"] .question_form .question_input {font-family: 'Noto Sans', sans-serif; font-size: 16px; line-height: 1.44; color:#5a5a5a; width: 100%; border:0; padding: 11px 15px; background-color: #f9f9f9;}
+.section[data-name="contact_question"] .question_form .question_input {font-family: 'Noto Sans', sans-serif; font-size: 16px !important; line-height: 1.44 !important; color:#5a5a5a; width: 100%; border:0; padding: 11px 15px; background-color: #f9f9f9;}
+.section[data-name="contact_question"] .question_form .question_input::placeholder {
+	font-size: 16px; line-height: 1.44;
+}
 .section[data-name="contact_question"] .question_form.last {border-bottom: 0; display: block; padding: 0; margin-bottom: 16px;}
 .section[data-name="contact_question"] .question_form.last .title {margin-top: 11px; margin-bottom: 17px;}
-.section[data-name="contact_question"] .question_form .question_textarea {width: 100%; border:0; padding: 18px 15px; font-size: 16px; line-height: 1.44; color:#5a5a5a; background-color: #f9f9f9; min-height: 224px; box-sizing: border-box; resize: none} 
+.section[data-name="contact_question"] .question_form .question_textarea {width: 100%; border:0; padding: 18px 15px; font-size: 16px !important; line-height: 1.44 !important; color:#5a5a5a; background-color: #f9f9f9; min-height: 224px; box-sizing: border-box; resize: none} 
 .section[data-name="contact_question"] .question_check {display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 46px;}
 .section[data-name="contact_question"] .question_check input {display: none;}
 .label {display: inline-block; width: 21px; height: 21px; margin-right: 7.3px; cursor: pointer;
@@ -49,9 +52,9 @@ background-position:center;
 }
 input[type='checkbox']:checked  + .label {background-image: url(/assets/images/contact/check_on.png);}
 .section[data-name="contact_question"] .question_check .text {font-family: 'Noto Sans', sans-serif; font-size: 12px; line-height: 1.92; color:#969696; margin-right: 11px; margin-bottom: 0;}
-.section[data-name="contact_question"] .question_check .bold_text {font-family: 'Noto Sans', sans-serif; font-size: 12px; line-height: 1.92; color:#292929; text-decoration: underline; cursor: pointer;}
+.section[data-name="contact_question"] .question_check .bold_text {font-family: 'Noto Sans', sans-serif; font-size: 12px; line-height: 1.92; color:#292929; text-decoration: underline; cursor: pointer; font-weight: 900;}
 .section[data-name="contact_question"] .question_check .regular_text {margin-top: 3px; margin-left: 27px; font-family: 'Noto Sans', sans-serif; font-size: 12px; line-height: 1.92; color:#969696;}
-.section[data-name="contact_question"] .question_box .btn {width: 100%; height: 46px; border-radius:28px; border: solid 1px #ec6c00; background: transparent; color:#ec6c00; font-size: 16px; line-height: 1.38; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
+.section[data-name="contact_question"] .question_box .btn {width: 100%; height: 46px; border-radius:28px; border: solid 1px #ec6c00; background: transparent; color:#ec6c00; font-size: 16px !important; line-height: 1.38 !important; font-family: 'Noto Sans', sans-serif; font-weight: bold;}
 
 /* contact_address */
 .section[data-name="contact_address"]  {width: 100%; padding: 442px 0 140px 0;}

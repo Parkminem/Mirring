@@ -6,7 +6,7 @@
   >
     <div class="container_1076">
       <p class="title" v-html="title"></p>
-      <p class="sub_title">{{ subTitle }}</p>
+      <p class="sub_title" v-html="subTitle"></p>
       <p class="text" v-html="text"></p>
     </div>
   </section>

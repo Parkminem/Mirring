@@ -1,7 +1,7 @@
 <template>
   <section class="section section_animation dot3" data-name="main_technology">
     <div class="container_1076">
-      <div class="content position">
+      <div :class="['content position', lang]">
         <div class="container_1096">
           <div class="images" style="background-image: url(/assets/images/home/technology_1.png)"></div>
           <div class="box">
@@ -37,11 +37,18 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import scrollEvent from '../../util/scrollEvent';
 import { useI18n } from 'vue-i18n';
+import i18n from '../../i18n';
 const { t } = useI18n();
 const boxes = ref();
+const lang = i18n.global.locale;
+
+watch(lang, (newLang) => {
+  lang = newLang;
+});
+
 onMounted(() => {
   scrollEvent.sectionAnimationByscroll();
   scrollEvent.settingBoxAnimation(boxes.value);

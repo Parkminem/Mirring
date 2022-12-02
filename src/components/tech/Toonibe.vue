@@ -8,7 +8,7 @@
         <div class="steps"></div>
         <div class="sub__image"></div>
         <div class="toonibe__text">
-          <span><i class="fas fa-sort-up" aria-hidden="true"></i></span>
+          <span class="material-icons"> arrow_drop_up </span>
           <p>{{ t('tech.toonivieDesc') }}</p>
         </div>
       </div>

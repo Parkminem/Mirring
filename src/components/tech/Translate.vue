@@ -10,12 +10,12 @@
       <div class="translate__main"></div>
       <div class="slide__container">
         <ul id="slider" class="translate__sub">
-          <li style="background-image: url('/assets/images/OurTech/translate1.png')" class="subimage slide"></li>
-          <li style="background-image: url('/assets/images/OurTech/translate2.png')" class="subimage slide"></li>
-          <li style="background-image: url('/assets/images/OurTech/translate3.png')" class="subimage slide"></li>
-          <li style="background-image: url('/assets/images/OurTech/translate4.png')" class="subimage slide"></li>
-          <li style="background-image: url('/assets/images/OurTech/translate5.png')" class="subimage slide"></li>
-          <li style="background-image: url('/assets/images/OurTech/translate6.png')" class="subimage slide"></li>
+          <li
+            v-for="(item, idx) in 6"
+            :key="idx"
+            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${idx + 1}.png)` }"
+            class="subimage slide"
+          ></li>
         </ul>
         <a href="#"><i id="prev" class="fas fa-chevron-left" aria-hidden="true"></i></a>
         <a href="#"><i id="next" class="fas fa-chevron-right" aria-hidden="true"></i></a>
@@ -25,7 +25,14 @@
   </div>
 </template>
 <script setup>
+import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
-
+import i18n from '../../i18n';
 const { t } = useI18n();
+
+const lang = i18n.global.locale;
+
+watch(lang, (newLang) => {
+  lang = newLang;
+});
 </script>
