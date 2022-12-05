@@ -1,5 +1,10 @@
 <template>
-  <section class="section section_animation dot4" data-name="main_contact" style="margin-top: -100px; opacity: 1">
+  <section
+    class="section section_animation dot5"
+    id="main05"
+    data-name="main_contact"
+    style="margin-top: -100px; opacity: 1"
+  >
     <div class="container_1076">
       <div class="content">
         <img

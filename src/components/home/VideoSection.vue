@@ -1,5 +1,5 @@
 <template>
-  <section class="section" data-name="main_business">
+  <section class="section dot4" data-name="main_business" id="main04">
     <div class="container_1076">
       <div class="content">
         <div class="images mobile" style="background-image: url(/assets/images/home/business_1.png)"></div>

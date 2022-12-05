@@ -11,9 +11,9 @@
       <div class="slide__container">
         <ul id="slider" class="translate__sub">
           <li
-            v-for="(item, idx) in 6"
-            :key="idx"
-            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${idx + 1}.png)` }"
+            v-for="i in 6"
+            :key="i"
+            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
             class="subimage slide"
           ></li>
         </ul>

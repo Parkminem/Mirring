@@ -52,7 +52,8 @@ const router = createRouter({
   //뒤로가기 시 이동 전 스크롤로 뒤로가게 됨, 그 이외는 스크롤탑 0
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition;
-    else if (to.hash) return { el: to.hash };
+    else if (to.hash == '#main03') return { el: to.hash, behavior: 'smooth', top: 400 };
+    else if (to.hash) return { el: to.hash, behavior: 'smooth', top: 100 };
     else return { top: 0 };
   }
 });

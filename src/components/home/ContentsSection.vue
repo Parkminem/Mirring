@@ -1,5 +1,10 @@
 <template>
-  <section class="section section_animation dot2" data-name="main_about" style="margin-top: -100px; opacity: 1">
+  <section
+    class="section section_animation dot2"
+    id="main02"
+    data-name="main_about"
+    style="margin-top: -100px; opacity: 1"
+  >
     <div class="container_1076">
       <div class="content">
         <img
@@ -137,8 +142,8 @@ import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 const { t } = useI18n();
-
 const swiper = ref(null);
+
 const breakPoints = {
   1024: {
     spaceBetween: 28,
@@ -154,7 +159,6 @@ let onSwiper = (swiperInstance) => {
 function goNews() {
   router.push({
     path: '/about',
-    query: { section: 'about_news' },
     hash: '#about_news'
   });
 }

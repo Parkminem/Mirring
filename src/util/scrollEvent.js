@@ -77,58 +77,10 @@ function settingNewsSlider() {
   // }
 }
 
-/**
- * 메인 네비게이션 클릭이벤트
- */
-function settingNavigationByClick() {
-  $('.dot').on('click', function () {
-    const target = $(this).attr('data-target');
-    const element = $('.' + target);
-    const element_offset_top = element.offset().top;
-    if (target == 'dot2' || target == 'dot4' || target == 'dot5') {
-      if (element.css('opacity') == '0') {
-        $('body, html').animate({ scrollTop: element_offset_top - 100 - 100 }, 400);
-      } else {
-        $('body, html').animate({ scrollTop: element_offset_top - 100 }, 400);
-      }
-    } else if (target == 'dot3') {
-      if (element.css('opacity') == '0') {
-        $('body, html').animate({ scrollTop: element_offset_top - 350 - 100 }, 400);
-      } else {
-        $('body, html').animate({ scrollTop: element_offset_top - 142.5 - 100 }, 400);
-      }
-    } else if (target == 'dot1') {
-      $('body, html').animate({ scrollTop: element_offset_top - 100 }, 400);
-    }
-  });
-}
-/**
- * 메인 네비게이션 스크롤 이벤트
- */
-function settingNavigationByScroll() {
-  const route = useRoute();
-  if (route.path == '/') {
-    $(window).on('scroll', function () {
-      let scroll_top = $(this).scrollTop();
-      let i = '';
-      if (scroll_top >= $('.dot1').offset().top - $('.dot1').innerHeight() / 2) i = 0;
-      if (scroll_top >= $('.dot2').offset().top - $('.dot2').innerHeight() / 2) i = 1;
-      if (scroll_top >= $('.dot3').offset().top - $('.dot3').innerHeight() * 1.5) i = 2;
-      if (scroll_top >= $('.dot4').offset().top - $('.dot4').innerHeight()) i = 3;
-      if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) i = 4;
-      $('.dot').stop().eq(i).addClass('active').siblings().removeClass('active');
-    });
-  } else {
-    return false;
-  }
-}
-
 const scrollEvent = {
   boxAnimationByscroll,
   settingNewsSlider,
   sectionAnimationByscroll,
-  settingNavigationByClick,
-  settingBoxAnimation,
-  settingNavigationByScroll
+  settingBoxAnimation
 };
 export default scrollEvent;

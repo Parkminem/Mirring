@@ -1,5 +1,5 @@
 <template>
-  <section class="section section_animation dot3" data-name="main_technology">
+  <section class="section section_animation dot3" id="main03" data-name="main_technology">
     <div class="container_1076">
       <div :class="['content position', lang]">
         <div class="container_1096">

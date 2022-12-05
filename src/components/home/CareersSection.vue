@@ -1,5 +1,5 @@
 <template>
-  <section class="section section_animation dot5" data-name="main_careers" style="margin-top: -100px">
+  <section class="section section_animation" data-name="main_careers" style="margin-top: -100px">
     <div class="container_1076">
       <div class="content">
         <img
