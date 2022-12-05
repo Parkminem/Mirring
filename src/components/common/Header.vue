@@ -119,23 +119,28 @@ const isActive = ref(false);
 
 const scrollActive = ref(false);
 
-onMounted(() => {
+const handleHeader = () => {
   document.addEventListener('wheel', (e) => {
     const scrollDirection = e.deltaY;
-    if (scrollDirection > 0) {
-      scrollActive.value = true;
-    } else {
-      scrollActive.value = false;
-    }
+    scrollDirection > 0 ? (scrollActive.value = true) : (scrollActive.value = false);
   });
-});
 
-//로컬스토리지에 언어 저장
-watch(language, (newLanguage) => {
-  localStorage.setItem('locale', newLanguage);
-  i18n.global.locale.value = newLanguage;
-  window.location.reload();
-});
+  //로컬스토리지에 언어 저장
+  watch(language, (newLanguage) => {
+    localStorage.setItem('locale', newLanguage);
+    i18n.global.locale.value = newLanguage;
+    window.location.reload();
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    if (scrollTop <= 100) scrollActive.value = false;
+  });
+};
+
+onMounted(handleHeader);
+
+// 언어를 선택하는 함수
 
 // 언어 토글(클릭하면 열리고 마우스가 벗어나면 사라지는 기능)
 const settingHeaderChangeLanguage = () => {
