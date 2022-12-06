@@ -66,7 +66,7 @@ background-position: center;}
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);}
 	#header .mobile .content .menu_img img {width: 36px; cursor: pointer;}
-	#header .mobile .menu {display: none; background-color: #f9f9f9; padding: 0 2.5%; position: relative;}
+	#header .mobile .menu {background-color: #f9f9f9; padding: 0 2.5%; position: relative;}
 	#header .mobile .menu .quick_menu {text-align: right; cursor: pointer; padding: 10px 0;}
 	#header .mobile .menu .quick_menu.active a {color:#ec6c00;}
 	#header .mobile .menu .quick_menu a {font-size: 18px; font-family: 'Noto Sans', sans-serif; font-weight: bold;}

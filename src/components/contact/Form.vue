@@ -16,13 +16,14 @@
               <ul
                 :class="[selectState ? ['animation_question_select', 'active'] : 'animation_question_select']"
                 @click="openSelect"
+                @mouseleave="closeSelect"
               >
-                <li data-value="0" @click="type = 0" class="placeholder active">{{ t('contact.typePlaceHolder') }}</li>
-                <li data-value="1" @click="type = 1">{{ t('contact.type01') }}</li>
-                <li data-value="2" @click="type = 2">{{ t('contact.type02') }}</li>
-                <li data-value="3" @click="type = 3">{{ t('contact.type03') }}</li>
-                <li data-value="4" @click="type = 4">{{ t('contact.type04') }}</li>
-                <li data-value="5" @click="type = 5">{{ t('contact.type05') }}</li>
+                <li @click="resetType" class="placeholder" :class="{ active: placeholder }">
+                  {{ t('contact.typePlaceHolder') }}
+                </li>
+                <li v-for="i in 5" :key="i" @click="selectType(i)" :class="{ active: typeNo[i] }">
+                  {{ t(`contact.type0${i}`) }}
+                </li>
               </ul>
             </div>
           </div>
@@ -111,8 +112,7 @@
   </form>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
-import clickEvent from '../../util/clickEvent';
+import { ref } from 'vue';
 import { useModalStore } from '../../store/modal';
 import { useFormStore } from '../../store/form';
 import { useI18n } from 'vue-i18n';
@@ -135,9 +135,13 @@ const tel = ref('');
 const email = ref('');
 const desc = ref('');
 const checkPrivacy = ref();
-
-onMounted(() => {
-  clickEvent.settingQuestionSelectByClick();
+const placeholder = ref(true);
+let typeNo = ref({
+  1: false,
+  2: false,
+  3: false,
+  4: false,
+  5: false
 });
 
 //데이터 전송
@@ -184,11 +188,34 @@ function sendForm() {
   //폼 데이터 전송 액션 사용해야함
 }
 
+//문의유형 리스트 열고 닫는 함수
 function openSelect() {
   if (selectState.value) {
     selectState.value = false;
   } else {
     selectState.value = true;
+  }
+}
+function closeSelect() {
+  selectState.value = false;
+}
+
+//문의유형 선택 함수
+function selectType(No) {
+  type.value = No;
+  placeholder.value = false;
+  for (let key in typeNo.value) {
+    if (key == No) typeNo.value[key] = true;
+    else typeNo.value[key] = false;
+  }
+}
+function resetType() {
+  type.value = 0;
+  if (!placeholder.value) {
+    placeholder.value = true;
+    for (let key in typeNo.value) {
+      typeNo.value[key] = false;
+    }
   }
 }
 </script>

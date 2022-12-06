@@ -31,7 +31,7 @@
     <div class="container_1076 position">
       <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
         <Swiper
-          :loop="true"
+          :loop="loop"
           :slides-per-view="4"
           :space-between="0"
           :touch-ratio="0"
@@ -116,6 +116,7 @@
         tabindex="0"
         role="button"
         aria-label="Previous slide"
+        :style="{ display: btns }"
       />
       <img
         @click="swiper.slideNext()"
@@ -126,6 +127,7 @@
         tabindex="0"
         role="button"
         aria-label="Next slide"
+        :style="{ display: btns }"
       />
       <a href="#" class="more" @click.prevent="goNews">{{ t('common.button.more') }} &gt;</a>
       <router-link to="/about" class="page_move">{{ t('common.button.aboutLink') }} &gt;</router-link>
@@ -150,11 +152,9 @@ const breakPoints = {
     slidesPerView: 4
   }
 };
-
 let onSwiper = (swiperInstance) => {
   swiper.value = swiperInstance;
 };
-
 //더보기 클릭 시 뉴스 컴포넌트로 이동
 function goNews() {
   router.push({
@@ -163,10 +163,20 @@ function goNews() {
   });
 }
 onMounted(() => {
+  const arr = document.querySelectorAll('.swiper-slide');
   const box = $('.swiper').children();
   scrollEvent.settingBoxAnimation(box);
   scrollEvent.sectionAnimationByscroll();
-  scrollEvent.settingNewsSlider();
+
+  //뉴스가 4개 이하일 때 루프, 버튼 없애는 함수들
+  const loop = () => {
+    if (arr.length < 5) return false;
+    else return true;
+  };
+  const btns = () => {
+    if (arr.length < 5) return 'none';
+    else return 'block';
+  };
 });
 </script>
-<style></style>
+<style scoped></style>

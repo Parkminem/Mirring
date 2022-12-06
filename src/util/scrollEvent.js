@@ -58,28 +58,10 @@ function settingBoxAnimation(element) {
   });
 }
 
-/**
-스와이퍼 네비게이션 버튼 없애는 함수(메인 뉴스 4개 이하일 때)
- */
-function settingNewsSlider() {
-  const element = $(".section[data-name='main_about'] .swiper-slide");
-  const element_length = element.length;
-  if (element_length <= 4) {
-    $('.swiper_navigation').hide();
-    element.addClass('css');
-  }
-  // swiperSlide() 에러떠서 주석처리
-  // else {
-  //   swiperSlide();
-  //   $(window).on('resize', () => {
-  //     swiperSlide();
-  //   });
-  // }
-}
+//
 
 const scrollEvent = {
   boxAnimationByscroll,
-  settingNewsSlider,
   sectionAnimationByscroll,
   settingBoxAnimation
 };
