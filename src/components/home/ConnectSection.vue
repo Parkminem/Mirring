@@ -5,6 +5,7 @@
     id="main03"
     ref="section"
     data-name="main_technology"
+    :key="$route.fullPath"
   >
     <div class="container_1076">
       <div :class="['content position', lang]">

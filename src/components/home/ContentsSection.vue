@@ -5,6 +5,7 @@
     id="main02"
     data-name="main_about"
     ref="section"
+    :key="$route.fullPath"
   >
     <div class="container_1076">
       <div class="content">

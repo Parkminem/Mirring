@@ -3,13 +3,12 @@
     <Modal v-if="infoModalState" />
   </Transition>
   <Header />
-  <router-view :key="route.fullPath"></router-view>
+  <router-view></router-view>
   <Footer />
 </template>
 <script setup>
 import { watch } from 'vue';
 import { storeToRefs } from 'pinia';
-import { useRoute } from 'vue-router';
 import Header from '../components/common/Header.vue';
 import Footer from '../components/common/Footer.vue';
 
@@ -18,7 +17,6 @@ import { useModalStore } from '../store/modal';
 
 const modalStore = useModalStore();
 const { infoModalState } = storeToRefs(modalStore);
-const route = useRoute();
 
 //모달창 on/off
 watch(infoModalState, (newInfoModalState) => {

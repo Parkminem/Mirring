@@ -5,6 +5,7 @@
     data-name="main_contact"
     :class="{ section_animation: activeSection }"
     ref="section"
+    :key="$route.fullPath"
   >
     <div class="container_1076">
       <div class="content">

@@ -1,5 +1,5 @@
 <template>
-  <section class="section dot1" id="main01" data-name="main_home">
+  <section class="section dot1" id="main01" data-name="main_home" :key="$route.fullPath">
     <div class="container_1676">
       <div class="content">
         <p class="title">

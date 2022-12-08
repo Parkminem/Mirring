@@ -1,5 +1,11 @@
 <template>
-  <section class="section" data-name="main_careers" :class="{ section_animation: activeSection }" ref="section">
+  <section
+    class="section"
+    data-name="main_careers"
+    :class="{ section_animation: activeSection }"
+    ref="section"
+    :key="$route.fullPath"
+  >
     <div class="container_1076">
       <div class="content">
         <img
