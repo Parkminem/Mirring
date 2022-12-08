@@ -9,72 +9,85 @@
         alt="close"
         @click="modalStore.infoModalClose"
       />
-      <p class="title">개인정보처리방침</p>
+      <p class="title">{{ t('contact.privacyTitle') }}</p>
       <div class="area">
         <p>
-          <span>㈜아이디어 콘서트</span>(<span>이하 ‘회사’</span>)<span>는 개인정보보호법</span>,
-          <span
-            >정보통신망 이용촉진 및 정보보호 등에 관한 법률 등에 따라 아래의 개인정보처리방침을 통하여 정보주체인
-            이용자의 개인정보를 보호하고 홈페이지 이용자가 제공하는 개인정보가 어떤 목적과 방식으로 이용되는지
-            알려드립니다</span
+          <span>{{ t('contact.privacyDesc01') }}</span
+          >(<span>{{ t('contact.privacyDesc02') }}</span
+          >)<span>{{ t('contact.privacyDesc03') }}</span
+          >, <span>{{ t('contact.privacyDesc04') }}</span
           >.
         </p>
         <p><br /></p>
-        <p><span>제</span>1<span>조 총칙</span></p>
+        <p>
+          <span>{{ t('contact.privacySubTitle') }}</span
+          >1<span>{{ t('contact.privacySub01Title') }}</span>
+        </p>
         <p><br /></p>
         <p>
-          1. <span>개인정보란 생존하는 개인에 관한 정보로서 성명</span>,
-          <span>주민등록번호 등에 의하여 당해 개인을 알아볼 수 있는 부호</span>, <span>문자</span>, <span>음성</span>,
-          <span>음향</span>, <span>영상 및 생체 특성 등에 관한 정보</span>(<span
-            >당해 정보만으로는 특정 개인을 알아볼 수 없는 경우에도 다른 정보와 용이하게 결합하여 알아볼 수 있는 것을
-            포함</span
-          >)<span>를 말합니다</span>.<br />2. <span>회사는 고객님의 개인정보를 중요시하며</span>,
-          <span
-            >『정보통신망 이용촉진 및 정보보호 등에 관한 법률』과 개인정보 보호 관련 각종 법규를 준수하고 있습니다</span
-          >.<br />3.
-          <span>회사는 개인정보처리방침을 통하여 고객님의 개인정보가 어떠한 용도와 방식으로 이용되고 있으며</span>,
-          <span>개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다</span>.<br />4.
-          <span>회사의 개인정보처리방침은 관련 법령 및 내부 운영 방침의 변경에 따라 개정될 수 있습니다</span>.
-          <span>개인정보처리방침이 개정되는 경우에는 시행일자 등을 부여하여 개정된 내용을 홈페이지</span
-          >(http://ideaconcert.com)<span>에 지체 없이 공지합니다</span>.<br />5.
-          <span
-            >영업의 전부 또는 일부를 양도하거나 합병 등으로 개인정보를 이전하는 경우 서면 전자우편 등을 통하여 고객님께
-            개별적으로 통지하고</span
-          >, <span>회사의 과실 없이 고객님의 연락처를 알 수 없는 경우에 해당하여 서면</span>,
-          <span>전자우편 등으로 통지할 수 없는 경우에는 홈페이지</span>(http://ideaconcert.com),
-          <span>첫 화면에서 식별할 수 있도록 표기하여 </span>30<span>일 이상 그 사실을 공지합니다</span>.
-          <span>단</span>, <span>천재지변 등 정당한 사유로 홈페이지 게시가 곤란한 경우에는 </span>2<span
-            >곳 이상의 중앙일간지</span
-          >(<span
-            >고객님의 대부분이 특정 지역에 거주하는 경우에는 그 지역을 보급구역으로 하는 일간지로 할 수 있습니다</span
-          >.)<span>에 </span>1<span>회 이상 공고하는 것으로 갈음합니다</span>.
+          1. <span>{{ t('contact.privacySub01-1-1') }}</span
+          >, <span>{{ t('contact.privacySub01-1-2') }}</span
+          >, <span>{{ t('contact.privacySub01-1-3') }}</span
+          >, <span>{{ t('contact.privacySub01-1-4') }}</span
+          >, <span>{{ t('contact.privacySub01-1-5') }}</span
+          >, <span>{{ t('contact.privacySub01-1-6') }}</span
+          >(<span>{{ t('contact.privacySub01-1-7') }}</span
+          >)<span>{{ t('contact.privacySub01-1-8') }}</span
+          >.<br />2. <span>{{ t('contact.privacySub01-2-1') }}</span
+          >, <span>{{ t('contact.privacySub01-2-2') }}</span
+          >.<br />3. <span>{{ t('contact.privacySub01-3-1') }}</span
+          >, <span>{{ t('contact.privacySub01-3-2') }}</span
+          >.<br />4. <span>{{ t('contact.privacySub01-4-1') }}</span
+          >. <span>{{ t('contact.privacySub01-4-2') }}</span
+          >(http://ideaconcert.com)<span>{{ t('contact.privacySub01-4-3') }}</span
+          >.<br />5. <span>{{ t('contact.privacySub01-5-1') }}</span
+          >, <span>{{ t('contact.privacySub01-5-2') }}</span
+          >, <span>{{ t('contact.privacySub01-5-3') }}</span
+          >(http://ideaconcert.com), <span>{{ t('contact.privacySub01-5-4') }}</span> 30<span>{{
+            t('contact.privacySub01-5-5')
+          }}</span
+          >. <span>{{ t('contact.privacySub01-5-6') }}</span
+          >, <span>{{ t('contact.privacySub01-5-7') }}</span> 2<span>{{ t('contact.privacySub01-5-8') }} </span
+          >(<span>{{ t('contact.privacySub01-5-9') }}</span
+          >.)<span>{{ t('contact.privacySub01-5-10') }}</span> 1<span>{{ t('contact.privacySub01-5-11') }}</span
+          >.
         </p>
         <p><br /></p>
         <p><br /></p>
-        <p><span>제</span>2<span>조 개인정보의 수집항목 및 수집</span>/<span>이용 목적</span></p>
         <p>
-          1. <span>회사는 회원가입</span>, <span>상담</span>,
-          <span>서비스 제공 등을 위하여 필요한 범위에서 최소한의 개인정보만을 수집합니다</span>.<br />2.
-          <span>사상</span>, <span>신념</span>, <span>가족 및 친인척관계</span>,
-          <span>학력</span>(<span>學歷</span>)•<span>병력</span>(<span>病歷</span>),
-          <span
-            >기타 사회활동 경력 등 고객님의 권리 • 이익이나 사생활을 뚜렷하게 침해할 우려가 있는 개인정보는 수집하지
-            않습니다</span
-          >. <span>다만</span>,
-          <span
-            >고객님께서 수집에 동의하시거나 다른 법률에 따라 특별히 수집 대상 개인정보로 허용된 경우에는 필요한 범위에서
-            최소한으로 위 개인정보를 수집할 수 있습니다</span
-          >.<br />3.
-          <span>회사는 단말기 접근 권한을 허용 받았어도 허용된 권한 관련 모든 정보가 즉시 수집</span
-          >(<span>전송</span>)<span>되는 것은 아니며</span>, <span>개인정보 수집 이용 동의를 받은 범위 내에서</span>,
-          <span>고객님 단말기 정보에 접근 후에 수집</span>(<span>전송</span>)<span>합니다</span>.<br />4.
-          <span>회사는 아래의 경우에 한하여 고객님의 동의 없이 고객님의 개인정보를 수집ㆍ이용할 수 있습니다</span
-          >.<br /><span>가</span>.
-          <span
-            >고객님과의 계약을 이행하기 위하여 필요한 개인정보로서 경제적ㆍ기술적인 사유로 통상적인 동의를 받는 것이
-            뚜렷하게 곤란한 경우</span
-          ><br /><span>나</span>. <span>서비스의 제공에 따른 요금정산을 위하여 필요한 경우</span><br /><span>다</span>.
-          <span>관련 법령에 특별한 규정이 있는 경우</span>
+          <span>{{ t('contact.privacySubTitle') }}</span
+          >2<span>{{ t('contact.privacySub02Title1') }}</span
+          >/<span>{{ t('contact.privacySub02Title2') }}</span>
+        </p>
+        <p>
+          1. <span>{{ t('contact.privacySub02-1-1') }}</span
+          >, <span>{{ t('contact.privacySub02-1-2') }}</span
+          >, <span>{{ t('contact.privacySub02-1-3') }}</span
+          >.<br />2. <span>{{ t('contact.privacySub02-2-1') }}</span
+          >, <span>{{ t('contact.privacySub02-2-2') }}</span
+          >, <span>{{ t('contact.privacySub02-2-3') }}</span
+          >, <span>{{ t('contact.privacySub02-2-4') }}</span
+          >(<span>{{ t('contact.privacySub02-2-5') }}</span
+          >)•<span>{{ t('contact.privacySub02-2-6') }}</span
+          >(<span>{{ t('contact.privacySub02-2-7') }}</span
+          >), <span>{{ t('contact.privacySub02-2-8') }}</span
+          >. <span>{{ t('contact.privacySub02-2-9') }}</span
+          >, <span>{{ t('contact.privacySub02-2-10') }}</span
+          >.<br />3. <span>{{ t('contact.privacySub02-3-1') }}</span
+          >(<span>{{ t('contact.privacySub02-3-2') }}</span
+          >)<span>{{ t('contact.privacySub02-3-3') }}</span
+          >, <span>{{ t('contact.privacySub02-3-4') }}</span
+          >, <span>{{ t('contact.privacySub02-3-5') }}</span
+          >(<span>{{ t('contact.privacySub02-3-6') }}</span
+          >)<span>{{ t('contact.privacySub02-3-7') }}</span
+          >.<br />4. <span>{{ t('contact.privacySub02-4-1') }}</span
+          >.<br /><span>{{ t('contact.privacySub02-4-2') }}</span
+          >. <span>{{ t('contact.privacySub02-4-3') }}</span
+          ><br /><span>{{ t('contact.privacySub02-4-4') }}</span
+          >. <span>{{ t('contact.privacySub02-4-5') }}</span
+          ><br /><span>{{ t('contact.privacySub02-4-6') }}</span
+          >.
+          <span>{{ t('contact.privacySub02-4-7') }}</span>
         </p>
         <p>[<span>필수</span>]</p>
         <table width="601" cellpadding="5" cellspacing="0">
@@ -475,5 +488,7 @@
 </template>
 <script setup>
 import { useModalStore } from '../../store/modal';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const modalStore = useModalStore();
 </script>
