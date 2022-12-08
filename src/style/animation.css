@@ -5,11 +5,11 @@
   animation: 0.8s ease-in slideUp;
   animation-fill-mode: forwards;
 }
-:is(.box01, .box02, .box03, .box04) {
+:is(.box01, .box02, .box03, .box04, .box05) {
   animation: 0.25s ease-in-out boxAnimation;
   animation-fill-mode: forwards;
 }
-.css, .white_box {
+.boxAni {
   opacity: 0;
 }
 .box01 {
@@ -23,6 +23,9 @@
 }
 .box04 {
   animation-delay: 0.4s
+}
+.box05 {
+  animation-delay: 0.5s
 }
 @keyframes slideUp {
   0% {

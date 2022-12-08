@@ -19,18 +19,18 @@
             }}</a>
           </ul>
         </div>
-        <div class="right_box box_animation" ref="boxes">
-          <div class="white_box">
+        <div class="right_box box_animation">
+          <div class="white_box boxAni" :class="{ box01: activeBox[1] }" ref="box01">
             <div class="round"></div>
             <p class="title">{{ t('careers.applyBox01Title') }}</p>
             <p class="text">{{ t('careers.applyBox01Text') }}</p>
           </div>
-          <div class="white_box">
+          <div class="white_box boxAni" :class="{ box02: activeBox[2] }" ref="box02">
             <div class="round"></div>
             <p class="title">{{ t('careers.applyBox02Title') }}</p>
             <p class="text">{{ t('careers.applyBox02Text') }}</p>
           </div>
-          <div class="white_box">
+          <div class="white_box boxAni" :class="{ box03: activeBox[3] }" ref="box03">
             <div class="round"></div>
             <p class="title">{{ t('careers.applyBox03Title') }}</p>
             <p class="text">{{ t('careers.applyBox03Text') }}</p>
@@ -51,17 +51,39 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
-import scrollEvent from '../../util/scrollEvent';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
-const boxes = ref();
 
+//박스애니메이션
+const activeBox = ref({
+  1: false,
+  2: false,
+  3: false
+});
+const box01 = ref();
+const box02 = ref();
+const box03 = ref();
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  if (box01.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[1] = true;
+  if (box02.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[2] = true;
+  if (box03.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[3] = true;
+}
 onMounted(() => {
-  const boxesVal = boxes.value;
-  scrollEvent.settingBoxAnimation(boxesVal);
+  if (innerHeight > box01.value.offsetTop + box01.value.clientHeight) {
+    for (let key of Object.keys(activeBox.value)) {
+      activeBox.value[key] = true;
+    }
+  }
+  //모바일 박스애니메이션
+  if (window.innerWidth < 1025) window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
 });
 </script>
 <style scoped>
 @import '../../style/careers.css';
+@import '../../style/animation.css';
 </style>

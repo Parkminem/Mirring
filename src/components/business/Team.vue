@@ -12,20 +12,20 @@
             }}
           </p>
         </div>
-        <ul class="left box_animation" ref="boxes">
-          <li class="box" style="opacity: 1">
+        <ul class="left box_animation">
+          <li class="box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
             <div class="round"></div>
             <p class="title">{{ t('business.movieBox01') }}</p>
           </li>
-          <li class="box" style="opacity: 1">
+          <li class="box boxAni" :class="{ box02: activeBox[1] }">
             <div class="round"></div>
             <p class="title">{{ t('business.movieBox02') }}</p>
           </li>
-          <li class="box" style="opacity: 1">
+          <li class="box boxAni" ref="box02" :class="{ box03: activeBox[2] }">
             <div class="round"></div>
             <p class="title">{{ t('business.movieBox03') }}</p>
           </li>
-          <li class="box" style="opacity: 1">
+          <li class="box boxAni" :class="{ box04: activeBox[2] }">
             <div class="round"></div>
             <p class="title">{{ t('business.movieBox04') }}</p>
           </li>
@@ -35,15 +35,33 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
-import scrollEvent from '../../util/scrollEvent';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
-const boxes = ref();
-
+//박스 애니메이션
+const activeBox = ref({
+  1: false,
+  2: false
+});
+const box01 = ref();
+const box02 = ref();
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  if (window.innerWidth < 1025) {
+    if (box01.value.offsetParent.offsetTop + box01.value.clientHeight * 2 < scrollH) activeBox.value[1] = true;
+    if (box01.value.offsetParent.offsetTop + box01.value.clientHeight + box02.value.offsetTop < scrollH)
+      activeBox.value[2] = true;
+  } else {
+    if (scrollH > box01.value.offsetParent.offsetTop + box01.value.clientHeight) activeBox.value[1] = true;
+    if (scrollH > box02.value.offsetParent.offsetTop + box02.value.clientHeight + box02.value.offsetTop)
+      activeBox.value[2] = true;
+  }
+}
 onMounted(() => {
-  const boxesVal = boxes.value;
-  scrollEvent.settingBoxAnimation(boxesVal);
+  window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
 });
 </script>

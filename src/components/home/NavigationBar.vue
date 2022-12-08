@@ -2,7 +2,7 @@
   <nav id="navigation">
     <div
       v-for="i in 5"
-      :key="i"
+      :key="route.fullPath"
       class="dot"
       :class="{ active: dots[i] }"
       :data-target="`dot${i}`"
@@ -12,15 +12,18 @@
 </template>
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 const router = useRouter();
-
+const route = useRoute();
 //navigation 클릭 시 섹션 이동 함수
 function goSection(hash) {
-  router.push({
-    path: '/',
-    hash: hash
-  });
+  router
+    .push({
+      name: 'Home',
+      hash: hash
+    })
+    .then(console.log(route))
+    .catch(() => console.log('예외'));
 }
 let dots = ref({
   1: true,
@@ -40,21 +43,27 @@ onMounted(() => {
   window.addEventListener('scroll', () => {
     let scrollTop = scrollY;
     if (section01H < scrollTop) {
-      [dots.value[1], dots.value[2]] = [true, false];
+      [dots.value[1], dots.value[2], dots.value[3], dots.value[4], dots.value[5]] = [true, false, false, false, false];
     }
     if (section02H < scrollTop) {
-      [dots.value[1], dots.value[2], dots.value[3]] = [false, true, false];
+      [dots.value[1], dots.value[2], dots.value[3], dots.value[4], dots.value[5]] = [false, true, false, false, false];
     }
     if (section03H < scrollTop) {
-      [dots.value[2], dots.value[3], dots.value[4]] = [false, true, false];
+      [dots.value[1], dots.value[2], dots.value[3], dots.value[4], dots.value[5]] = [false, false, true, false, false];
     }
     if (section04H < scrollTop) {
-      [dots.value[3], dots.value[4], dots.value[5]] = [false, true, false];
+      [dots.value[1], dots.value[2], dots.value[3], dots.value[4], dots.value[5]] = [false, false, false, true, false];
     }
     if (section05H < scrollTop) {
-      [dots.value[4], dots.value[5]] = [false, true];
+      [dots.value[1], dots.value[2], dots.value[3], dots.value[4], dots.value[5]] = [false, false, false, false, true];
     }
   });
 });
 </script>
-<style></style>
+<style scoped>
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style>

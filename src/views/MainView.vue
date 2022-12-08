@@ -11,7 +11,6 @@
 </template>
 <script setup>
 import NavigationBar from '../components/home/NavigationBar.vue';
-
 import MainVisual from '../components/home/MainVisual.vue';
 import ContentsSection from '../components/home/ContentsSection.vue';
 import ConnectSection from '../components/home/ConnectSection.vue';
@@ -22,5 +21,5 @@ import CareersSection from '../components/home/CareersSection.vue';
 
 <style>
 @import '../style/main.css';
-@import '../style/main_popup.css';
+@import '../style/animation.css';
 </style>

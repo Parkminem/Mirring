@@ -11,23 +11,23 @@
           </div>
         </div>
       </div>
-      <ul class="content box_animation" ref="boxes">
-        <li class="white_box">
+      <ul class="content box_animation">
+        <li class="white_box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
           <div class="round"></div>
           <p class="title">{{ t('home.connectBoxTitle01') }}</p>
           <p class="text">{{ t('home.connectBoxText01') }}</p>
         </li>
-        <li class="white_box">
+        <li class="white_box boxAni" :class="{ box02: activeBox[1] }">
           <div class="round"></div>
           <p class="title">{{ t('home.connectBoxTitle02') }}</p>
           <p class="text">{{ t('home.connectBoxText02') }}</p>
         </li>
-        <li class="white_box">
+        <li class="white_box boxAni" ref="box02" :class="{ box03: activeBox[2] }">
           <div class="round"></div>
           <p class="title">{{ t('home.connectBoxTitle03') }}</p>
           <p class="text">{{ t('home.connectBoxText03') }}</p>
         </li>
-        <li class="white_box">
+        <li class="white_box boxAni" :class="{ box04: activeBox[2] }">
           <div class="round"></div>
           <p class="title">{{ t('home.connectBoxTitle04') }}</p>
           <p class="text">{{ t('home.connectBoxText04') }}</p>
@@ -37,21 +37,38 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted, watch } from 'vue';
-import scrollEvent from '../../util/scrollEvent';
+import { ref, onMounted, watch, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import i18n from '../../i18n';
 const { t } = useI18n();
-const boxes = ref();
 const lang = i18n.global.locale;
 
 watch(lang, (newLang) => {
   lang = newLang;
 });
 
+//박스 애니메이션
+const activeBox = ref({
+  1: false,
+  2: false
+});
+const box01 = ref();
+const box02 = ref();
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  if (window.innerWidth < 1025) {
+    if (box01.value.offsetParent.offsetTop + box01.value.clientHeight * 3 < scrollH) activeBox.value[1] = true;
+    if (box02.value.offsetParent.offsetTop + box01.value.clientHeight * 4 < scrollH) activeBox.value[2] = true;
+  } else {
+    if (scrollH > box01.value.offsetParent.offsetTop + box01.value.clientHeight * 2)
+      [activeBox.value[1], activeBox.value[2]] = [true, true];
+  }
+}
 onMounted(() => {
-  scrollEvent.sectionAnimationByscroll();
-  scrollEvent.settingBoxAnimation(boxes.value);
+  window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
 });
 </script>
 <style></style>

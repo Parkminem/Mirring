@@ -29,4 +29,5 @@ const bg = '/assets/images/business/business.jpg';
 
 <style>
 @import '../style/business.css';
+@import '../style/animation.css';
 </style>

@@ -27,4 +27,5 @@ const bg = '/assets/images/about/banner.png';
 
 <style>
 @import '../style/abuot.css';
+@import '../style/animation.css';
 </style>
