@@ -26,6 +26,6 @@ const bg = '/assets/images/about/banner.png';
 </script>
 
 <style>
-@import '../style/abuot.css';
+@import '../style/about.css';
 @import '../style/animation.css';
 </style>
