@@ -1,5 +1,11 @@
 <template>
-  <section class="section section_animation dot3" id="main03" data-name="main_technology">
+  <section
+    class="section dot3"
+    :class="{ section_animation: activeSection }"
+    id="main03"
+    ref="section"
+    data-name="main_technology"
+  >
     <div class="container_1076">
       <div :class="['content position', lang]">
         <div class="container_1096">
@@ -47,7 +53,9 @@ watch(lang, (newLang) => {
   lang = newLang;
 });
 
-//박스 애니메이션
+//박스 애니메이션 & 섹션 슬라이드업 애니메이션
+const section = ref();
+const activeSection = ref(false);
 const activeBox = ref({
   1: false,
   2: false
@@ -56,6 +64,7 @@ const box01 = ref();
 const box02 = ref();
 function scrollEvent() {
   let scrollH = scrollY + innerHeight;
+  if (scrollH > section.value.offsetTop) activeSection.value = true;
   if (window.innerWidth < 1025) {
     if (box01.value.offsetParent.offsetTop + box01.value.clientHeight * 3 < scrollH) activeBox.value[1] = true;
     if (box02.value.offsetParent.offsetTop + box01.value.clientHeight * 4 < scrollH) activeBox.value[2] = true;

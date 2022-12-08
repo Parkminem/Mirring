@@ -1,5 +1,5 @@
 <template>
-  <section class="section section_animation" data-name="main_careers" style="margin-top: -100px">
+  <section class="section" data-name="main_careers" :class="{ section_animation: activeSection }" ref="section">
     <div class="container_1076">
       <div class="content">
         <img
@@ -19,7 +19,20 @@
   </section>
 </template>
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
+
+//섹션 슬라이드업 애니메이션
+const section = ref();
+const activeSection = ref(false);
+function sectionAnimation() {
+  if (scrollY + innerHeight > section.value.offsetTop) activeSection.value = true;
+}
+onMounted(() => {
+  window.addEventListener('scroll', sectionAnimation);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', sectionAnimation);
+});
 </script>
-<style scoped></style>

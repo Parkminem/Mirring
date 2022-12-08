@@ -5,7 +5,7 @@
   animation: 0.8s ease-in slideUp;
   animation-fill-mode: forwards;
 }
-:is(.box01, .box02, .box03, .box04, .box05) {
+.box01, .box02, .box03, .box04, .box05 {
   animation: 0.25s ease-in-out boxAnimation;
   animation-fill-mode: forwards;
 }
@@ -47,3 +47,9 @@
   }
 }
 
+/* scss
+@for $i from 1 through 5 {
+  .box0#{$i} {
+    animation-delay: 0.#{$i}
+  }; 
+*/

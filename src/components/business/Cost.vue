@@ -94,6 +94,6 @@ onMounted(() => {
   window.addEventListener('scroll', scrollEvent);
 });
 onUnmounted(() => {
-  window.addEventListener('scroll', scrollEvent);
+  window.removeEventListener('scroll', scrollEvent);
 });
 </script>

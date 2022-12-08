@@ -1,9 +1,10 @@
 <template>
   <section
-    class="section section_animation dot2"
+    class="section dot2"
+    :class="{ section_animation: activeSection }"
     id="main02"
     data-name="main_about"
-    style="margin-top: -100px; opacity: 1"
+    ref="section"
   >
     <div class="container_1076">
       <div class="content">
@@ -133,11 +134,9 @@
   </section>
 </template>
 <script setup>
-import $ from 'jquery';
-import scrollEvent from '../../util/scrollEvent';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 const router = useRouter();
@@ -160,11 +159,18 @@ function goNews() {
     hash: '#about_news'
   });
 }
+//섹션 슬라이드업 애니메이션
+const section = ref();
+const activeSection = ref(false);
+function sectionAnimation() {
+  if (innerHeight > section.value.offsetTop) return (activeSection.value = true);
+}
 onMounted(() => {
-  const arr = document.querySelectorAll('.swiper-slide');
-  const box = $('.swiper').children();
-  scrollEvent.settingBoxAnimation(box);
-  scrollEvent.sectionAnimationByscroll();
+  if (innerWidth < 1025) {
+    window.addEventListener('scroll', sectionAnimation);
+  } else sectionAnimation();
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', sectionAnimation);
 });
 </script>
-<style scoped></style>
