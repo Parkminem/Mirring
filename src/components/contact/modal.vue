@@ -9,87 +9,91 @@
         alt="close"
         @click="modalStore.infoModalClose"
       />
-      <p class="title">{{ t('contact.privacyTitle') }}</p>
+      <p class="title">{{ t('privacy.Title') }}</p>
       <div class="area">
         <p>
-          <span>{{ t('contact.privacyDesc01') }}</span
-          >(<span>{{ t('contact.privacyDesc02') }}</span
-          >)<span>{{ t('contact.privacyDesc03') }}</span
-          >, <span>{{ t('contact.privacyDesc04') }}</span
+          <span>{{ t('privacy.Desc01') }}</span
+          >(<span>{{ t('privacy.Desc02') }}</span
+          >)<span>{{ t('privacy.Desc03') }}</span
+          >, <span>{{ t('privacy.Desc04') }}</span
           >.
         </p>
         <p><br /></p>
         <p>
-          <span>{{ t('contact.privacySubTitle') }}</span
-          >1<span>{{ t('contact.privacySub01Title') }}</span>
+          <span>{{ t('privacy.je') }}</span
+          >1<span>{{ t('privacy.Sub01Title') }}</span>
         </p>
         <p><br /></p>
         <p>
-          1. <span>{{ t('contact.privacySub01-1-1') }}</span
-          >, <span>{{ t('contact.privacySub01-1-2') }}</span
-          >, <span>{{ t('contact.privacySub01-1-3') }}</span
-          >, <span>{{ t('contact.privacySub01-1-4') }}</span
-          >, <span>{{ t('contact.privacySub01-1-5') }}</span
-          >, <span>{{ t('contact.privacySub01-1-6') }}</span
-          >(<span>{{ t('contact.privacySub01-1-7') }}</span
-          >)<span>{{ t('contact.privacySub01-1-8') }}</span
-          >.<br />2. <span>{{ t('contact.privacySub01-2-1') }}</span
-          >, <span>{{ t('contact.privacySub01-2-2') }}</span
-          >.<br />3. <span>{{ t('contact.privacySub01-3-1') }}</span
-          >, <span>{{ t('contact.privacySub01-3-2') }}</span
-          >.<br />4. <span>{{ t('contact.privacySub01-4-1') }}</span
-          >. <span>{{ t('contact.privacySub01-4-2') }}</span
-          >(http://ideaconcert.com)<span>{{ t('contact.privacySub01-4-3') }}</span
-          >.<br />5. <span>{{ t('contact.privacySub01-5-1') }}</span
-          >, <span>{{ t('contact.privacySub01-5-2') }}</span
-          >, <span>{{ t('contact.privacySub01-5-3') }}</span
-          >(http://ideaconcert.com), <span>{{ t('contact.privacySub01-5-4') }}</span> 30<span>{{
-            t('contact.privacySub01-5-5')
+          1. <span>{{ t('privacy.Sub01-1-1') }}</span
+          >, <span>{{ t('privacy.Sub01-1-2') }}</span
+          >, <span>{{ t('privacy.Sub01-1-3') }}</span
+          >, <span>{{ t('privacy.Sub01-1-4') }}</span
+          >, <span>{{ t('privacy.Sub01-1-5') }}</span
+          >, <span>{{ t('privacy.Sub01-1-6') }}</span
+          >(<span>{{ t('privacy.Sub01-1-7') }}</span
+          >)<span>{{ t('privacy.Sub01-1-8') }}</span
+          >.<br />2. <span>{{ t('privacy.Sub01-2-1') }}</span
+          >, <span>{{ t('privacy.Sub01-2-2') }}</span
+          >.<br />3. <span>{{ t('privacy.Sub01-3-1') }}</span
+          >, <span>{{ t('privacy.Sub01-3-2') }}</span
+          >.<br />4. <span>{{ t('privacy.Sub01-4-1') }}</span
+          >. <span>{{ t('privacy.Sub01-4-2') }}</span
+          >(http://ideaconcert.com)<span>{{ t('privacy.Sub01-4-3') }}</span
+          >.<br />5. <span>{{ t('privacy.Sub01-5-1') }}</span
+          >, <span>{{ t('privacy.Sub01-5-2') }}</span
+          >, <span>{{ t('privacy.Sub01-5-3') }}</span
+          >(http://ideaconcert.com), <span>{{ t('privacy.Sub01-5-4') }}</span> 30<span>{{
+            t('privacy.Sub01-5-5')
           }}</span
-          >. <span>{{ t('contact.privacySub01-5-6') }}</span
-          >, <span>{{ t('contact.privacySub01-5-7') }}</span> 2<span>{{ t('contact.privacySub01-5-8') }} </span
-          >(<span>{{ t('contact.privacySub01-5-9') }}</span
-          >.)<span>{{ t('contact.privacySub01-5-10') }}</span> 1<span>{{ t('contact.privacySub01-5-11') }}</span
+          >. <span>{{ t('privacy.Sub01-5-6') }}</span
+          >, <span>{{ t('privacy.Sub01-5-7') }}</span> 2<span>{{ t('privacy.Sub01-5-8') }} </span>(<span>{{
+            t('privacy.Sub01-5-9')
+          }}</span
+          >.)<span>{{ t('privacy.Sub01-5-10') }}</span> 1<span>{{ t('privacy.Sub01-5-11') }}</span
           >.
         </p>
         <p><br /></p>
         <p><br /></p>
         <p>
-          <span>{{ t('contact.privacySubTitle') }}</span
-          >2<span>{{ t('contact.privacySub02Title1') }}</span
-          >/<span>{{ t('contact.privacySub02Title2') }}</span>
+          <span>{{ t('privacy.je') }}</span
+          >2<span>{{ t('privacy.Sub02Title1') }}</span
+          >/<span>{{ t('privacy.Sub02Title2') }}</span>
         </p>
         <p>
-          1. <span>{{ t('contact.privacySub02-1-1') }}</span
-          >, <span>{{ t('contact.privacySub02-1-2') }}</span
-          >, <span>{{ t('contact.privacySub02-1-3') }}</span
-          >.<br />2. <span>{{ t('contact.privacySub02-2-1') }}</span
-          >, <span>{{ t('contact.privacySub02-2-2') }}</span
-          >, <span>{{ t('contact.privacySub02-2-3') }}</span
-          >, <span>{{ t('contact.privacySub02-2-4') }}</span
-          >(<span>{{ t('contact.privacySub02-2-5') }}</span
-          >)•<span>{{ t('contact.privacySub02-2-6') }}</span
-          >(<span>{{ t('contact.privacySub02-2-7') }}</span
-          >), <span>{{ t('contact.privacySub02-2-8') }}</span
-          >. <span>{{ t('contact.privacySub02-2-9') }}</span
-          >, <span>{{ t('contact.privacySub02-2-10') }}</span
-          >.<br />3. <span>{{ t('contact.privacySub02-3-1') }}</span
-          >(<span>{{ t('contact.privacySub02-3-2') }}</span
-          >)<span>{{ t('contact.privacySub02-3-3') }}</span
-          >, <span>{{ t('contact.privacySub02-3-4') }}</span
-          >, <span>{{ t('contact.privacySub02-3-5') }}</span
-          >(<span>{{ t('contact.privacySub02-3-6') }}</span
-          >)<span>{{ t('contact.privacySub02-3-7') }}</span
-          >.<br />4. <span>{{ t('contact.privacySub02-4-1') }}</span
-          >.<br /><span>{{ t('contact.privacySub02-4-2') }}</span
-          >. <span>{{ t('contact.privacySub02-4-3') }}</span
-          ><br /><span>{{ t('contact.privacySub02-4-4') }}</span
-          >. <span>{{ t('contact.privacySub02-4-5') }}</span
-          ><br /><span>{{ t('contact.privacySub02-4-6') }}</span
+          1. <span>{{ t('privacy.Sub02-1-1') }}</span
+          >, <span>{{ t('privacy.Sub02-1-2') }}</span
+          >, <span>{{ t('privacy.Sub02-1-3') }}</span
+          >.<br />2. <span>{{ t('privacy.Sub02-2-1') }}</span
+          >, <span>{{ t('privacy.Sub02-2-2') }}</span
+          >, <span>{{ t('privacy.Sub02-2-3') }}</span
+          >, <span>{{ t('privacy.Sub02-2-4') }}</span
+          >(<span>{{ t('privacy.Sub02-2-5') }}</span
+          >)•<span>{{ t('privacy.Sub02-2-6') }}</span
+          >(<span>{{ t('privacy.Sub02-2-7') }}</span
+          >), <span>{{ t('privacy.Sub02-2-8') }}</span
+          >. <span>{{ t('privacy.Sub02-2-9') }}</span
+          >, <span>{{ t('privacy.Sub02-2-10') }}</span
+          >.<br />3. <span>{{ t('privacy.Sub02-3-1') }}</span
+          >(<span>{{ t('privacy.Sub02-3-2') }}</span
+          >)<span>{{ t('privacy.Sub02-3-3') }}</span
+          >, <span>{{ t('privacy.Sub02-3-4') }}</span
+          >, <span>{{ t('privacy.Sub02-3-5') }}</span
+          >(<span>{{ t('privacy.Sub02-3-6') }}</span
+          >)<span>{{ t('privacy.Sub02-3-7') }}</span
+          >.<br />4. <span>{{ t('privacy.Sub02-4-1') }}</span
+          >.<br /><span>{{ t('privacy.ga') }}</span
+          >. <span>{{ t('privacy.Sub02-4-2') }}</span
+          ><br /><span>{{ t('privacy.na') }}</span
+          >. <span>{{ t('privacy.Sub02-4-3') }}</span
+          ><br /><span>{{ t('privacy.da') }}</span
           >.
-          <span>{{ t('contact.privacySub02-4-7') }}</span>
+          <span>{{ t('privacy.Sub02-4-4') }}</span>
         </p>
-        <p>[<span>필수</span>]</p>
+        <p>
+          [<span>{{ t('privacy.Sub02-4-5') }}</span
+          >]
+        </p>
         <table width="601" cellpadding="5" cellspacing="0">
           <colgroup>
             <col width="102" />
@@ -98,32 +102,47 @@
           <thead>
             <tr>
               <td width="102" style="border: 1px solid #808080; padding: 0.05in 0.1in">
-                <p><span>목적</span></p>
+                <p>
+                  <span>{{ t('privacy.Sub02-4-5-head01') }}</span>
+                </p>
               </td>
               <td width="477" style="border: 1px solid #808080; padding: 0.05in 0.1in">
-                <p><span>항목</span></p>
+                <p>
+                  <span>{{ t('privacy.Sub02-4-5-head02') }}</span>
+                </p>
               </td>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td width="102" style="border: 1px solid #808080; padding: 0.05in 0.1in">
-                <p><span>사용자 정보</span></p>
+                <p>
+                  <span>{{ t('privacy.Sub02-4-5-body01') }}</span>
+                </p>
               </td>
               <td width="477" style="border: 1px solid #808080; padding: 0.05in 0.1in">
                 <p>
-                  <span>성함</span>, <span>회사명</span>, <span>부서명</span>/<span>직급</span>, <span>전화번호</span>,
-                  E-mail<span>주소</span>
+                  <span>{{ t('privacy.Sub02-4-5-body01-01') }}</span
+                  >, <span>{{ t('privacy.Sub02-4-5-body01-02') }}</span
+                  >, <span>{{ t('privacy.Sub02-4-5-body01-03') }}</span
+                  >/<span>{{ t('privacy.Sub02-4-5-body01-04') }}</span
+                  >, <span>{{ t('privacy.Sub02-4-5-body01-05') }}</span
+                  >, E-mail<span>{{ t('privacy.Sub02-4-5-body01-06') }}</span>
                 </p>
               </td>
             </tr>
             <tr>
               <td width="102" style="border: 1px solid #808080; padding: 0.05in 0.1in">
-                <p><span>서비스 이용</span></p>
+                <p>
+                  <span>{{ t('privacy.Sub02-4-5-body02') }}</span>
+                </p>
               </td>
               <td width="477" style="border: 1px solid #808080; padding: 0.05in 0.1in">
                 <p>
-                  <span>서비스 이용시간</span>/<span>정지 기록</span>, <span>접속 로그</span>, <span>쿠키 정보</span>
+                  <span>{{ t('privacy.Sub02-4-5-body02-01') }}</span
+                  >/<span>{{ t('privacy.Sub02-4-5-body02-02') }}</span
+                  >, <span>{{ t('privacy.Sub02-4-5-body02-03') }}</span
+                  >, <span>{{ t('privacy.Sub02-4-5-body02-04') }}</span>
                 </p>
               </td>
             </tr>
@@ -131,32 +150,44 @@
         </table>
         <p><br /></p>
         <p><br /></p>
-        <p><span>제</span>3<span>조 개인정보의 수집방법</span></p>
         <p>
-          <span>회사는 다음과 같은 방법으로 개인정보를 수집합니다</span>.<br /><span>가</span>.
-          <span>홈페이지를 통한 회원</span>/<span>서비스 가입 과정에서 수집</span>
+          <span>{{ t('privacy.je') }}</span
+          >3<span>{{ t('privacy.Sub03Title') }}</span>
+        </p>
+        <p>
+          <span>{{ t('privacy.Sub03-1-1') }}</span
+          >.<br /><span>{{ t('privacy.ga') }}</span
+          >. <span>{{ t('privacy.Sub03-1-2') }}</span
+          >/<span>{{ t('privacy.Sub03-1-3') }}</span>
         </p>
         <p><br /></p>
         <p><br /></p>
-        <p><span>제</span>4<span>조 개인정보의 보유 및 이용기간</span></p>
+        <p>
+          <span>{{ t('privacy.je') }}</span
+          >4<span>{{ t('privacy.Sub04Title') }}</span>
+        </p>
         <p>
           1.
-          <span
-            >회사는 고객님의 개인정보를 고객님께 서비스를 제공하는 기간 또는 분쟁처리 기간 동안에 한하여 보유하고 이를
-            이용합니다</span
-          >.<br /><span>가</span>. <span>서비스 가입기간</span>(<span>가입일 </span>~ <span>해지일</span>)<br /><span
-            >나</span
-          >. <span>요금정산</span>, <span>요금 과오납 등 분쟁 대비를 위해 해지 또는 요금완납 후 </span>6<span
-            >개월까지</span
-          ><br /><span>다</span>. <span>요금관련 분쟁 등 서비스 이용과 관련된 민원</span>/<span
-            >분쟁이 계속될 경우에는 민원</span
-          >/<span>분쟁 해결 시까지 보유</span>(<span>단</span>,
-          <span>관계 법령에 특별한 규정이 있을 경우 관련 법령에 따라 보관</span>)<br />2. <span>상법</span>,
-          <span>국세기본법</span>, <span>통신비밀보호법</span>, <span>전자상거래 등에서의 소비자보호에 관한 법률</span>,
-          <span
-            >신용정보의 이용 및 보호에 관한 법률 등 관계법령에 따라 보존할 필요가 있는 경우 회사는 관계법령에서 정한
-            기간 동안 고객의 개인정보를 보유하며</span
-          >, <span>그 기간은 다음과 같습니다</span>.
+          <span>{{ t('privacy.Sub04-1-1') }}</span
+          >.<br /><span>{{ t('privacy.ga') }}</span
+          >. <span>{{ t('privacy.Sub04-1-2') }}</span
+          >(<span>{{ t('privacy.Sub04-1-3') }}</span> ~ <span>{{ t('privacy.Sub04-1-4') }}</span
+          >)<br /><span>{{ t('privacy.na') }}</span
+          >. <span>{{ t('privacy.Sub04-1-5') }}</span
+          >, <span>{{ t('privacy.Sub04-1-6') }}</span> 6<span>{{ t('privacy.Sub04-1-7') }}</span
+          ><br /><span>{{ t('privacy.da') }}</span
+          >. <span>{{ t('privacy.Sub04-1-8') }}</span
+          >/<span>{{ t('privacy.Sub04-1-9') }}</span
+          >/<span>{{ t('privacy.Sub04-1-10') }}</span
+          >(<span>{{ t('privacy.Sub04-1-11') }}</span
+          >, <span>{{ t('privacy.Sub04-1-12') }}</span
+          >)<br />2. <span>{{ t('privacy.Sub04-2-1') }}</span
+          >, <span>{{ t('privacy.Sub04-2-2') }}</span
+          >, <span>{{ t('privacy.Sub04-2-3') }}</span
+          >, <span>{{ t('privacy.Sub04-2-4') }}</span
+          >, <span>{{ t('privacy.Sub04-2-5') }}</span
+          >, <span>{{ t('privacy.Sub04-2-6') }}</span
+          >.
         </p>
         <table width="4369" cellpadding="5" cellspacing="0">
           <colgroup>
