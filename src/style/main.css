@@ -2,12 +2,12 @@
 
 body {overflow-x: hidden;}
 
-#navigation {position: fixed; left: 74px; top: 50%; transform: translateY(-50%); z-index: 1;}
+#navigation {position: fixed; left: 74px; top: 50%; transform: translateY(-50%); z-index: 100;}
 #navigation .dot {width: 13px; height: 13px; background-color: #fff; background-color: #d2d2d2; border-radius:50%; margin-bottom: 34px; cursor: pointer;}
 #navigation .dot:last-child {margin-bottom: 0;}
 #navigation .dot.active {position: relative; background-color: transparent;}
 #navigation .dot.active:before {content:''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 23px; height: 23px;
-background-image: url(/resources/common/images/nav.png);
+background-image: url(/assets/images/home/nav.png);
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;}
@@ -15,7 +15,7 @@ background-position: center;}
 /* main_home */
 .section[data-name="main_home"] {background-color: #ff943a; padding-top: 130px; overflow: hidden;}
 .section[data-name="main_home"] .content {position: relative;}
-.section[data-name="main_home"] .content .title {position: relative; font-family: 'GmarketSansBold'; font-weight: bold; font-size: 5.85em; color:#fff; text-align: center; margin-bottom: 36px;}
+.section[data-name="main_home"] .content .title {position: relative; font-family: 'GmarketSansBold'; font-weight: bold; font-size: 5.85em; color:#fff; text-align: center; margin-bottom: 36px; line-height: 93px;}
 .section[data-name="main_home"] .content .text {font-family: 'Noto Sans', sans-serif; font-size: 18px; line-height: 1.7; color:#292929; text-align: center; margin-top: 10px;}
 .section[data-name="main_home"] .content .img_box {position: relative; margin: 221px auto 0 auto; width: 447px; height: 139px;}
 .section[data-name="main_home"] .content .img_box .earth2 {position: absolute; top: -165px;  width: 100%; transform-origin: 50% 50%; padding: 20px; box-sizing: border-box;
@@ -25,7 +25,7 @@ background-position: center;}
 .section[data-name="main_home"] .content .img_box .cloud.mobile {display: none;}
 .section[data-name="main_home"] .content .img_box .character_1 {position: absolute; top: -175px; left: 35px; width: 266px; height: 196px;}
 .section[data-name="main_home"] .content .img_box .character_2 {position: absolute; bottom: 38.1px; left: -30px; width: 123.1px; height: 124.8px;}
-.section[data-name="main_home"] .content .img_box .bg_text {position: absolute; left: 50%; top: -165px; transform: translateX(-50%); font-family: 'GmarketSansBold'; font-weight: bold; font-size: 15.4em; line-height: 1.09; color:#fe8e30;
+.section[data-name="main_home"] .content .img_box .bg_text {position: absolute; left: 50%; top: -165px; transform: translateX(-50%); font-family: 'GmarketSansBold'; font-weight: bold; font-size: 185px; line-height: 1.09; color:#fe8e30;
 -webkit-transform: translateX(-50%);}
 @keyframes rotate_image{
 	100% {
@@ -59,14 +59,14 @@ right: 50px;}
 cursor: pointer;
 display: flex;
 flex-direction: column;}
-.section[data-name="main_about"] .swiper-container .swiper-slide.css {margin-right: 28px;}
+/* .section[data-name="main_about"] .swiper-container .swiper-slide.css {margin-right: 28px;} */
 .section[data-name="main_about"] .swiper-container .swiper-slide.css:last-child {margin-right: 0;}
 .section[data-name="main_about"] .swiper-container .swiper-slide .images {width: 248px; height: 248px; object-fit: cover; overflow: hidden; }
 .section[data-name="main_about"] .swiper-container .swiper-slide .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; padding: 20px 10px 0 10px; }
 .section[data-name="main_about"] .position .swiper-button-prev,
-.section[data-name="main_about"] .position .swiper-button-next {position: absolute; top: 50%; transform: translateY(-50%); z-index: 99; cursor: pointer;}
-.section[data-name="main_about"] .position .swiper-button-prev {left: -85px; background-image: url(/assets/images/home/swiper_prev.png);}
-.section[data-name="main_about"] .position .swiper-button-next {right: -85px; background-image: url(/assets/images/home/swiper_next.png);}
+.section[data-name="main_about"] .position .swiper-button-next {position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 1;}
+.section[data-name="main_about"] .position .swiper-button-prev {left: -85px;}
+.section[data-name="main_about"] .position .swiper-button-next {right: -85px;}
 .section[data-name="main_about"] .position .more {position: absolute; top: -38px; right: 0; font-family: 'Noto Sans', sans-seri; font-weight: bold; font-size: 14px; line-height: 1.36; color:#5a5a5a;}
 .section[data-name="main_about"] .position .page_move {width: 248px;height: 46px; margin: 0 auto; margin-top: 63.4px;}
 
@@ -81,8 +81,9 @@ background-position: center;}
 /* main_technology */
 .section[data-name="main_technology"] {margin-top: 519px !important; padding-top: 222px; background-color: #f9f9f9; position: relative;}
 .section[data-name="main_technology"] .content {display: flex; padding-bottom: 1px;}
-.section[data-name="main_technology"] .content.position {position: absolute; top: -142.5px;}
-.section[data-name="main_technology"] .content.position.us {top: -225px}
+.section[data-name="main_technology"] .content.position {position: absolute;}
+.section[data-name="main_technology"] .content.position.kr {top: -142.5px}
+.section[data-name="main_technology"] .content.position.en {top: -225px}
 .section[data-name="main_technology"] .content.position.id {top: -225px}
 .section[data-name="main_technology"] .content.position.pt {top: -200px}
 .section[data-name="main_technology"] .content.position .container_1096 {display: flex;}
@@ -103,7 +104,7 @@ background-position: center;}
 background-repeat: no-repeat;
 background-size: auto;
 background-position: center;}
-.section[data-name="main_technology"] .content .white_box:nth-child(1) .round {background-image: url(/assets/images/home/technology_1.png);}
+.section[data-name="main_technology"] .content .white_box:nth-child(1) .round {background-image: url(/assets/images/home/technology_01.png);}
 .section[data-name="main_technology"] .content .white_box:nth-child(2) .round{background-image: url(/assets/images/home/technology_2.png);}
 .section[data-name="main_technology"] .content .white_box:nth-child(3) .round {background-image: url(/assets/images/home/technology_3.png);}
 .section[data-name="main_technology"] .content .white_box:nth-child(4) .round {background-image: url(/assets/images/home/technology_4.png);}
@@ -168,7 +169,7 @@ left: 50px;}
 
 
 @media(max-width:1676px){
-  .section[data-name="main_home"] .content .img_box .bg_text {font-size: 10em;}
+  .section[data-name="main_home"] .content .img_box .bg_text {font-size: 120px;}
 }
 
 @media(max-width:1300px){
@@ -185,7 +186,7 @@ left: 50px;}
 	
 	/* main_home */
 	.section[data-name="main_home"] {padding: 119px 0 100px 0;}
-	.section[data-name="main_home"] .content .title {font-size: 2.45em; margin-bottom: 33px;}
+	.section[data-name="main_home"] .content .title {font-size: 2.45em; margin-bottom: 33px;line-height: 39px;}
 	.section[data-name="main_home"] .content .text {margin-top: 0; font-size: 12px;}
 	.orange_circle:before {left: 0; width: 17px; height: 17px;}
 	.section[data-name="main_home"] .content .img_box {margin-top: 177px; width: 184px; height: 185px;}
@@ -209,7 +210,7 @@ left: 50px;}
 	.section[data-name="main_about"] .bg_text {display: none;}
 	.section[data-name="main_about"] .position {position: static; transform: none; left: auto; bottom: auto;}
 	.section[data-name="main_about"] .swiper-container .swiper-wrapper {flex-wrap:wrap;}
-	.section[data-name="main_about"] .swiper-container .swiper-slide {width: 49%; margin-right: 1%; margin-top: 1%; min-height: 0;}
+	.section[data-name="main_about"] .swiper-container .swiper-slide {width: 49% !important; margin-right: 1% !important; margin-top: 1%; min-height: 0;}
 	.section[data-name="main_about"] .image_box {width: 100%;}
 	.section[data-name="main_about"] .swiper-container .swiper-slide:nth-child(n+5) {display: none;}
 	.section[data-name="main_about"] .position .more {display: none;}

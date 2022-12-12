@@ -1,0 +1,55 @@
+.dot2, .dot3, .dot4, .dot5, .dot6 {
+  opacity: 0;
+}
+.section_animation {
+  animation: 0.8s ease-in slideUp;
+  animation-fill-mode: forwards;
+}
+.box01, .box02, .box03, .box04, .box05 {
+  animation: 0.25s ease-in-out boxAnimation;
+  animation-fill-mode: forwards;
+}
+.boxAni {
+  opacity: 0;
+}
+.box01 {
+  animation-delay: 0.1s;
+}
+.box02 {
+  animation-delay: 0.2s;
+}
+.box03 {
+  animation-delay: 0.3s;
+}
+.box04 {
+  animation-delay: 0.4s
+}
+.box05 {
+  animation-delay: 0.5s
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes boxAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* scss
+@for $i from 1 through 5 {
+  .box0#{$i} {
+    animation-delay: 0.#{$i}
+  }; 
+*/

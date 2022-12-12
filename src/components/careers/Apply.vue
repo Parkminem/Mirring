@@ -1,0 +1,89 @@
+<template>
+  <section class="section" data-name="careers_support">
+    <div class="container_1076">
+      <div class="content">
+        <div class="left_box">
+          <p class="title" v-html="t('careers.applyTitle')"></p>
+          <p class="text" v-html="t('careers.applyText')"></p>
+          <ul class="contact_info">
+            <li class="tel">
+              <b>{{ t('careers.applyTel') }}</b
+              ><span class="country_number">{{ t('careers.applyTelNum') }}</span>
+            </li>
+            <li class="mail">
+              <b>{{ t('careers.applyEmail') }}</b
+              ><span>recruit@ideaconcert.com</span>
+            </li>
+            <a class="page_move" href="/assets/data/careers/아이디어 콘서트_입사지원서.zip" download="">{{
+              t('common.button.downLoad')
+            }}</a>
+          </ul>
+        </div>
+        <div class="right_box box_animation">
+          <div class="white_box boxAni" :class="{ box01: activeBox[1] }" ref="box01">
+            <div class="round"></div>
+            <p class="title">{{ t('careers.applyBox01Title') }}</p>
+            <p class="text">{{ t('careers.applyBox01Text') }}</p>
+          </div>
+          <div class="white_box boxAni" :class="{ box02: activeBox[2] }" ref="box02">
+            <div class="round"></div>
+            <p class="title">{{ t('careers.applyBox02Title') }}</p>
+            <p class="text">{{ t('careers.applyBox02Text') }}</p>
+          </div>
+          <div class="white_box boxAni" :class="{ box03: activeBox[3] }" ref="box03">
+            <div class="round"></div>
+            <p class="title">{{ t('careers.applyBox03Title') }}</p>
+            <p class="text">{{ t('careers.applyBox03Text') }}</p>
+          </div>
+        </div>
+        <div class="mobile contact_info">
+          <p class="tel">
+            <b>{{ t('careers.applyTel') }}</b>
+            <span class="country_number">{{ t('careers.applyTelNum') }}</span>
+          </p>
+          <p class="mail"><b>E-mail</b><span>recruit@ideaconcert.com</span></p>
+          <a class="page_move" href="/assets/data/careers/아이디어 콘서트_입사지원서.zip" download="">{{
+            t('common.button.downLoad')
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
+//박스애니메이션
+const activeBox = ref({
+  1: false,
+  2: false,
+  3: false
+});
+const box01 = ref();
+const box02 = ref();
+const box03 = ref();
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  if (box01.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[1] = true;
+  if (box02.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[2] = true;
+  if (box03.value.offsetTop + box01.value.clientHeight < scrollH) activeBox.value[3] = true;
+}
+onMounted(() => {
+  if (innerHeight > box01.value.offsetTop + box01.value.clientHeight) {
+    for (let key of Object.keys(activeBox.value)) {
+      activeBox.value[key] = true;
+    }
+  }
+  //모바일 박스애니메이션
+  if (window.innerWidth < 1025) window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
+});
+</script>
+<style scoped>
+@import '../../style/careers.css';
+@import '../../style/animation.css';
+</style>

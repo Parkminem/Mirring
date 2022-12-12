@@ -1,23 +1,25 @@
 <template>
+  <NavigationBar />
   <div id="main">
-    <Main01 />
-    <Main02 />
-    <Main03 />
-    <Main04 />
-    <Main05 />
-    <Main06 />
+    <MainVisual />
+    <ContentsSection />
+    <ConnectSection />
+    <VideoSection />
+    <ContactSection />
+    <CareersSection />
   </div>
 </template>
 <script setup>
-import Main01 from "../components/home/Main01.vue";
-import Main02 from "../components/home/Main02.vue";
-import Main03 from "../components/home/Main03.vue";
-import Main04 from "../components/home/Main04.vue";
-import Main05 from "../components/home/Main05.vue";
-import Main06 from "../components/home/Main06.vue";
+import NavigationBar from '../components/home/NavigationBar.vue';
+import MainVisual from '../components/home/MainVisual.vue';
+import ContentsSection from '../components/home/ContentsSection.vue';
+import ConnectSection from '../components/home/ConnectSection.vue';
+import VideoSection from '../components/home/VideoSection.vue';
+import ContactSection from '../components/home/ContactSection.vue';
+import CareersSection from '../components/home/CareersSection.vue';
 </script>
 
 <style>
-@import "../style/main.css";
-@import "../style/main_popup.css";
+@import '../style/main.css';
+@import '../style/animation.css';
 </style>

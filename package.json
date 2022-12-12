@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "axios": "^1.2.1",
+>>>>>>> dev
     "jquery": "^3.6.1",
     "pinia": "^2.0.25",
     "swiper": "^8.4.5",
     "vue": "^3.2.41",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

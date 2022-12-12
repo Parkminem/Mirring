@@ -2,19 +2,30 @@
   <div class="content_wrap">
     <div class="list_box_wrap">
       <ul>
+<<<<<<< HEAD
         <li class="listbox">
+=======
+        <li class="listbox" v-for="(item, idx) in items" :key="item.title">
+>>>>>>> dev
           <div class="img_wrap">
             <img src="/assets/images/contents/img01.jpg" />
           </div>
           <dl>
+<<<<<<< HEAD
             <dt>나의 로맨틱 홀리데이</dt>
             <dd>
               할리우드 여행을 꿈꾸는 대한민국 흔녀 강재인. 부푼 설레임을 안고 떠난 LA 패키지 투어에서 만난 것은 다름
               아닌 첩보, 액션, 스릴러?
+=======
+            <dt>{{ item.title }}</dt>
+            <dd>
+              {{ item.desc }}
+>>>>>>> dev
             </dd>
           </dl>
           <ul class="btn_wrap">
             <li>
+<<<<<<< HEAD
               <a target="blank" href="/assets/data/contents/01_나의_로맨틱_홀리데이_ko.pdf">작품소개서</a>
             </li>
             <li>
@@ -196,6 +207,16 @@
             <li><a target="blank" href="/assets/data/contents/11_총수_en.pdf">Introduction</a></li>
           </ul>
         </li>
+=======
+              <!-- 작품소개서 href에 링크 삽입 -->
+              <a target="blank" href="">작품소개서</a>
+            </li>
+            <li>
+              <a target="blank" href="">Introduction</a>
+            </li>
+          </ul>
+        </li>
+>>>>>>> dev
       </ul>
     </div>
   </div>

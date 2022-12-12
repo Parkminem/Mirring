@@ -16,7 +16,6 @@ display: -webkit-box;
 }
 
 
-
 /* input , select 파란 테두리 초기화 */
 input:focus,
 select {
@@ -80,8 +79,8 @@ body {
 
 /* 폰트 초기화 */
 body, th, td, input, select, textarea, button {
-	font-size: 12px;
-	line-height: 1.33;
+	font-size: 12px !important;
+	line-height: 1.33 !important;
 	color: #222;
 }
 
