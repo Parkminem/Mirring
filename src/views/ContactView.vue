@@ -10,7 +10,6 @@ import Form from '../components/contact/Form.vue';
 import Map from '../components/contact/Map.vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
-
 const title = t('contact.mainTitle');
 const subTitle = t('contact.subTitle');
 const text = t('contact.mainText');

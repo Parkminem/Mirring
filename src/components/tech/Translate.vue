@@ -9,28 +9,77 @@
       </div>
       <div class="translate__main"></div>
       <div class="slide__container">
-        <ul id="slider" class="translate__sub">
+        <!-- <ul id="slider" class="translate__sub">
           <li
             v-for="i in 6"
             :key="i"
             :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
             class="subimage slide"
           ></li>
-        </ul>
-        <a href="#"><i id="prev" class="fas fa-chevron-left" aria-hidden="true"></i></a>
-        <a href="#"><i id="next" class="fas fa-chevron-right" aria-hidden="true"></i></a>
+        </ul> -->
+        <Swiper
+          id="slider"
+          class="translate__sub"
+          @swiper="onSwiper"
+          :breakpoints="breakPoints"
+          :slides-per-view="1"
+          :touch-ratio="0"
+          :centered-slides="true"
+        >
+          <SwiperSlide
+            class="subimage slide"
+            v-for="i in 6"
+            :key="i"
+            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
+          ></SwiperSlide>
+        </Swiper>
+        <button @click="preBtn()">
+          <span class="material-icons" id="prev" aria-hidden="true"> arrow_back_ios </span>
+        </button>
+        <button @click="nextBtn()">
+          <span class="material-icons" id="next" aria-hidden="true"> arrow_forward_ios </span>
+        </button>
       </div>
-      <span id="current__slide"></span>
+      <span id="current__slide">{{ swiperIndex }} / 6</span>
     </div>
   </div>
 </template>
 <script setup>
-import { watch } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import { watch, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import i18n from '../../i18n';
 const { t } = useI18n();
-
 const lang = i18n.global.locale;
+const swiperIndex = ref(1);
+const breakPoints = {
+  768: {
+    slidesPerView: 6
+  }
+};
+const swiper = ref(null);
+const onSwiper = (swiperInstance) => {
+  swiper.value = swiperInstance;
+};
+function nextBtn() {
+  if (swiperIndex.value == 6) {
+    swiper.value.slideTo(0);
+    swiperIndex.value = 1;
+  } else {
+    swiperIndex.value++;
+    swiper.value.slideNext();
+  }
+}
+function preBtn() {
+  if (swiperIndex.value == 1) {
+    swiper.value.slideTo(5);
+    swiperIndex.value = 6;
+  } else {
+    swiperIndex.value--;
+    swiper.value.slidePrev();
+  }
+}
 
 watch(lang, (newLang) => {
   lang = newLang;

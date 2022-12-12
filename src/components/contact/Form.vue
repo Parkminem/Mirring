@@ -21,8 +21,8 @@
                 <li @click="resetType" class="placeholder" :class="{ active: placeholder }">
                   {{ t('contact.typePlaceHolder') }}
                 </li>
-                <li v-for="i in 5" :key="i" @click="selectType(i)" :class="{ active: typeNo[i] }">
-                  {{ t(`contact.type0${i}`) }}
+                <li v-for="i in types" :key="i" @click="selectType(i.type)" :class="{ active: typeNo[i.type] }">
+                  {{ i.name }}
                 </li>
               </ul>
             </div>
@@ -116,10 +116,14 @@ import { ref } from 'vue';
 import { useModalStore } from '../../store/modal';
 import { useFormStore } from '../../store/form';
 import { useI18n } from 'vue-i18n';
+import i18n from '../../i18n';
+import { storeToRefs } from 'pinia';
 const { t } = useI18n();
+const locale = i18n.global.locale.value;
 
 const modalStore = useModalStore();
 const formStore = useFormStore();
+const { types } = storeToRefs(formStore);
 
 const mailReg = new RegExp(
   "([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])"
@@ -187,6 +191,9 @@ function sendForm() {
 
   //폼 데이터 전송 액션 사용해야함
 }
+
+//문의유형 리스트 받아오기
+formStore.typeListAct(locale);
 
 //문의유형 리스트 열고 닫는 함수
 function openSelect() {
