@@ -9,10 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "axios": "^1.2.1",
->>>>>>> dev
     "jquery": "^3.6.1",
     "pinia": "^2.0.25",
     "swiper": "^8.4.5",
