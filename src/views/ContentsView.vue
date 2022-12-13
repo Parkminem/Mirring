@@ -14,5 +14,3 @@ const subTitle = t('contents.subTitle');
 const text = t('contents.mainText');
 const bg = '/assets/images/contents/Contents.jpg';
 </script>
-
-<style scoped></style>

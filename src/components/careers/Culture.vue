@@ -74,7 +74,117 @@ onUnmounted(() => {
 });
 //박스 애니메이션 끝
 </script>
-<style scoped>
-@import '../../style/careers.css';
+<style scoped lang="scss">
 @import '../../style/animation.css';
+.section {
+  background-color: #ffffff;
+  padding-bottom: 140px;
+  .container_1076 {
+    > p {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 1.36;
+      color: #292929;
+      margin-bottom: 30px;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+        margin-right: 85px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .round {
+          width: 139px;
+          height: 139px;
+          border-radius: 50%;
+          background-color: #f8f8f8;
+          margin-bottom: 28px;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: center;
+        }
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) .round {
+            background-image: url(/assets/images/careers/culture0#{$i}.png);
+          }
+        }
+        p {
+          font-family: 'Noto Sans', sans-serif;
+          text-align: center;
+          &.title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.38;
+            color: #292929;
+            margin-bottom: 17px;
+            width: 100%;
+          }
+          &.text {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.64;
+            color: #5a5a5a;
+            text-align: center;
+            width: 106%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-bottom: 80px;
+    .container_1076 {
+      .content {
+        flex-wrap: wrap;
+        .box {
+          position: relative;
+          width: 100%;
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+          margin: 0;
+          margin-bottom: 10px;
+          padding: 18px;
+          .round {
+            width: 76px;
+            height: 76px;
+            background-size: 70%;
+            margin: 0;
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          p {
+            &.title {
+              font-size: 12px;
+              margin: 0;
+              margin-bottom: 10px;
+              text-align: left;
+              margin-left: 101px;
+              width: calc(100% - 101px);
+            }
+            &.text {
+              font-size: 12px;
+              margin: 0;
+              text-align: left;
+              margin-left: 101px;
+              width: calc(100% - 101px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

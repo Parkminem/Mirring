@@ -111,4 +111,124 @@ onMounted(() => {
   };
 });
 </script>
-<style></style>
+<style scoped lang="scss">
+.section {
+  width: 100%;
+  padding: 442px 0 140px 0;
+  .container_1076 {
+    p {
+      font-family: 'Noto Sans', sans-serif;
+      color: #292929;
+      text-align: center;
+      &.title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 1.36;
+        margin-bottom: 10px;
+      }
+      &.sub_title {
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 60px;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .address_box {
+        width: 33%;
+        max-width: 315px;
+        box-sizing: border-box;
+        margin-right: 66px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .kakao_map {
+          width: 315px;
+          height: 252px;
+          color: #333;
+          position: relative;
+          font-family: 'Noto Sans', sans-serif;
+          margin-bottom: 30px;
+          .root_daum_roughmap .wrap_controllers {
+            display: none;
+          }
+        }
+        .title {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 1.38;
+          color: #292929;
+        }
+        .text {
+          font-size: 14px;
+          line-height: 1.64;
+          color: #5a5a5a;
+          text-align: center;
+          width: 100%;
+        }
+        .info {
+          font-size: 14px;
+          line-height: 1.64;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          color: #5a5a5a;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1px;
+            height: 70%;
+            background-color: #5a5a5a;
+          }
+          .tel {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    padding: 50px 0 80px 0 !important;
+    .container_1076 {
+      p {
+        &.title {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        &.sub_title {
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+      .content {
+        flex-direction: column;
+        align-items: center;
+        .address_box {
+          margin-top: 35px;
+          margin-right: 0;
+          width: 100%;
+          .kakao_map {
+            margin-bottom: 20px;
+          }
+          .title {
+            font-size: 12px;
+          }
+          .text {
+            font-size: 12px;
+          }
+          .info {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

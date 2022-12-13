@@ -18,5 +18,3 @@ const subTitle = t('careers.subTitle');
 const text = t('careers.mainText');
 const bg = '/assets/images/careers/careers.png';
 </script>
-
-<style scoped></style>

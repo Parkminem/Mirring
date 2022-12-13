@@ -9,6 +9,7 @@
       </div>
       <div class="translate__main"></div>
       <div class="slide__container">
+<<<<<<< HEAD
         <!-- <ul id="slider" class="translate__sub">
           <li
             v-for="i in 6"
@@ -31,6 +32,22 @@
             v-for="i in 6"
             :key="i"
             :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
+=======
+        <Swiper
+          id="slider"
+          class="translate__sub"
+          @swiper="onSwiper"
+          :breakpoints="breakPoints"
+          :slides-per-view="1"
+          :touch-ratio="0"
+          :centered-slides="true"
+        >
+          <SwiperSlide
+            class="subimage slide"
+            v-for="i in 6"
+            :key="i"
+            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
+>>>>>>> ajax
           ></SwiperSlide>
         </Swiper>
         <button @click="preBtn()">

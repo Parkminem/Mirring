@@ -6,7 +6,17 @@ import instance from './axiosInstance';
 function getTypeList() {
   return instance.get('/question/type/list');
 }
+<<<<<<< HEAD
 
 const formApi = { getTypeList };
+=======
+/**
+ * 위치 조회
+ */
+function getLocation() {
+  return instance.get('/location/list');
+}
+const formApi = { getTypeList, getLocation };
+>>>>>>> ajax
 
 export default formApi;

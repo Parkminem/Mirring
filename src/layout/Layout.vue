@@ -25,7 +25,8 @@ watch(infoModalState, (newInfoModalState) => {
 });
 </script>
 
-<style>
+<style lang="scss">
+//transition
 .infoModal-enter-from,
 .infoModal-leave-to {
   opacity: 0;
@@ -37,5 +38,15 @@ watch(infoModalState, (newInfoModalState) => {
 .infoModal-enter-to,
 .infoModal-leave-from {
   opacity: 1;
+}
+@media (max-width: 1024px) {
+  #modal {
+    height: 100%;
+    .modal_box {
+      width: 80%;
+      padding: 30px;
+      font-size: 12px;
+    }
+  }
 }
 </style>

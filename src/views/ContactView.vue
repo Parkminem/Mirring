@@ -15,7 +15,3 @@ const subTitle = t('contact.subTitle');
 const text = t('contact.mainText');
 const bg = '/assets/images/contact/contact.jpg';
 </script>
-
-<style>
-@import '../style/contact.css';
-</style>
