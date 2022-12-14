@@ -166,8 +166,146 @@ onMounted(() => {
   if (innerHeight > box01.value.offsetTop + box01.value.clientHeight)
     [activeBox.value[1], activeBox.value[2]] = [true, true];
   if (window.innerWidth < 1024) window.addEventListener('scroll', scrollEvent);
+  else {
+    [activeBox.value[1], activeBox.value[2]] = [true, true];
+  }
 });
 onUnmounted(() => {
   window.removeEventListener('scroll', scrollEvent);
 });
 </script>
+<style lang="scss" scoped>
+.section {
+  .business_list_menu {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    .container_1076 .content {
+      display: flex;
+      .menu {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.38;
+        color: #292929;
+        text-align: center;
+        width: 25%;
+        padding: 24px 0 21px 0;
+        cursor: pointer;
+        &.active {
+          color: #ec6c00;
+        }
+      }
+    }
+  }
+  .business_list_box {
+    padding: 40px 0 60px 0;
+    background-color: #f9f9f9;
+    .container_1076 .content {
+      display: flex;
+      justify-content: center;
+      &.active {
+        display: flex;
+      }
+      .box {
+        width: 248px;
+        min-height: 337px;
+        margin-right: 28px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        &:last-child {
+          margin-right: 0;
+        }
+        .images {
+          width: 100%;
+          height: 130px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .round {
+          width: 122px;
+          height: 122px;
+          background-color: #f8f8f8;
+          border-radius: 50%;
+          margin: 15px auto 10px auto;
+          background-repeat: no-repeat;
+          background-size: 70%;
+          background-position: center;
+        }
+        .text_box {
+          padding: 17px 18px;
+          box-sizing: border-box;
+          font-family: 'Noto Sans', sans-serif;
+          text-align: center;
+          .title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #292929;
+            line-height: 1.38;
+          }
+          .text {
+            font-size: 14px;
+            line-height: 1.64;
+            color: #5a5a5a;
+            padding-top: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    .business_list_menu .container_1076 .content {
+      flex-wrap: wrap;
+      .menu {
+        width: 50%;
+        font-size: 14px;
+        padding: 28px 0 26px 0;
+        &.active {
+          background-color: #f9f9f9;
+        }
+      }
+    }
+    .business_list_box {
+      padding: 20px 0 40px 0;
+      .container_1076 .content {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        &:nth-child(3) .box:last-child {
+          margin-right: auto;
+        }
+        .box {
+          width: 49%;
+          margin-right: 1%;
+          margin-top: 1%;
+          min-height: 0;
+          &:last-child {
+            margin-right: 1%;
+          }
+          @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+              margin-top: 0;
+            }
+          }
+          .round {
+            width: 89px;
+            height: 89px;
+          }
+          .text_box {
+            padding: 10px;
+            .title {
+              font-size: 12px;
+            }
+            .text {
+              font-size: 12px;
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</style>

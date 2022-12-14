@@ -164,12 +164,11 @@ function goNews() {
 const section = ref();
 const activeSection = ref(false);
 function sectionAnimation() {
-  if (innerHeight > section.value.offsetTop) return (activeSection.value = true);
+  if (innerHeight + scrollY > section.value.offsetTop) return (activeSection.value = true);
 }
 onMounted(() => {
-  if (innerWidth < 1025) {
-    window.addEventListener('scroll', sectionAnimation);
-  } else sectionAnimation();
+  if (innerWidth > 1280) activeSection.value = true;
+  window.addEventListener('scroll', sectionAnimation);
 });
 onUnmounted(() => {
   window.removeEventListener('scroll', sectionAnimation);

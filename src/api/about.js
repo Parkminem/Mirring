@@ -6,10 +6,6 @@ import instance from './axiosInstance';
 function getPartners() {
   return instance.get('/partner/list');
 }
-<<<<<<< HEAD
-
-const aboutApi = { getPartners };
-=======
 /**
  * 연혁 리스트 받기
  */
@@ -23,6 +19,5 @@ function getNews(lang) {
   return instance.get(`/news/list?lang=${lang}`);
 }
 const aboutApi = { getPartners, getHistory, getNews };
->>>>>>> ajax
 
 export default aboutApi;

@@ -38,8 +38,6 @@ export const useFormStore = defineStore('form', {
           console.log(err);
         });
     }
-<<<<<<< HEAD
-=======
   }
 });
 
@@ -54,6 +52,5 @@ export const useMapStore = defineStore('map', {
         .then((res) => (this.locations = res.data.data))
         .catch((err) => console.log(err));
     }
->>>>>>> ajax
   }
 });
