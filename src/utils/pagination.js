@@ -11,7 +11,7 @@ export function pagination(page, totalPage, pageSize) {
   const nextBtn = totalPage > pageSize && totalPage !== endPage ? true : false; //다음 버튼 생성
 
   let pageArr = [];
-  for (let i = start; i <= endPage; i++) pageArr.push(i);
+  for (let i = startPage; i <= endPage; i++) pageArr.push(i);
 
   return {
     startPage,
