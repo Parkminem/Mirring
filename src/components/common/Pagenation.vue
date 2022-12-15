@@ -13,7 +13,6 @@
 </template>
 <script setup>
 import { pagination } from '../../utils/pagination';
-import { defineProps } from 'vue';
 const props = defineProps({
   page: Number,
   totalPage: Number,
