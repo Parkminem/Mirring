@@ -155,13 +155,9 @@
         <!-- pagination -->
         <ul class="news_pagination">
           <li class="number active">1</li>
-
           <li class="number" onclick="mvNewsPage(2)">2</li>
-
           <li class="number" onclick="mvNewsPage(3)">3</li>
-
           <li class="number" onclick="mvNewsPage(4)">4</li>
-
           <li class="arrow next" onclick="mvNewsPage(5)">
             <img src="/assets/images/about/pagination_next.png" alt="arrow_next" />
           </li>
@@ -177,4 +173,209 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 </script>
-<style></style>
+<style lang="scss" scoped>
+.section {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  background-color: #f9f9f9;
+  .container_1076 {
+    > p {
+      font-family: 'Noto Sans', sans-serif;
+      color: #292929;
+      text-align: center;
+      &.title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 1.36;
+      }
+      &.text {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+    }
+    .news_list_box {
+      margin-top: 60px;
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        .box {
+          display: flex;
+          flex-direction: column;
+          width: 248px;
+          min-height: 402.6px;
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+          margin-right: 28px;
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+          &:nth-child(n + 5) {
+            margin-top: 56.5px;
+          }
+          .effect_area {
+            overflow: hidden;
+            cursor: pointer;
+            &:hover .image_box {
+              transform: scale(1.05);
+            }
+            .image_box {
+              width: 248px;
+              height: 248px;
+              object-fit: contain;
+              transition: all 1.3s cubic-bezier(0, 0, 0.05, 1);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+            }
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 248px);
+            padding: 11px 15px 16.6px 15px;
+            .date {
+              font-family: 'Noto Sans', sans-serif;
+              font-size: 12px;
+              color: #969696;
+              line-height: 1.42;
+            }
+            .title {
+              font-family: 'Noto Sans', sans-serif;
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 1.38;
+              color: #292929;
+              text-align: left;
+              margin-top: 6px;
+              cursor: pointer;
+            }
+            .news_page_move {
+              margin-top: auto;
+              text-align: right;
+              span {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .news_pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 63.5px;
+        li {
+          &.active {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: bold;
+            color: #292929;
+          }
+          &.number {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 12px;
+            line-height: 1.42;
+            color: #969696;
+            margin-right: 20px;
+            cursor: pointer;
+          }
+          &.arrow {
+            cursor: pointer;
+            &.prev {
+              margin-right: 38px;
+            }
+            &.next {
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .section .container_1076 .news_list_box .content .box {
+    flex: 0 1 calc(25% - 14px);
+    margin-right: 0;
+    margin-right: 14px;
+    .image_box {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    padding: 50px 0;
+    .container_1076 {
+      > p {
+        &.title {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        &.text {
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+      .news_list_box {
+        margin-top: 35px;
+        .content {
+          display: block;
+          overflow: hidden;
+          .box {
+            float: left;
+            display: block;
+            width: 49%;
+            margin: 0;
+            margin-top: 2%;
+            min-height: 0;
+            overflow: hidden;
+            &:nth-child(even) {
+              float: right;
+            }
+            &:nth-child(odd) {
+              float: left;
+            }
+            &:nth-child(n + 5) {
+              margin-top: 2%;
+            }
+            .effect_area {
+              float: left;
+              .image_box {
+                width: 100px;
+                height: 100px;
+              }
+            }
+            .info {
+              margin-left: 100px;
+              .title {
+                font-size: 12px;
+                height: 16px;
+                &.ellipsis_line_2 {
+                  -webkit-line-clamp: 1;
+                }
+              }
+            }
+          }
+        }
+        .news_pagination {
+          margin-top: 20px;
+          display: block;
+          text-align: center;
+
+          .number {
+            display: inline;
+          }
+          .arrow {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .section .container_1076 .news_list_box .content .box {
+    width: 100%;
+  }
+}
+</style>

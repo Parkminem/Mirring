@@ -46,10 +46,51 @@ onUnmounted(() => {
   window.removeEventListener('scroll', scrollActive);
 });
 </script>
-<style scoped>
+<style scoped lang="scss">
 a {
   display: block;
   width: 100%;
   height: 100%;
+}
+#navigation {
+  position: fixed;
+  left: 74px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  .dot {
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    margin-bottom: 34px;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.active {
+      position: relative;
+      background-color: transparent;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 23px;
+        height: 23px;
+        background-image: url(/assets/images/home/nav.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  #navigation {
+    display: none;
+  }
 }
 </style>
