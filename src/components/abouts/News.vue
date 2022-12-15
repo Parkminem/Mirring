@@ -153,15 +153,7 @@
           <!-- //item -->
         </div>
         <!-- pagination -->
-        <ul class="news_pagination">
-          <li class="number active">1</li>
-          <li class="number" onclick="mvNewsPage(2)">2</li>
-          <li class="number" onclick="mvNewsPage(3)">3</li>
-          <li class="number" onclick="mvNewsPage(4)">4</li>
-          <li class="arrow next" onclick="mvNewsPage(5)">
-            <img src="/assets/images/about/pagination_next.png" alt="arrow_next" />
-          </li>
-        </ul>
+        <Pagenation :page="1" :total-page="12" :page-size="4" />
         <!-- //pagination -->
       </div>
     </div>
@@ -170,6 +162,7 @@
 </template>
 <script setup>
 import { useI18n } from 'vue-i18n';
+import Pagenation from '../common/Pagenation.vue';
 
 const { t } = useI18n();
 </script>
@@ -260,35 +253,6 @@ const { t } = useI18n();
           }
         }
       }
-      .news_pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 63.5px;
-        li {
-          &.active {
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: bold;
-            color: #292929;
-          }
-          &.number {
-            font-family: 'Noto Sans', sans-serif;
-            font-size: 12px;
-            line-height: 1.42;
-            color: #969696;
-            margin-right: 20px;
-            cursor: pointer;
-          }
-          &.arrow {
-            cursor: pointer;
-            &.prev {
-              margin-right: 38px;
-            }
-            &.next {
-              margin-left: 18px;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -355,18 +319,6 @@ const { t } = useI18n();
                 }
               }
             }
-          }
-        }
-        .news_pagination {
-          margin-top: 20px;
-          display: block;
-          text-align: center;
-
-          .number {
-            display: inline;
-          }
-          .arrow {
-            display: inline;
           }
         }
       }
