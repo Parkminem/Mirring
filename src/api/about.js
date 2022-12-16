@@ -18,6 +18,12 @@ function getHistory(lang) {
 function getNews(lang, page) {
   return instance.get(`/news/list/${lang}/${page}`);
 }
-const aboutApi = { getPartners, getHistory, getNews };
+/**
+ * 뉴스 상세 내용 조회(언어코드, 뉴스고유번호)
+ */
+function getDetailNews(lang, num) {
+  return instance.get(`/news/${lang}/${num}`);
+}
+const aboutApi = { getPartners, getHistory, getNews, getDetailNews };
 
 export default aboutApi;

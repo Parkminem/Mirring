@@ -12,8 +12,8 @@ import { storeToRefs } from 'pinia';
 import Header from '../components/common/Header.vue';
 import Footer from '../components/common/Footer.vue';
 import Modal from '../components/contact/Modal.vue';
-
 import { useModalStore } from '../store/modal';
+
 const modalStore = useModalStore();
 const { infoModalState } = storeToRefs(modalStore);
 

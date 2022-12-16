@@ -380,5 +380,12 @@
     "tel": "Silakan masukkan informasi kontak Anda",
     "mail": "Masukkan email Anda",
     "desc": "Silakan masukkan detail pertanyaan Anda"
+  },
+  "detail": {
+    "title": "Berita",
+    "text": "Semua tentang berita dari IDEACONCERT.",
+    "prev": "Sebelumnya",
+    "next": "Selanjutnya",
+    "list": "List"
   }
 }

@@ -7,6 +7,7 @@ import CareersView from '../views/CareersView.vue';
 import ContactView from '../views/ContactView.vue';
 import ContentsView from '../views/ContentsView.vue';
 import OurTechView from '../views/OurTechView.vue';
+import DetailNewsView from '../views/DetailNewsView.vue';
 
 const routes = [
   {
@@ -21,6 +22,7 @@ const routes = [
       },
       {
         path: '/about',
+        name: 'about',
         component: AboutUsView
       },
       {
@@ -42,6 +44,11 @@ const routes = [
       {
         path: '/tech',
         component: OurTechView
+      },
+      {
+        path: '/detail',
+        component: DetailNewsView,
+        name: 'detail'
       }
     ]
   }

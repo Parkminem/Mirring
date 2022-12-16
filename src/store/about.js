@@ -3,9 +3,15 @@ import aboutApi from './../api/about';
 
 export const useAboutStore = defineStore('about', {
   state: () => ({
-    partners: []
+    partners: [],
+    newsList: null,
+    detailNews: null
   }),
   actions: {
+    /**
+     * 파트너사 액션(언어코드)
+     * state : partners
+     */
     async partnerAct(locale) {
       this.partners = [];
       await aboutApi
@@ -36,6 +42,32 @@ export const useAboutStore = defineStore('about', {
           }
         })
         .catch((err) => console.log(err));
+    },
+    /**
+     * 뉴스리스트 액션(언어코드, 페이지 번호)
+     * state : newsList
+     */
+    async newsAct(locale, page) {
+      await aboutApi
+        .getNews(locale, page)
+        .then((res) => {
+          this.newsList = res.data.data;
+        })
+        .catch((err) => console.log(err));
+    },
+    /**
+     * 디테일뉴스 액션(언어코드, 뉴스 고유 번호)
+     * state : detailNews
+     */
+    async detailNewsAct(locale, num) {
+      await aboutApi
+        .getDetailNews(locale, num)
+        .then((res) => {
+          this.detailNews = res.data.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }
 });
