@@ -12,9 +12,7 @@
             <div class="info">
               <div class="month_box">
                 <span class="month"> 09 </span>
-
                 <p>(주) 아이디어콘서트 설립</p>
-
                 <p>6개월 챌린지 지원 사업 선정</p>
               </div>
             </div>
