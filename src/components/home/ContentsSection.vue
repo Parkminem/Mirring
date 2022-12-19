@@ -47,55 +47,15 @@
             class="css"
             v-for="(news, idx) of aboutStore.newsList"
             :key="news.news_pk"
-            v-if="locale == 'kr'"
           >
             <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
               <div class="effect_area">
                 <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
               </div>
-              <p class="title ellipsis_line_2">{{ news.title_kr }}</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide
-            :data-swiper-slide-index="idx"
-            class="css"
-            v-for="(news, idx) of aboutStore.newsList"
-            :key="news.news_pk"
-            v-if="locale == 'en'"
-          >
-            <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
-              <div class="effect_area">
-                <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
-              </div>
-              <p class="title ellipsis_line_2">{{ news.title_us }}</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide
-            :data-swiper-slide-index="idx"
-            class="css"
-            v-for="(news, idx) of aboutStore.newsList"
-            :key="news.news_pk"
-            v-if="locale == 'id'"
-          >
-            <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
-              <div class="effect_area">
-                <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
-              </div>
-              <p class="title ellipsis_line_2">{{ news.title_id }}</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide
-            :data-swiper-slide-index="idx"
-            class="css"
-            v-for="(news, idx) of aboutStore.newsList"
-            :key="news.news_pk"
-            v-if="locale == 'pt'"
-          >
-            <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
-              <div class="effect_area">
-                <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
-              </div>
-              <p class="title ellipsis_line_2">{{ news.title_pt }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'kr'">{{ news.title_kr }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'en'">{{ news.title_us }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'id'">{{ news.title_id }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'pt'">{{ news.title_pt }}</p>
             </router-link>
           </SwiperSlide>
         </Swiper>
