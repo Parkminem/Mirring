@@ -54,7 +54,8 @@ position: absolute;
 bottom: 93px;
 right: 50px;}
 .section[data-name="main_about"] .position {position: absolute;bottom: -200px; left: 50%;transform: translateX(-50%);}
-.section[data-name="main_about"] .swiper-container {padding-bottom: 1px;}
+/* .section[data-name="main_about"] .swiper-container {padding-bottom: 1px;} */
+.section[data-name="main_about"] .swiper-container .swiper {padding: 1px}
 .section[data-name="main_about"] .swiper-container .swiper-slide {width: 248px; min-height: 350px;  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1); background-color: #ffffff;
 cursor: pointer;
 display: flex;
