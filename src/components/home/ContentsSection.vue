@@ -37,9 +37,9 @@
           :slides-per-view="4"
           :space-between="0"
           :touch-ratio="0"
+          :looped-slides="8"
           :breakpoints="breakPoints"
           @swiper="onSwiper"
-          :initial-slide="0"
           class="box_animation"
         >
           <SwiperSlide
