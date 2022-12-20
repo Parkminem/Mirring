@@ -5,7 +5,8 @@ export const useAboutStore = defineStore('about', {
   state: () => ({
     partners: [],
     newsList: null,
-    detailNews: null
+    detailNews: null,
+    historys: null
   }),
   actions: {
     /**
@@ -68,6 +69,31 @@ export const useAboutStore = defineStore('about', {
         .catch((err) => {
           console.log(err);
         });
+    },
+    /**
+     * 연혁 액션(언어코드)
+     */
+    async historyAct(locale) {
+      function reducer(objectArray, property) {
+        return objectArray.reduce(function (acc, obj) {
+          let key = obj[property];
+          if (!acc[key]) {
+            acc[key] = [];
+          }
+          acc[key].sort(function (a, b) {
+            return a.month - b.month;
+          });
+          acc[key].push(obj);
+          return acc;
+        }, {});
+      }
+      await aboutApi
+        .getHistory(locale)
+        .then((res) => {
+          let result = reducer(res.data.data, 'year');
+          this.historys = result;
+        })
+        .then((err) => console.log(err));
     }
   }
 });
