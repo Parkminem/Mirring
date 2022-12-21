@@ -75,14 +75,11 @@ export const useAboutStore = defineStore('about', {
      */
     async historyAct(locale) {
       function reducer(objectArray, property) {
-        return objectArray.reduce(function (acc, obj) {
+        return objectArray.reduce((acc, obj) => {
           let key = obj[property];
           if (!acc[key]) {
             acc[key] = [];
           }
-          acc[key].sort((a, b) => {
-            return a.month - b.month;
-          });
           acc[key].push(obj);
           return acc;
         }, {});
@@ -91,6 +88,16 @@ export const useAboutStore = defineStore('about', {
         .getHistory(locale)
         .then((res) => {
           let result = reducer(res.data.data, 'year');
+          for (let value of Object.values(result)) {
+            value.sort((a, b) => {
+              if (a.month > b.month) {
+                return 1;
+              }
+              if (a.month < b.month) {
+                return -1;
+              }
+            });
+          }
           this.historys = result;
         })
         .catch((err) => console.log(err));

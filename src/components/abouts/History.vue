@@ -64,10 +64,13 @@ const keyArr = Object.keys(historys.value);
     }
     .history_area {
       margin-top: 82px;
+      display: flex;
+      flex-wrap: wrap;
       .content {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 165.5px 0 275.5px;
+        width: 35%;
+        padding: 0 100px;
         margin-top: 150px;
         background-image: url(/assets/images/about/history_dot.png);
         background-repeat: no-repeat;
@@ -93,7 +96,7 @@ const keyArr = Object.keys(historys.value);
             background-color: #d2d2d2;
           }
           &:last-child {
-            margin-left: auto;
+            // margin-left: auto;
           }
           &:nth-child(3n) {
             margin-right: 0;
@@ -136,6 +139,7 @@ const keyArr = Object.keys(historys.value);
 @media (max-width: 1400px) {
   .section .container_1358 .history_area .content {
     padding: 0 100px;
+    width: 29%;
   }
 }
 @media (max-width: 1024px) {
@@ -170,6 +174,7 @@ const keyArr = Object.keys(historys.value);
         }
         .content {
           padding: 0 40px;
+          width: 100%;
           margin-top: 0;
           background-image: none;
           &:first-child {
