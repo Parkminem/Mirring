@@ -53,6 +53,7 @@ export const useAboutStore = defineStore('about', {
         .getNews(locale, page)
         .then((res) => {
           this.newsList = res.data.data;
+          console.log(this.newsList);
         })
         .catch((err) => console.log(err));
     },
