@@ -80,7 +80,7 @@ export const useAboutStore = defineStore('about', {
           if (!acc[key]) {
             acc[key] = [];
           }
-          acc[key].sort(function (a, b) {
+          acc[key].sort((a, b) => {
             return a.month - b.month;
           });
           acc[key].push(obj);
@@ -93,7 +93,7 @@ export const useAboutStore = defineStore('about', {
           let result = reducer(res.data.data, 'year');
           this.historys = result;
         })
-        .then((err) => console.log(err));
+        .catch((err) => console.log(err));
     }
   }
 });
