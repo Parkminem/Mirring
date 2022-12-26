@@ -51,7 +51,13 @@ const routes = [
         name: 'detail'
       }
     ]
-  }
+  },
+  {
+    path: '/notfound',
+    name: '404',
+    component: () => import('../layout/ErrorLayout.vue')
+  },
+  { path: '/:pathMatch(.*)*', redirect: '/notfound' }
 ];
 
 const router = createRouter({
