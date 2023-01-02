@@ -5,7 +5,7 @@
       <p class="text">{{ t('about.historyDesc') }}</p>
       <div class="history_area">
         <div class="content box_animation" v-for="(item, idx) in keyArr.length" :key="item[idx]">
-          <div class="history_box" style="opacity: 1">
+          <div class="history_box" :class="[activeBox[idx + 1] ? `box01` : '']" ref="box">
             <p class="year">{{ keyArr[idx] }}</p>
             <div class="info">
               <div class="month_box" v-for="(item2, idx2) in historys[keyArr[idx]]" :key="item2.month">
@@ -27,13 +27,14 @@
           </div>
         </div>
         <div v-if="keyArr.length !== 2n" class="content box_animation">
-          <div class="history_box active"></div>
+          <div class="history_box active" :class="[activeBox[keyArr.length + 1] ? `box01` : '']" ref="emptyBox"></div>
         </div>
       </div>
     </div>
   </section>
 </template>
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useAboutStore } from '../../store/about';
@@ -41,7 +42,42 @@ const aboutStore = useAboutStore();
 const { historys } = storeToRefs(aboutStore);
 const { t, locale } = useI18n();
 
+const box = ref();
+const emptyBox = ref();
+
 const keyArr = Object.keys(historys.value);
+//박스 애니메이션
+let activeBox = ref({});
+for (let i = 1; i <= keyArr.length + 1; i++) {
+  activeBox.value[i] = false;
+}
+
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  for (let i = 0; i < box.value.length; i++) {
+    if (box.value[i].offsetTop + box.value[i].clientHeight < scrollH) activeBox.value[i + 1] = true;
+  }
+  if (emptyBox) {
+    if (emptyBox.value.offsetTop + emptyBox.value.clientHeight < scrollH) activeBox.value[box.value.length + 1] = true;
+  }
+}
+function mobileScrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  for (let i = 0; i < box.value.length; i++) {
+    if (box.value[i].offsetParent.offsetTop + box.value[i].clientHeight + 100 < scrollH) activeBox.value[i + 1] = true;
+  }
+  if (emptyBox) {
+    if (emptyBox.value.offsetTop + emptyBox.value.clientHeight < scrollH) activeBox.value[box.value.length + 1] = true;
+  }
+}
+
+onMounted(() => {
+  if (innerWidth < 1025) window.addEventListener('scroll', mobileScrollEvent);
+  else window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
+});
 </script>
 <style lang="scss" scoped>
 .section {
@@ -83,6 +119,7 @@ const keyArr = Object.keys(historys.value);
         .history_box {
           position: relative;
           width: 378px;
+          opacity: 0;
           &::before {
             content: '';
             position: absolute;
