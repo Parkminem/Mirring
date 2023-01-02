@@ -26,6 +26,9 @@
             </div>
           </div>
         </div>
+        <div v-if="keyArr.length !== 2n" class="content box_animation">
+          <div class="history_box active"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -93,9 +96,9 @@ const keyArr = Object.keys(historys.value);
           &.active::before {
             background-color: #d2d2d2;
           }
-          &:last-child {
-            // margin-left: auto;
-          }
+          /* &:last-child {
+            margin-left: auto;
+          } */
           &:nth-child(3n) {
             margin-right: 0;
           }
