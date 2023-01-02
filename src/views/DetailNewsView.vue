@@ -8,17 +8,17 @@
 import DetailBody from '../components/detail/DetailBody.vue';
 import Banner from '../components/detail/Banner.vue';
 import { useAboutStore } from '../store/about';
-import i18n from '../i18n';
+import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 import { useRoute } from 'vue-router';
 
+const { locale } = useI18n();
 const aboutStore = useAboutStore();
 const { detailNews } = storeToRefs(aboutStore);
-const locale = i18n.global.locale.value;
 const route = useRoute();
 const pk = route.query.pk;
 //상세 뉴스 불러오기
-aboutStore.detailNewsAct(locale, pk);
+aboutStore.detailNewsAct(locale.value, pk);
 </script>
 <style lang="scss" scoped>
 #main {

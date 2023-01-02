@@ -106,12 +106,10 @@ import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 import { useMapStore } from '../../store/form';
-import i18n from '../../i18n';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const mapStore = useMapStore();
 const { locations } = storeToRefs(mapStore);
-const locale = i18n.global.locale.value;
 
 onMounted(() => {
   const script = document.createElement('script');

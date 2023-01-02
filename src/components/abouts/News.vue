@@ -45,18 +45,16 @@
 import { useI18n } from 'vue-i18n';
 import Pagenation from '../common/Pagenation.vue';
 import { useAboutStore } from '../../store/about';
-import i18n from '../../i18n';
 import { changeDate } from '../../utils/util';
 import { useRouter } from 'vue-router';
 
-const { t } = useI18n();
-const locale = i18n.global.locale.value;
+const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
 const url = 'http://data.ideaconcert.com';
 const router = useRouter();
 
 // 뉴스리스트 불러오기
-aboutStore.newsAct(locale, 1);
+aboutStore.newsAct(locale.value, 1);
 </script>
 <style lang="scss" scoped>
 .section {

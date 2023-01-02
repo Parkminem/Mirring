@@ -15,7 +15,7 @@
               <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
             </li>
           </ul>
-          <ul :class="['bold_text_box', 'box_animation', lang]">
+          <ul :class="['bold_text_box', 'box_animation', locale]">
             <li class="boxAni" ref="box02" :class="{ box01: activeBox[2] }">{{ t('business.creator') }}</li>
             <li class="boxAni" :class="{ box02: activeBox[2] }">{{ t('business.tool') }}</li>
             <li class="boxAni" :class="{ box03: activeBox[2] }">{{ t('business.platforms') }}</li>
@@ -35,7 +35,7 @@
           </li>
         </ul>
         <div class="white_box_foot">
-          <ul :class="['bold_text_box', 'box_animation', lang]">
+          <ul :class="['bold_text_box', 'box_animation', locale]">
             <li class="boxAni" ref="box04" :class="{ box01: activeBox[4] }">{{ t('business.ip') }}</li>
             <li class="boxAni" :class="{ box01: activeBox[4] }">{{ t('business.makingMovie') }}</li>
             <li class="boxAni" :class="{ box01: activeBox[4] }">{{ t('business.sellingMovie') }}</li>
@@ -58,15 +58,9 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted, watch, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
-const { t } = useI18n();
-const lang = i18n.global.locale;
-
-watch(lang, (newLang) => {
-  lang = newLang;
-});
+const { t, locale } = useI18n();
 
 //박스애니메이션
 const activeBox = ref({

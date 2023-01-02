@@ -34,11 +34,9 @@
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useAboutStore } from '../../store/about';
-import i18n from '../../i18n';
 const aboutStore = useAboutStore();
 const { historys } = storeToRefs(aboutStore);
-const locale = i18n.global.locale.value;
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const keyArr = Object.keys(historys.value);
 </script>

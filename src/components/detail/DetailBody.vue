@@ -26,11 +26,8 @@
 import { changeDate } from '../../utils/util';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
-
-const locale = i18n.global.locale.value;
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const props = defineProps({
   pk: String,
   detailNews: Array

@@ -22,7 +22,7 @@
             class="subimage slide"
             v-for="i in 6"
             :key="i"
-            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${lang}_${i}.png)` }"
+            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${locale}_${i}.png)` }"
           ></SwiperSlide>
         </Swiper>
         <button @click="preBtn()">
@@ -39,11 +39,9 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import { watch, ref } from 'vue';
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
-const { t } = useI18n();
-const lang = i18n.global.locale;
+const { t, locale } = useI18n();
 const swiperIndex = ref(1);
 const breakPoints = {
   768: {
@@ -72,8 +70,4 @@ function preBtn() {
     swiper.value.slidePrev();
   }
 }
-
-watch(lang, (newLang) => {
-  lang = newLang;
-});
 </script>

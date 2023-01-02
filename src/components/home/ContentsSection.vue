@@ -91,19 +91,17 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import i18n from '../../i18n';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useAboutStore } from '../../store/about';
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const swiper = ref(null);
 const aboutStore = useAboutStore();
 const url = 'http://data.ideaconcert.com';
-const locale = i18n.global.locale.value;
 
 //뉴스리스트 불러오기
-aboutStore.newsAct(locale, 1);
+aboutStore.newsAct(locale.value, 1);
 const breakPoints = {
   1024: {
     spaceBetween: 28,

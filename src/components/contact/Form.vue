@@ -116,10 +116,8 @@ import { ref } from 'vue';
 import { useModalStore } from '../../store/modal';
 import { useFormStore } from '../../store/form';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
 import { storeToRefs } from 'pinia';
-const { t } = useI18n();
-const locale = i18n.global.locale.value;
+const { t, locale } = useI18n();
 
 const modalStore = useModalStore();
 const formStore = useFormStore();
@@ -193,7 +191,7 @@ function sendForm() {
 }
 
 //문의유형 리스트 받아오기
-formStore.typeListAct(locale);
+formStore.typeListAct(locale.value);
 
 //문의유형 리스트 열고 닫는 함수
 function openSelect() {

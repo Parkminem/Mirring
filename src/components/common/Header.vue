@@ -110,8 +110,7 @@
 import { onMounted, ref, watch } from 'vue';
 import { onBeforeRouteUpdate } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n/index';
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const languages = ['kr', 'en', 'id', 'pt'];
 const language = ref('');
 const isActive = ref(false);
@@ -127,7 +126,7 @@ const handleHeader = () => {
   //로컬스토리지에 언어 저장
   watch(language, (newLanguage) => {
     localStorage.setItem('locale', newLanguage);
-    i18n.global.locale.value = newLanguage;
+    locale.value = newLanguage;
     window.location.reload();
   });
 

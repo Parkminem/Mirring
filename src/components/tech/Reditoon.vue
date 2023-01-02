@@ -19,10 +19,8 @@
 <script setup>
 import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
-const { t } = useI18n();
-const lang = i18n.global.locale;
-
+const { t, locale } = useI18n();
+let lang = locale;
 watch(lang, (newLang) => {
   lang = newLang;
 });

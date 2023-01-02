@@ -18,16 +18,14 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
 import { useAboutStore } from '../../store/about';
 const aboutStore = useAboutStore();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const { partners } = storeToRefs(aboutStore);
 const url = 'http://data.ideaconcert.com';
-const locale = i18n.global.locale.value;
 
 //파트너사 리스트 받아오기
-aboutStore.partnerAct(locale);
+aboutStore.partnerAct(locale.value);
 </script>
 <style lang="scss" scoped>
 .section {
