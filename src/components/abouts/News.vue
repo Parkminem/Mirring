@@ -7,7 +7,13 @@
       <div class="news_list_box">
         <div class="content news_content box_animation">
           <!-- item -->
-          <div class="box" style="opacity: 1" v-for="news in aboutStore.newsList" :key="news.new_pk">
+          <div
+            class="box"
+            v-for="(news, idx) in aboutStore.newsList"
+            :key="news.new_pk"
+            ref="box"
+            :class="[activeBox[idx + 1] ? `box0${idx + 1}` : '']"
+          >
             <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
               <div class="effect_area">
                 <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
@@ -42,19 +48,38 @@
   <!-- //news -->
 </template>
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Pagenation from '../common/Pagenation.vue';
 import { useAboutStore } from '../../store/about';
 import { changeDate } from '../../utils/util';
-import { useRouter } from 'vue-router';
 
 const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
 const url = 'http://data.ideaconcert.com';
-const router = useRouter();
 
 // 뉴스리스트 불러오기
 aboutStore.newsAct(locale.value, 1);
+
+//박스 애니메이션
+const box = ref();
+const activeBox = ref({});
+for (let i = 1; i <= 8; i++) {
+  activeBox.value[i] = false;
+}
+function scrollEvent() {
+  let scrollH = scrollY + innerHeight;
+  for (let i = 0; i < box.value.length; i++) {
+    if (box.value[i].offsetTop + box.value[i].clientHeight < scrollH) activeBox.value[i + 1] = true;
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', scrollEvent);
+});
+onUnmounted(() => {
+  window.removeEventListener('scroll', scrollEvent);
+});
 </script>
 <style lang="scss" scoped>
 .section {
@@ -83,6 +108,7 @@ aboutStore.newsAct(locale.value, 1);
         display: flex;
         flex-wrap: wrap;
         .box {
+          opacity: 0;
           display: flex;
           flex-direction: column;
           width: 248px;

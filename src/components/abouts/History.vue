@@ -76,7 +76,8 @@ onMounted(() => {
   else window.addEventListener('scroll', scrollEvent);
 });
 onUnmounted(() => {
-  window.removeEventListener('scroll', scrollEvent);
+  if (innerWidth < 1025) window.removeEventListener('scroll', mobileScrollEvent);
+  else window.removeEventListener('scroll', scrollEvent);
 });
 </script>
 <style lang="scss" scoped>
