@@ -1,23 +1,52 @@
 <template>
   <ul class="news_pagination">
     <li class="arrow prev" v-if="pagination(page, totalPage, pageSize).preBtn">
-      <img src="/assets/images/common/pagination_prev.png" alt="arrow_prev" />
+      <img @click="clickPrev" src="/assets/images/common/pagination_prev.png" alt="arrow_prev" />
     </li>
-    <li v-for="i of pagination(page, totalPage, pageSize).pageArr" :class="{ active: page == i }" class="number">
+    <li @click="clickPage" v-for="i of pagination(page, totalPage, pageSize).pageArr" :class="{ active: page == i }" class="number">
       {{ i }}
     </li>
     <li class="arrow next" v-if="pagination(page, totalPage, pageSize).nextBtn">
-      <img src="/assets/images/common/pagination_next.png" alt="arrow_next" />
+      <img @click="clickNext" src="/assets/images/common/pagination_next.png" alt="arrow_next" />
     </li>
   </ul>
 </template>
 <script setup>
+
+import { useAboutStore } from '@/store/about';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { pagination } from '../../utils/pagination';
+
+const aboutStore = useAboutStore();
+const { locale } = useI18n();
+
 const props = defineProps({
   page: Number,
   totalPage: Number,
   pageSize: Number
 });
+
+const page = ref(props.page);
+
+const clickPage = (event) => {
+  const newPage = Number(event.currentTarget.innerText);
+  page.value = newPage;
+  aboutStore.newsAct(locale.value, page.value);
+}
+const clickNext = () => {
+  const endPage = pagination(page.value, props.totalPage, props.pageSize).endPage;
+  const newPage = endPage + 1;
+  page.value = newPage;
+  aboutStore.newsAct(locale.value, page.value);
+}
+
+const clickPrev = () => {
+  const startPage = pagination(page.value, props.totalPage, props.pageSize).startPage;
+  const newPage = startPage - props.pageSize;
+  page.value = newPage;
+  aboutStore.newsAct(locale.value, page.value);
+}
 </script>
 <style scoped lang="scss">
 .news_pagination {

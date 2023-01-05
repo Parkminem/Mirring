@@ -3,7 +3,7 @@
     <SubTitle :title="title" :subTitle="subTitle" :text="text" :bg="bg" />
     <Department />
     <History v-if="aboutStore.historys" />
-    <News />
+    <News v-if="aboutStore.totalPage"/>
     <Partner />
     <QuickBanner />
   </div>
@@ -27,6 +27,7 @@ const bg = '/assets/images/about/banner.png';
 
 const aboutStore = useAboutStore();
 aboutStore.historyAct(locale.value);
+aboutStore.newsAct(locale.value, 1);
 </script>
 
 <style>

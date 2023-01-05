@@ -41,7 +41,7 @@
           <!-- //item -->
         </div>
         <!-- v-if로 컨텐츠 수가 8 개 미만일 때 숨겨주는 코드 작성해 주세용 -->
-        <Pagenation :page="1" :total-page="12" :page-size="4" />
+        <Pagenation v-if="aboutStore.newsList.length >= 8" :page="1" :total-page="totalPage" :page-size="4" />
       </div>
     </div>
   </section>
@@ -57,6 +57,7 @@ import { changeDate } from '../../utils/util';
 const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
 const url = 'http://data.ideaconcert.com';
+const totalPage = aboutStore.totalPage;
 
 // 뉴스리스트 불러오기
 aboutStore.newsAct(locale.value, 1);
