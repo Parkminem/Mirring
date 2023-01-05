@@ -6,7 +6,8 @@ export const useAboutStore = defineStore('about', {
     partners: [],
     newsList: null,
     detailNews: null,
-    historys: null
+    historys: null,
+    totalPage: null
   }),
   actions: {
     /**
@@ -52,7 +53,8 @@ export const useAboutStore = defineStore('about', {
       await aboutApi
         .getNews(locale, page)
         .then((res) => {
-          this.newsList = res.data.data;
+          this.newsList = res.data.data.newsData;
+          this.totalPage = res.data.data.totalPageNum;
         })
         .catch((err) => console.log(err));
     },
