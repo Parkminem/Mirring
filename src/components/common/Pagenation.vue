@@ -29,11 +29,14 @@ const props = defineProps({
 
 const page = ref(props.page);
 
+// 페이지 이동
 const clickPage = (event) => {
   const newPage = Number(event.currentTarget.innerText);
   page.value = newPage;
   aboutStore.newsAct(locale.value, page.value);
 }
+
+// next 이동
 const clickNext = () => {
   const endPage = pagination(page.value, props.totalPage, props.pageSize).endPage;
   const newPage = endPage + 1;
@@ -41,6 +44,7 @@ const clickNext = () => {
   aboutStore.newsAct(locale.value, page.value);
 }
 
+// prev 이동
 const clickPrev = () => {
   const startPage = pagination(page.value, props.totalPage, props.pageSize).startPage;
   const newPage = startPage - props.pageSize;
