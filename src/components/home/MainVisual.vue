@@ -6,8 +6,7 @@
           Let’s PLAY your<span class="orange_circle"></span><br />
           Webtoons &amp; Comics
         </p>
-        <!-- <p class="text" v-html="t('home.mainText')"></p> -->
-        <i18n-t class="text" tag="p" keypath="home.mainText" />
+        <p class="text" v-html="t('home.mainText')"></p>
         <div class="img_box">
           <p class="bg_text">IDEACONCERT</p>
           <img class="earth2" alt="IDEACONCERT" src="assets/images/home/run_half-earth.gif" />
