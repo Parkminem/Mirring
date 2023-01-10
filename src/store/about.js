@@ -5,7 +5,6 @@ export const useAboutStore = defineStore('about', {
   state: () => ({
     partners: [],
     newsList: null,
-    detailNews: null,
     historys: null,
     totalPage: null
   }),
@@ -57,20 +56,6 @@ export const useAboutStore = defineStore('about', {
           this.totalPage = res.data.data.totalPageNum;
         })
         .catch((err) => console.log(err));
-    },
-    /**
-     * 디테일뉴스 액션(언어코드, 뉴스 고유 번호)
-     * state : detailNews
-     */
-    async detailNewsAct(locale, num) {
-      await aboutApi
-        .getDetailNews(locale, num)
-        .then((res) => {
-          this.detailNews = res.data.data;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
     },
     /**
      * 연혁 액션(언어코드)
