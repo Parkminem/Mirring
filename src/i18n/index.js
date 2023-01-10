@@ -11,6 +11,7 @@ const i18n = createI18n({
   allowComposition: true,
   fallbackLocale: 'en',
   silentFallbackWarn: true,
+  warnHtmlMessage: false,
   messages: { kr, pt, en, id }
 });
 export default i18n;
