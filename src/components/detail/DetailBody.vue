@@ -2,16 +2,10 @@
   <section class="section" data-name="about_detail_news">
     <div class="container_1076">
       <div class="notice_head">
-        <div class="title" v-if="locale == 'kr'">{{ detailNews.title_kr }}</div>
-        <div class="title" v-if="locale == 'en'">{{ detailNews.title_us }}</div>
-        <div class="title" v-if="locale == 'id'">{{ detailNews.title_id }}</div>
-        <div class="title" v-if="locale == 'pt'">{{ detailNews.title_pt }}</div>
-        <div class="date">{{ changeDate(detailNews.regdate) }}</div>
+        <div class="title">{{ title }}</div>
+        <div class="date">{{ changeDate(date) }}</div>
       </div>
-      <div class="notice_body" v-if="locale == 'kr'" v-html="detailNews.content_kr"></div>
-      <div class="notice_body" v-if="locale == 'en'" v-html="detailNews.content_us"></div>
-      <div class="notice_body" v-if="locale == 'id'" v-html="detailNews.content_id"></div>
-      <div class="notice_body" v-if="locale == 'pt'" v-html="detailNews.content_pt"></div>
+      <div class="notice_body" v-html="content"></div>
     </div>
     <ul class="notice_foot">
       <li class="prev" v-if="preBtn()" @click="goPage(Number(pk) - 1)">&lt; {{ t('detail.prev') }}</li>
@@ -24,14 +18,47 @@
 </template>
 <script setup>
 import { changeDate } from '../../utils/util';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import aboutApi from '../../api/about';
 const router = useRouter();
 const { t, locale } = useI18n();
+
 const props = defineProps({
-  pk: String,
-  detailNews: Array
+  pk: String
 });
+
+const title = ref('');
+const content = ref('');
+const date = ref('');
+
+//상세 뉴스 불러오기
+await aboutApi
+  .getDetailNews(locale.value, props.pk)
+  .then((res) => {
+    date.value = res.data.data.regdate;
+    switch (locale.value) {
+      case 'kr':
+        title.value = res.data.data.title_kr;
+        content.value = res.data.data.content_kr;
+        break;
+      case 'id':
+        title.value = res.data.data.title_id;
+        content.value = res.data.data.content_id;
+        break;
+      case 'en':
+        title.value = res.data.data.title_us;
+        content.value = res.data.data.content_us;
+        break;
+      case 'pt':
+        title.value = res.data.data.title_pt;
+        content.value = res.data.data.content_pt;
+        break;
+    }
+  })
+  .catch((err) => console.log(err));
+
 //목록 클릭 시 뉴스 컴포넌트로 이동
 function goNews() {
   router.push({
