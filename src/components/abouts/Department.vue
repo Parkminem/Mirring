@@ -110,7 +110,7 @@ onUnmounted(() => {
         flex-direction: column;
         @for $i from 1 through 5 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/about/department_#{$i}.png);
+            background-image: url(@/assets/images/about/department_#{$i}.png);
           }
         }
         .round {

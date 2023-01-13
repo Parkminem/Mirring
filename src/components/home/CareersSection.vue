@@ -10,7 +10,7 @@
       <div class="content">
         <img
           class="character"
-          src="/assets/images/home/character_careers.png"
+          src="@/assets/images/home/character_careers.png"
           alt="character_careers"
           title="character_careers"
         />

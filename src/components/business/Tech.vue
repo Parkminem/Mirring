@@ -4,7 +4,12 @@
     <div class="container_1076">
       <p class="title">{{ t('business.produceTechTitle') }}</p>
       <p class="text" v-html="t('business.produceTechText')"></p>
-      <img class="phone_img" src="/assets/images/business/technology_phone_img.png" alt="phone_img" title="phone_img" />
+      <img
+        class="phone_img"
+        src="@/assets/images/business/technology_phone_img.png"
+        alt="phone_img"
+        title="phone_img"
+      />
       <ul class="content box_animation">
         <li class="box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
           <div class="round"></div>
@@ -140,7 +145,7 @@ onUnmounted(() => {
         }
         @for $i from 1 through 4 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/business/technology_#{$i}.png);
+            background-image: url(@/assets/images/business/technology_#{$i}.png);
           }
         }
         .round {

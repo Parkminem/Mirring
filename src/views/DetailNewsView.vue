@@ -6,14 +6,14 @@
         <DetailBody :pk="pk" />
       </template>
       <template #fallback
-        ><div class="loading"><img src="/assets/images/common/spinner.gif" alt="loading" /></div
+        ><div class="loading"><img src="@/assets/images/common/spinner.gif" alt="loading" /></div
       ></template>
     </Suspense>
   </div>
 </template>
 <script setup>
-import DetailBody from '../components/detail/DetailBody.vue';
-import Banner from '../components/detail/Banner.vue';
+import DetailBody from '@/components/detail/DetailBody.vue';
+import Banner from '@/components/detail/Banner.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();

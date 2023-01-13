@@ -11,15 +11,15 @@
         <!-- pangyo -->
         <Swiper @swiper="pangyoSwiper" data-name="pangyo" v-if="pangyo" :loop="true">
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/pangyo_1.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url('/src/assets/images/careers/pangyo_1.jpg')`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="0"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/pangyo_2.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/pangyo_2.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="1"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/pangyo_3.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/pangyo_3.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="2"
           ></SwiperSlide>
           <div
@@ -42,23 +42,23 @@
         <!-- yangjae -->
         <Swiper @swiper="yangjaeSwiper" data-name="yangjae" v-if="yangjae" :loop="true">
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/yangjae_1.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_1.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="0"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/yangjae_2.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_2.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="1"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/yangjae_3.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_3.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="2"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/yangjae_4.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_4.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="3"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/yangjae_5.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_5.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="4"
           ></SwiperSlide>
           <div
@@ -81,19 +81,19 @@
         <!-- jeju -->
         <Swiper @swiper="jejuSwiper" data-name="jeju" v-if="jeju" :loop="true">
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/jeju_1.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_1.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="0"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/jeju_2.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_2.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="1"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/jeju_3.jpg)`, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_3.jpg)`, height: calcHeight() + 'px' }"
             data-swiper-slide-index="2"
           ></SwiperSlide>
           <SwiperSlide
-            :style="{ backgroundImage: `url(/assets/images/careers/jeju_4.jpg) `, height: calcHeight() + 'px' }"
+            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_4.jpg) `, height: calcHeight() + 'px' }"
             data-swiper-slide-index="3"
           ></SwiperSlide>
           <div
@@ -216,13 +216,13 @@ function activeTab(first, second, third) {
         &.swiper-button-prev {
           left: 15px;
           &:after {
-            background-image: url(/assets/images/careers/White_left.png);
+            background-image: url(@/assets/images/careers/White_left.png);
           }
         }
         &.swiper-button-next {
           right: 15px;
           &:after {
-            background-image: url(/assets/images/careers/White_right.png);
+            background-image: url(@/assets/images/careers/White_right.png);
           }
         }
       }

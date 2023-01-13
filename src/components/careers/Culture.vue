@@ -115,7 +115,7 @@ onUnmounted(() => {
         }
         @for $i from 1 through 5 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/careers/culture0#{$i}.png);
+            background-image: url(@/assets/images/careers/culture0#{$i}.png);
           }
         }
         p {

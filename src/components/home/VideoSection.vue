@@ -9,13 +9,13 @@
   >
     <div class="container_1076">
       <div class="content">
-        <div class="images mobile" style="background-image: url(/assets/images/home/business_1.png)"></div>
+        <div class="images mobile" style="background-image: url(/src/assets/images/home/business_1.png)"></div>
         <div class="box">
           <p class="title" v-html="t('home.videoTitle')"></p>
           <p class="sub_title">{{ t('home.videoSubTitle') }}</p>
           <p class="text" v-html="t('home.videoText')"></p>
         </div>
-        <div class="images" style="background-image: url(/assets/images/home/business_1.png)"></div>
+        <div class="images" style="background-image: url(/src/assets/images/home/business_1.png)"></div>
       </div>
       <ul class="content box_animation">
         <li class="white_box boxAni" ref="box01" :class="{ box01: activeBox[1] }">

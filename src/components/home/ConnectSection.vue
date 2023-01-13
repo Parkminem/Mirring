@@ -10,7 +10,7 @@
     <div class="container_1076">
       <div :class="['content position', locale]">
         <div class="container_1096">
-          <div class="images" style="background-image: url(/assets/images/home/technology_1.png)"></div>
+          <div class="images" style="background-image: url(/src/assets/images/home/technology_1.png)"></div>
           <div class="box">
             <p class="title" v-html="t('home.connectTitle')"></p>
             <p class="sub_title">{{ t('home.connectSubTitle') }}</p>

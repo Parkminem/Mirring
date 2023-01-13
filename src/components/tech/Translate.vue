@@ -22,7 +22,7 @@
             class="subimage slide"
             v-for="i in 6"
             :key="i"
-            :style="{ backgroundImage: `url(/assets/images/ourTech/translate_${locale}_${i}.png)` }"
+            :style="{ backgroundImage: `url(/src/assets/images/ourTech/translate_${locale}_${i}.png)` }"
           ></SwiperSlide>
         </Swiper>
         <button @click="preBtn()">

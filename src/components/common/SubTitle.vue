@@ -2,7 +2,7 @@
   <section
     :class="[path == '/contact' || path == '/careers' ? ['section', 'widePadding'] : 'section']"
     data-name="banner"
-    :style="{ backgroundImage: `url(${bg})` }"
+    :style="{ backgroundImage: `url('${bg}')` }"
   >
     <div class="container_1076">
       <p class="title" v-html="title"></p>

@@ -17,11 +17,11 @@
   </section>
 </template>
 <script setup>
-import { changeDate } from '../../utils/util';
+import { changeDate } from '@/utils/util';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import aboutApi from '../../api/about';
+import aboutApi from '@/api/about';
 const router = useRouter();
 const { t, locale } = useI18n();
 

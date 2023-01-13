@@ -105,7 +105,7 @@
 import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
-import { useMapStore } from '../../store/form';
+import { useMapStore } from '@/store/form';
 
 const { t, locale } = useI18n();
 const mapStore = useMapStore();

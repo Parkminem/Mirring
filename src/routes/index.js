@@ -5,15 +5,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 // 사용법은 import() 함수를 이용하는 것입니다.
 // ex) component: () => import('../views/MainView.vue')
 
-// import Layout from '../layout/Layout.vue';
-// import MainView from '../views/MainView.vue';
-// import AboutUsView from '../views/AboutUsView.vue';
-// import BusinessView from '../views/BusinessView.vue';
-// import CareersView from '../views/CareersView.vue';
-// import ContactView from '../views/ContactView.vue';
-// import ContentsView from '../views/ContentsView.vue';
-// import OurTechView from '../views/OurTechView.vue';
-// import DetailNewsView from '../views/DetailNewsView.vue';
+// import Layout from '@/layout/Layout.vue';
+// import MainView from '@/views/MainView.vue';
+// import AboutUsView from '@/views/AboutUsView.vue';
+// import BusinessView from '@/views/BusinessView.vue';
+// import CareersView from '@/views/CareersView.vue';
+// import ContactView from '@/views/ContactView.vue';
+// import ContentsView from '@/views/ContentsView.vue';
+// import OurTechView from '@/views/OurTechView.vue';
+// import DetailNewsView from '@/views/DetailNewsView.vue';
 
 const routes = [
   {

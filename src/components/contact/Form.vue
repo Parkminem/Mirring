@@ -113,8 +113,8 @@
 </template>
 <script setup>
 import { ref } from 'vue';
-import { useModalStore } from '../../store/modal';
-import { useFormStore } from '../../store/form';
+import { useModalStore } from '@/store/modal';
+import { useFormStore } from '@/store/form';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 const { t, locale } = useI18n();
@@ -334,7 +334,7 @@ function resetType() {
               width: 18px;
               height: 15px;
               z-index: 101;
-              background-image: url(/assets/images/contact/arrow_bottom.png);
+              background-image: url(@/assets/images/contact/arrow_bottom.png);
               background-repeat: no-repeat;
               background-size: cover;
               background-position: center;
@@ -449,13 +449,13 @@ function resetType() {
       height: 21px;
       margin-right: 7.3px;
       cursor: pointer;
-      background-image: url(/assets/images/contact/check_off.png);
+      background-image: url(@/assets/images/contact/check_off.png);
       background-repeat: no-repeat;
       background-size: 95%;
       background-position: center;
     }
     input[type='checkbox']:checked + .label {
-      background-image: url(/assets/images/contact/check_on.png);
+      background-image: url(@/assets/images/contact/check_on.png);
     }
   }
 }

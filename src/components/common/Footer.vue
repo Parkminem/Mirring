@@ -90,7 +90,7 @@ const { t } = useI18n();
             }
             .arrow {
               transform: rotateZ(180deg);
-              background-image: url('/assets/images/common/arrow_up_black.png');
+              background-image: url('@/assets/images/common/arrow_up_black.png');
             }
           }
         }
@@ -125,7 +125,7 @@ const { t } = useI18n();
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            background-image: url('/assets/images/common/arrow_up_gray.png');
+            background-image: url('@/assets/images/common/arrow_up_gray.png');
           }
         }
       }

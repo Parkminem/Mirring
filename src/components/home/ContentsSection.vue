@@ -11,7 +11,7 @@
       <div class="content">
         <img
           class="character mobile"
-          src="/assets/images/home/character_about.png"
+          src="@/assets/images/home/character_about.png"
           alt="character_about"
           title="character_about"
         />
@@ -23,7 +23,7 @@
         </div>
         <img
           class="character"
-          src="/assets/images/home/character_about.png"
+          src="@/assets/images/home/character_about.png"
           alt="character_about"
           title="character_about"
         />
@@ -65,7 +65,7 @@
       <img
         @click="swiper.slidePrev()"
         class="swiper-button-prev swiper_navigation"
-        src="/assets/images/home/swiper_prev.png"
+        src="@/assets/images/home/swiper_prev.png"
         alt="prev"
         title="prev"
         tabindex="0"
@@ -75,7 +75,7 @@
       <img
         @click="swiper.slideNext()"
         class="swiper-button-next swiper_navigation"
-        src="/assets/images/home/swiper_next.png"
+        src="@/assets/images/home/swiper_next.png"
         alt="next"
         title="next"
         tabindex="0"
@@ -93,7 +93,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
-import { useAboutStore } from '../../store/about';
+import { useAboutStore } from '@/store/about';
 const router = useRouter();
 const { t, locale } = useI18n();
 const swiper = ref(null);

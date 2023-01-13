@@ -7,7 +7,7 @@ body {overflow-x: hidden;}
 #navigation .dot:last-child {margin-bottom: 0;}
 #navigation .dot.active {position: relative; background-color: transparent;}
 #navigation .dot.active:before {content:''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 23px; height: 23px;
-background-image: url(/assets/images/home/nav.png);
+background-image: url(@/assets/images/home/nav.png);
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;}
@@ -105,10 +105,10 @@ background-position: center;}
 background-repeat: no-repeat;
 background-size: auto;
 background-position: center;}
-.section[data-name="main_technology"] .content .white_box:nth-child(1) .round {background-image: url(/assets/images/home/technology_01.png);}
-.section[data-name="main_technology"] .content .white_box:nth-child(2) .round{background-image: url(/assets/images/home/technology_2.png);}
-.section[data-name="main_technology"] .content .white_box:nth-child(3) .round {background-image: url(/assets/images/home/technology_3.png);}
-.section[data-name="main_technology"] .content .white_box:nth-child(4) .round {background-image: url(/assets/images/home/technology_4.png);}
+.section[data-name="main_technology"] .content .white_box:nth-child(1) .round {background-image: url(@/assets/images/home/technology_01.png);}
+.section[data-name="main_technology"] .content .white_box:nth-child(2) .round{background-image: url(@/assets/images/home/technology_2.png);}
+.section[data-name="main_technology"] .content .white_box:nth-child(3) .round {background-image: url(@/assets/images/home/technology_3.png);}
+.section[data-name="main_technology"] .content .white_box:nth-child(4) .round {background-image: url(@/assets/images/home/technology_4.png);}
 .section[data-name="main_technology"] .content .white_box .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; margin-top: 23px; text-align: center; width: 100%;}
 .section[data-name="main_technology"] .content .white_box .text {font-family: 'Noto Sans', sans-serif; font-size: 14px; line-height: 1.64; color:#5a5a5a; margin-top: 16px; text-align: center; width: 100%; box-sizing:border-box;}
 
@@ -136,10 +136,10 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: auto;
 background-position: center;}
-.section[data-name="main_business"] .content .white_box:nth-child(1) .round {background-image: url(/assets/images/home//team_1.png);} 
-.section[data-name="main_business"] .content .white_box:nth-child(2) .round {background-image: url(/assets/images/home//team_2.png);} 
-.section[data-name="main_business"] .content .white_box:nth-child(3) .round {background-image: url(/assets/images/home//team_3.png);} 
-.section[data-name="main_business"] .content .white_box:nth-child(4) .round {background-image: url(/assets/images/home//team_4.png);} 
+.section[data-name="main_business"] .content .white_box:nth-child(1) .round {background-image: url(@/assets/images/home//team_1.png);} 
+.section[data-name="main_business"] .content .white_box:nth-child(2) .round {background-image: url(@/assets/images/home//team_2.png);} 
+.section[data-name="main_business"] .content .white_box:nth-child(3) .round {background-image: url(@/assets/images/home//team_3.png);} 
+.section[data-name="main_business"] .content .white_box:nth-child(4) .round {background-image: url(@/assets/images/home//team_4.png);} 
 .section[data-name="main_business"] .content .white_box .title {font-family: 'Noto Sans', sans-serif; font-weight: bold; font-size: 16px; line-height: 1.38; color:#292929; margin-top: 23px; text-align: center; width: 100%;}
 .section[data-name="main_business"] .page_move {width: 248px; height: 46px; margin: 60px auto 0 auto;}
 .section[data-name="main_business"] .bg_text {font-family: 'GmarketSansBold'; font-weight: bold; font-size: 16.5em; line-height: 1.15; color: #f1f1f1;

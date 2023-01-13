@@ -4,7 +4,7 @@
       <ul>
         <li class="listbox" v-for="(item, idx) in items" :key="item.title">
           <div class="img_wrap">
-            <img src="/assets/images/contents/img01.jpg" />
+            <img src="@/assets/images/contents/img01.jpg" />
           </div>
           <dl>
             <dt>{{ item.title }}</dt>

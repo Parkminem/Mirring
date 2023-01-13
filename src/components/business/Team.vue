@@ -5,9 +5,9 @@
       <p class="text" v-html="t('business.movieText')"></p>
       <div class="content">
         <div class="right">
-          <img class="team_pc_img" src="/assets/images/business/team_pc_img.png" alt="pc_img" title="pc_img" />
+          <img class="team_pc_img" src="@/assets/images/business/team_pc_img.png" alt="pc_img" title="pc_img" />
           <p class="text">
-            <img class="arrow" src="/assets/images/business/arrow_up_gray.png" alt="arrow_up" />{{
+            <img class="arrow" src="@/assets/images/business/arrow_up_gray.png" alt="arrow_up" />{{
               t('business.movieDesc')
             }}
           </p>
@@ -152,7 +152,7 @@ onUnmounted(() => {
           }
           @for $i from 1 through 4 {
             &:nth-child(#{$i}) .round {
-              background-image: url(/assets/images/business/team_#{$i}.png);
+              background-image: url(@/assets/images/business/team_#{$i}.png);
             }
           }
           .round {

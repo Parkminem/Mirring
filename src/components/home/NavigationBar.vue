@@ -80,7 +80,7 @@ a {
         transform: translate(-50%, -50%);
         width: 23px;
         height: 23px;
-        background-image: url(/assets/images/home/nav.png);
+        background-image: url(@/assets/images/home/nav.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

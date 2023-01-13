@@ -86,7 +86,7 @@
           <img
             @click="swiper.slidePrev()"
             class="swiper_button_prev swiper_navigation"
-            src="/assets/images/business/swiper_prev.png"
+            src="@/assets/images/business/swiper_prev.png"
             alt="prev"
             title="prev"
             tabindex="0"
@@ -96,7 +96,7 @@
           <img
             @click="swiper.slideNext()"
             class="swiper_button_next swiper_navigation"
-            src="/assets/images/business/swiper_next.png"
+            src="@/assets/images/business/swiper_next.png"
             alt="next"
             title="next"
             tabindex="0"

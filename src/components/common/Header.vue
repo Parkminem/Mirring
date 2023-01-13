@@ -4,7 +4,7 @@
       <ul class="content pc">
         <li class="logo">
           <router-link to="/">
-            <img src="assets/images/common/logo.png" alt="logo" title="logo" />
+            <img src="@/assets/images/common/logo.png" alt="logo" title="logo" />
           </router-link>
         </li>
         <li class="quick_menu">
@@ -51,10 +51,10 @@
       <div class="mobile">
         <ul class="content">
           <li class="logo">
-            <a href="/"><img src="assets/images/common/logo.png" alt="logo" title="logo" /></a>
+            <a href="/"><img src="@/assets/images/common/logo.png" alt="logo" title="logo" /></a>
           </li>
           <li class="menu_img" @click="headerMobileMenuActive">
-            <img src="assets/images/common/menu.png" alt="menu" title="menu" />
+            <img src="@/assets/images/common/menu.png" alt="menu" title="menu" />
           </li>
         </ul>
         <Transition name="slideToggle">
@@ -246,7 +246,7 @@ onBeforeRouteUpdate((to, from, next) => {
         top: 10.5px;
         width: 6px;
         height: 5px;
-        background-image: url(/assets/images/common/arrow_down_gray.png);
+        background-image: url(@/assets/images/common/arrow_down_gray.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

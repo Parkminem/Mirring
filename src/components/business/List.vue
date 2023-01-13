@@ -22,7 +22,7 @@
       <div class="container_1076">
         <ul class="content box_animation" v-if="actives.contents">
           <li class="box boxAni" :class="{ box01: activeBox[1] }" ref="box01">
-            <div class="round" style="background-image: url(/assets/images/business/list_1_1.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_1_1.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.produceBox01Title') }}</p>
               <p class="text">
@@ -31,21 +31,21 @@
             </div>
           </li>
           <li class="box boxAni" :class="{ box02: activeBox[1] }">
-            <div class="round" style="background-image: url(/assets/images/business/list_1_2.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_1_2.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.produceBox02Title') }}</p>
               <p class="text">{{ t('business.produceBox02Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" :class="{ box03: activeBox[2] }" ref="box02">
-            <div class="round" style="background-image: url(/assets/images/business/list_1_3.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_1_3.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.produceBox03Title') }}</p>
               <p class="text">{{ t('business.produceBox03Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" :class="{ box04: activeBox[2] }">
-            <div class="round" style="background-image: url(/assets/images/business/list_1_4.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_1_4.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.produceBox04Title') }}</p>
               <p class="text">{{ t('business.produceBox04Text') }}</p>
@@ -54,28 +54,28 @@
         </ul>
         <ul class="content box_animation" v-if="actives.culture">
           <li class="box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_2_1.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_2_1.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.researchBox01Title') }}</p>
               <p class="text">{{ t('business.researchBox01Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" :class="{ box02: activeBox[1] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_2_2.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_2_2.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.researchBox02Title') }}</p>
               <p class="text">{{ t('business.researchBox02Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" ref="box02" :class="{ box03: activeBox[2] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_2_3.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_2_3.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.researchBox03Title') }}</p>
               <p class="text">{{ t('business.researchBox03Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" :class="{ box04: activeBox[2] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_2_4.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_2_4.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.researchBox04Title') }}</p>
               <p class="text">{{ t('business.researchBox04Text') }}</p>
@@ -84,21 +84,21 @@
         </ul>
         <ul class="content box_animation" v-if="actives.translation">
           <li class="box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
-            <div class="round" style="background-image: url(/assets/images/business/list_3_1.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_3_1.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.translationBox01Title') }}</p>
               <p class="text">{{ t('business.translationBox01Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" :class="{ box02: activeBox[1] }">
-            <div class="round" style="background-image: url(/assets/images/business/list_3_2.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_3_2.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.translationBox02Title') }}</p>
               <p class="text">{{ t('business.translationBox02Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" ref="box02" :class="{ box03: activeBox[2] }">
-            <div class="round" style="background-image: url(/assets/images/business/list_3_3.png)"></div>
+            <div class="round" style="background-image: url(/src/assets/images/business/list_3_3.png)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.translationBox03Title') }}</p>
               <p class="text">{{ t('business.translationBox03Text') }}</p>
@@ -107,14 +107,14 @@
         </ul>
         <ul class="content box_animation" v-if="actives.platform">
           <li class="box boxAni" ref="box01" :class="{ box01: activeBox[1] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_4_1.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_4_1.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.platformBox01Title') }}</p>
               <p class="text">{{ t('business.platformBox01Text') }}</p>
             </div>
           </li>
           <li class="box boxAni" ref="box02" :class="{ box02: activeBox[2] }">
-            <div class="images" style="background-image: url(/assets/images/business/list_4_2.jpg)"></div>
+            <div class="images" style="background-image: url(/src/assets/images/business/list_4_2.jpg)"></div>
             <div class="text_box">
               <p class="title">{{ t('business.platformBox02Title') }}</p>
               <p class="text">{{ t('business.platformBox02Text') }}</p>

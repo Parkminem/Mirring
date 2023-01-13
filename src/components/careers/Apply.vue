@@ -14,7 +14,7 @@
               <b>{{ t('careers.applyEmail') }}</b
               ><span>recruit@ideaconcert.com</span>
             </li>
-            <a class="page_move" href="/assets/data/careers/아이디어 콘서트_입사지원서.zip" download="">{{
+            <a class="page_move" href="/아이디어 콘서트_입사지원서.zip" download="">{{
               t('common.button.downLoad')
             }}</a>
           </ul>
@@ -42,9 +42,7 @@
             <span class="country_number">{{ t('careers.applyTelNum') }}</span>
           </p>
           <p class="mail"><b>E-mail</b><span>recruit@ideaconcert.com</span></p>
-          <a class="page_move" href="/assets/data/careers/아이디어 콘서트_입사지원서.zip" download="">{{
-            t('common.button.downLoad')
-          }}</a>
+          <a class="page_move" href="/아이디어 콘서트_입사지원서.zip" download="">{{ t('common.button.downLoad') }}</a>
         </div>
       </div>
     </div>
@@ -162,7 +160,7 @@ onUnmounted(() => {
         }
         @for $i from 1 through 3 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/careers/support0#{$i}.png);
+            background-image: url(@/assets/images/careers/support0#{$i}.png);
           }
         }
         p {

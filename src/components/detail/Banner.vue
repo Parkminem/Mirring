@@ -12,7 +12,7 @@ const { t } = useI18n();
 .banner {
   padding: 58px 0 56px 0;
   text-align: center;
-  background-image: url(/assets/images/common/newsBanner.png);
+  background-image: url(@/assets/images/common/newsBanner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

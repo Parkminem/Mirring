@@ -50,9 +50,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import Pagenation from '../common/Pagenation.vue';
-import { useAboutStore } from '../../store/about';
-import { changeDate } from '../../utils/util';
+import Pagenation from '@/components/common/Pagenation.vue';
+import { useAboutStore } from '@/store/about';
+import { changeDate } from '@/utils/util';
 
 const { t, locale } = useI18n();
 const aboutStore = useAboutStore();

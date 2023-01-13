@@ -14,12 +14,12 @@
 #first__notice { position: absolute; margin-top: 0; top: 0; left: 10.8%; }
 #first__notice.content__notice { width: 29%; display: block; padding: 4px 0; background-color: #ff943a; font-family: NotoSans; font-size: 1.2rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: center; color: #ffffff; margin-top: 15px }
 .reditoon__image { padding-bottom: 41.8%; margin-top: 70px;}
-.reditoon__image.kr { background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴(국문).png") center center no-repeat ; }
-.reditoon__image.en { background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat; }
-.reditoon__image.pt { background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat; }
-.reditoon__image.id { background : url("/assets/images/ourTech/흑백만화-자동-웹툰화툴\(영문\).png") center center no-repeat; }
+.reditoon__image.kr { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(국문).png") center center no-repeat ; }
+.reditoon__image.en { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
+.reditoon__image.pt { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
+.reditoon__image.id { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
 .content .cut__images { margin: 70px 0; display: flex; position: relative; padding-top: 52px; box-sizing: border-box; }
-.cut__images .cut__image { width: 51.7%; padding-bottom: 41.8%; background : url("/assets/images/ourTech/image.png") no-repeat; background-position: center; background-size: cover; margin-right: 22px; }
+.cut__images .cut__image { width: 51.7%; padding-bottom: 41.8%; background : url("@/assets/images/ourTech/image.png") no-repeat; background-position: center; background-size: cover; margin-right: 22px; }
 .cut__images .cut__process { position: absolute; top: 0; left: 51.7%; width : 48.7%; display: flex;  flex-wrap: wrap; }
 .process { width: 47.3%; height: 47%; margin: 0 5.4% 12.1% 0; box-sizing: border-box; position: relative; }
 .shadow { box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2); }
@@ -28,14 +28,14 @@
 .process:nth-child(n+3) { margin-bottom: 0; }
 .process__image { padding-bottom: 56.5%; }
 .process__text { height: 97px; display: flex; justify-content: center; align-items: center; font-family: NotoSans; font-size: 1rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #292929; }
-.process:nth-child(1) .process__image { background: url("/assets/images/ourTech/peocess1.png") no-repeat; background-position: center; background-size: cover; }
-.process:nth-child(2) .process__image { background: url("/assets/images/ourTech/process2.png") no-repeat; background-position: center; background-size: cover; }
-.process:nth-child(3) .process__image { background: url("/assets/images/ourTech/process3.png") no-repeat; background-position: center; background-size: cover; }
+.process:nth-child(1) .process__image { background: url("@/assets/images/ourTech/peocess1.png") no-repeat; background-position: center; background-size: cover; }
+.process:nth-child(2) .process__image { background: url("@/assets/images/ourTech/process2.png") no-repeat; background-position: center; background-size: cover; }
+.process:nth-child(3) .process__image { background: url("@/assets/images/ourTech/process3.png") no-repeat; background-position: center; background-size: cover; }
 .process:nth-child(3) .process__text span { display: inline-block; max-width: 155px; }
-.process:nth-child(4) .process__image { background: url("/assets/images/ourTech/peocess4.png") no-repeat; background-position: center; background-size: cover; }
+.process:nth-child(4) .process__image { background: url("@/assets/images/ourTech/peocess4.png") no-repeat; background-position: center; background-size: cover; }
 .process:nth-child(4) .process__text span { display: inline-block; max-width: 230px; }
 /* translate */
-.cartoon__translate .translate__main { max-width: 85.6%; padding-bottom: 50%; margin: 70px auto 16.8px; background: url("/assets/images/ourTech/translateMain.png") no-repeat; background-position: center; background-size: cover; }
+.cartoon__translate .translate__main { max-width: 85.6%; padding-bottom: 50%; margin: 70px auto 16.8px; background: url("@/assets/images/ourTech/translateMain.png") no-repeat; background-position: center; background-size: cover; }
 .translate__sub .swiper-wrapper {max-width: 100%; display: flex; flex-wrap: wrap;}
 .translate__sub .subimage { width: 48.7% !important; padding-bottom: 32%; margin-right: 2.6%; margin-bottom: 60px; position: relative; }
 .translate__sub .subimage::before { content : ""; position: absolute; top: 0; left: 5px; width: 30px; height: 30px; background-color: #ec6c00; font-family: NotoSans; font-size: 1rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #f9f9f9; display: flex; align-items: center; justify-content: center; }
@@ -59,45 +59,45 @@
 /*viewer*/ 
 .content .viewer__images { max-width: 100%; margin: 85px 0 183px; display: flex; align-items: center; }
 .viewer__images .viewer__process { width : 48.7%; display: flex; flex-wrap: wrap; margin-right: 5.8%; }
-.viewer__process .process:nth-child(1) .process__image { background: url("/assets/images/ourTech/가로세로_01@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(1) .process__image { background: url("@/assets/images/ourTech/가로세로_01@2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(1) .process__text span { max-width: 165px; }
-.viewer__process .process:nth-child(2) .process__image { background: url("/assets/images/ourTech/가로세로_02@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(2) .process__image { background: url("@/assets/images/ourTech/가로세로_02@2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(2) .process__text span { max-width: 165px; }
-.viewer__process .process:nth-child(3) .process__image { background: url("/assets/images/ourTech/가로세로_03@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(3) .process__image { background: url("@/assets/images/ourTech/가로세로_03@2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(3) .process__text span { max-width: 180px; }
-.viewer__process .process:nth-child(4) .process__image { background: url("/assets/images/ourTech/가로세로_04@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(4) .process__image { background: url("@/assets/images/ourTech/가로세로_04@2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(4) .process__text span { max-width: 180px; }
 .viewer__images .viewer__image { width: 45.5%; }
 .viewer__images .viewer__process .process { width: 47.3%; margin-right: 5.4%; }
 .viewer__images .viewer__process .process:nth-child(2n) { margin-right: 0; }
-.viewer__image .horizon { width: 100%; padding-bottom: 52%; margin-bottom: 22.2px; background: url("/assets/images/ourTech/캡처.PNG") no-repeat; background-position: center; background-size: cover; }
+.viewer__image .horizon { width: 100%; padding-bottom: 52%; margin-bottom: 22.2px; background: url("@/assets/images/ourTech/캡처.PNG") no-repeat; background-position: center; background-size: cover; }
 .viewer__image p { font-family: NotoSans; font-size: 1rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #292929; }
 /*damda */
 .damda .damda__images { display: flex; margin: 74px 0 70.4px; align-items: center; }
-.damda .main__image { width: 61.5%; padding-bottom: 36%; margin-right: 1%; background: url("/assets/images/ourTech/담다메인.png") no-repeat; background-position: center; background-size: cover; }
-.damda .sub__image { width: 37.5%; padding-bottom: 44.4%; background: url("/assets/images/ourTech/담다서브.png") no-repeat; background-position: center; background-size: cover; }
+.damda .main__image { width: 61.5%; padding-bottom: 36%; margin-right: 1%; background: url("@/assets/images/ourTech/담다메인.png") no-repeat; background-position: center; background-size: cover; }
+.damda .sub__image { width: 37.5%; padding-bottom: 44.4%; background: url("@/assets/images/ourTech/담다서브.png") no-repeat; background-position: center; background-size: cover; }
 /*toonibe*/
 .toonibe .toonibe__images { display: flex; margin-top: 26.7px; align-items: center; position: relative; margin-bottom: 229px; }
-.toonibe .steps { background: url("/assets/images/ourTech/투니비서브.png") no-repeat; background-position: center; background-size: cover; width: 43.6%; padding-bottom: 26.8%; margin-right: 2.7%; }
-.toonibe .sub__image { background: url("/assets/images/ourTech/투니비메인.PNG") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
+.toonibe .steps { background: url("@/assets/images/ourTech/투니비서브.png") no-repeat; background-position: center; background-size: cover; width: 43.6%; padding-bottom: 26.8%; margin-right: 2.7%; }
+.toonibe .sub__image { background: url("@/assets/images/ourTech/투니비메인.PNG") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
 .toonibe__text { position: absolute; top: 100%; left: 0; max-width: 43%; height: 75px; text-align: left; }
 .toonibe__text .material-icons { display: inline-block; width: 10px; height: 8px; color: #969696; font-size: 18px; }
 .toonibe__text p { max-width: 475px; font-family: NotoSans; font-size: 0.9rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: left; color: #969696;}
 /*advertisement*/
 .advertisement { display: flex; justify-content: space-between; }
-.question { flex-basis: 0; flex-grow: 1; display: flex; position: relative; justify-content: center; height: 248px; background: url("/assets/images/ourTech/하단배너.png") no-repeat; background-position: center; background-size: cover;
+.question { flex-basis: 0; flex-grow: 1; display: flex; position: relative; justify-content: center; height: 248px; background: url("@/assets/images/ourTech/하단배너.png") no-repeat; background-position: center; background-size: cover;
 cursor : pointer; }
 .advertise__text { margin: 55px 0 50px; }
 .advertise__text h2 { font-family: NotoSans; font-size: 1rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #292929; margin-bottom: 8px; }
 .advertise__text p { font-family: NotoSans; font-size: 1rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; color: #292929; margin-bottom: 37px; }
 .advertise__text a { display: inline-block; padding: 11px 42px; font-family: NotoSans; font-size: 1rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal; color: #ffffff; border-radius: 28px; background-color: #ec6c00; }
-.recruit { display: flex; flex-basis: 0; flex-grow: 1; justify-content: center; height: 248px; background: url("/assets/images/ourTech/하단배너1.png") no-repeat; background-position: center; background-size: cover; position: relative; cursor : pointer; }
+.recruit { display: flex; flex-basis: 0; flex-grow: 1; justify-content: center; height: 248px; background: url("@/assets/images/ourTech/하단배너1.png") no-repeat; background-position: center; background-size: cover; position: relative; cursor : pointer; }
 .question, .recruit { transition : 1s all ease; }
 .question:hover::before, .recruit:hover::before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; content : ""; background : #ec6c00; opacity : 0.2; }
 .recruit .advertise__text { text-align: right; }
 .advertisement .character { display: block; width: 161px; height: 148px; }
-.advertisement .character.qa { background: url("/assets/images/ourTech/ACON문의.png") no-repeat; background-position: center; background-size: cover; margin: 50px 62px 50px 0; }
-.advertisement .character.cruit { background: url("/assets/images/ourTech/ACON지원.png") no-repeat; background-position: center; background-size: cover; width: 187px; height: 150px; margin: 55px 0 43px 62px; }
+.advertisement .character.qa { background: url("@/assets/images/ourTech/ACON문의.png") no-repeat; background-position: center; background-size: cover; margin: 50px 62px 50px 0; }
+.advertisement .character.cruit { background: url("@/assets/images/ourTech/ACON지원.png") no-repeat; background-position: center; background-size: cover; width: 187px; height: 150px; margin: 55px 0 43px 62px; }
 @media(min-width:769px){
   .translate__sub .swiper-wrapper {transform: translate3d(0,0,0) !important;}
 }
