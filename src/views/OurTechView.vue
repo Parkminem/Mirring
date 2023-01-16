@@ -30,5 +30,5 @@ const bg = '/src/assets/images/ourTech/banner.png';
 </script>
 
 <style>
-@import '../style/tech.css';
+@import '../assets/style/tech.css';
 </style>

@@ -28,5 +28,5 @@
 </template>
 <script setup></script>
 <style scoped>
-@import '../../style/contents.css';
+@import '../../assets/style/contents.css';
 </style>

@@ -82,7 +82,7 @@ onUnmounted(() => {
 });
 </script>
 <style scoped lang="scss">
-@import '../../style/animation.css';
+@import '../../assets/style/animation.css';
 .section {
   background-color: #f9f9f9;
   padding: 100px 0 120px 0;

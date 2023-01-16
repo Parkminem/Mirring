@@ -20,6 +20,6 @@ import CareersSection from '@/components/home/CareersSection.vue';
 </script>
 
 <style>
-@import '../style/main.css';
-@import '../style/animation.css';
+@import '../assets/style/main.css';
+@import '../assets/style/animation.css';
 </style>

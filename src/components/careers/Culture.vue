@@ -75,7 +75,7 @@ onUnmounted(() => {
 //박스 애니메이션 끝
 </script>
 <style scoped lang="scss">
-@import '../../style/animation.css';
+@import '../../assets/style/animation.css';
 .section {
   background-color: #ffffff;
   padding-bottom: 140px;
