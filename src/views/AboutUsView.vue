@@ -26,10 +26,14 @@ const text = t('about.mainText');
 const bg = '/src/assets/images/about/banner.png';
 
 const aboutStore = useAboutStore();
-aboutStore.historyAct(locale.value);
-aboutStore.newsAct(locale.value, 1);
+
+// @refactoring
+// async 메소드를 호출 할 땐 await 붙여주세요.
+// script setup 에선 최상위 구문에 await을 바로 사용할 수 있습니다.
+await aboutStore.historyAct(locale.value);
+await aboutStore.newsAct(locale.value, 1);
 </script>
 
 <style>
-@import '../style/animation.css';
+@import '../assets/style/animation.css';
 </style>
