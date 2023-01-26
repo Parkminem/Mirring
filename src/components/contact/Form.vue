@@ -1,5 +1,5 @@
 <template>
-  <form id="questionFormId">
+  <div>
     <input type="hidden" name="_csrf" value="eb7fd389-cf0e-4adc-a145-c857175f449c" />
     <section class="section" data-name="contact_question">
       <p class="bg_text">Q&amp;A</p>
@@ -9,7 +9,7 @@
         <a class="company_profile" href="https://makevu.me/d355cee78b" target="_blank"
           >{{ t('contact.qnaLink') }} &gt;</a
         >
-        <div class="question_box">
+        <form class="question_box" id="form">
           <div class="question_form">
             <label class="title">{{ t('contact.type') }} *</label>
             <div class="animation_question_select_box">
@@ -106,10 +106,10 @@
             <b class="bold_text" @click="modalStore.infoModalOpen">{{ t('contact.privacyLink') }}</b>
           </div>
           <input type="button" class="btn btn_hover" :value="t('common.button.inquery')" @click="sendForm" />
-        </div>
+        </form>
       </div>
     </section>
-  </form>
+  </div>
 </template>
 <script setup>
 import { ref } from 'vue';
@@ -117,6 +117,7 @@ import { useModalStore } from '../../store/modal';
 import { useFormStore } from '../../store/form';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
+import formApi from '../../api/form';
 const { t, locale } = useI18n();
 
 const modalStore = useModalStore();
@@ -176,16 +177,27 @@ function sendForm() {
     return false;
   }
   tel.value = tel.value.replace(/[^0-9]/g, '');
-  const formData = {
-    type: type.value,
-    name: name.value.replace(/ /gi, ''),
-    company: company.value.replace(/ /gi, ''),
-    team: team.value.replace(/ /gi, ''),
-    tel: tel.value.replace(/ /gi, ''),
-    email: email.value.replace(/ /gi, ''),
-    desc: desc.value,
-    checkPrivacy: checkPrivacy.value
-  };
+  const form = document.getElementById('form');
+  const formData = new FormData(form);
+  formData.append('question_type_pk', type.value);
+  formApi
+    .fetchContact(formData)
+    .then((res) => {
+      if (res.data.status === 200) {
+        alert('신청 되었습니다.');
+        type.value = name.value = '';
+        tel.value = '';
+        email.value = '';
+        desc.value = '';
+        company.value = '';
+        team.value = '';
+        checkPrivacy.value = false;
+        typeNo.value[1] = true;
+      }
+    })
+    .catch((err) => {
+      alert('신청이 실패하였습니다. 다시 한 번 시도해주세요.');
+    });
 
   //폼 데이터 전송 액션 사용해야함
 }
