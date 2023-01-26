@@ -52,7 +52,6 @@ export const useAboutStore = defineStore('about', {
       await aboutApi
         .getNews(locale, page)
         .then((res) => {
-          console.log(res);
           this.newsList = res.data.data.newsData;
           this.totalPage = res.data.data.totalPageNum;
         })
