@@ -192,7 +192,10 @@ function sendForm() {
         company.value = '';
         team.value = '';
         checkPrivacy.value = false;
-        typeNo.value[1] = true;
+        placeholder.value = true;
+        for (let key in typeNo.value) {
+          typeNo.value[key] = false;
+        }
       }
     })
     .catch((err) => {
