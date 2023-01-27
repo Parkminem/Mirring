@@ -42,6 +42,7 @@
       @goPrePage="(page) => movePrePage(page)"
       @goPage="(page) => movePage(page)"
       @goNextPage="(page) => moveNextPage(page)"
+      v-if="totalPage > 1"
     />
   </div>
 </template>
