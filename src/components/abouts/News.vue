@@ -41,7 +41,7 @@
           <!-- //item -->
         </div>
         <!-- v-if로 컨텐츠 수가 8 개 미만일 때 숨겨주는 코드 작성해 주세용 -->
-        <Pagenation v-if="totalPage >= 2" :page="1" :total-page="totalPage" :page-size="4" />
+        <Pagination v-if="totalPage >= 2" :page="1" :total-page="totalPage" :page-size="4" />
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import Pagenation from '../common/Pagenation.vue';
+import Pagination from '../common/Pagination.vue';
 import { useAboutStore } from '../../store/about';
 import { changeDate } from '../../utils/util';
 
