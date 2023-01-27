@@ -24,9 +24,6 @@ const bg = '/assets/images/contents/Contents.jpg';
 //컨텐츠리스트 조회
 </script>
 <style lang="scss" scoped>
-#main {
-  min-height: calc(100vh - 102px - 243px);
-}
 .loading {
   width: 100vw;
   min-height: calc(100vh - 102px - 243px);
@@ -35,9 +32,6 @@ const bg = '/assets/images/contents/Contents.jpg';
   justify-content: center;
 }
 @media (max-width: 1024px) {
-  #main {
-    min-height: calc(100vh - 95px - 241px);
-  }
   .loading {
     min-height: calc(100vh - 95px - 241px);
     img {

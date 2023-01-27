@@ -1,25 +1,22 @@
 <template>
   <ul class="news_pagination">
     <li class="arrow prev" v-if="pagination(page, totalPage, pageSize).preBtn">
-      <img @click="clickPrev" src="/assets/images/common/pagination_prev.png" alt="arrow_prev" />
+      <button @click="$emit('goPrePage', pagination(page, totalPage, pageSize).startPage - 1)">
+        <img @click="clickPrev" src="/assets/images/common/pagination_prev.png" alt="arrow_prev" />
+      </button>
     </li>
-    <li @click="clickPage" v-for="i of pagination(page, totalPage, pageSize).pageArr" :class="{ active: page == i }" class="number">
-      {{ i }}
+    <li @click="clickPage" v-for="i of pagination(page, totalPage, pageSize).pageArr" class="number">
+      <button @click="$emit('goPage', i)" :class="{ active: page == i }">{{ i }}</button>
     </li>
     <li class="arrow next" v-if="pagination(page, totalPage, pageSize).nextBtn">
-      <img @click="clickNext" src="/assets/images/common/pagination_next.png" alt="arrow_next" />
+      <button @click="$emit('goNextPage', pagination(page, totalPage, pageSize).endPage + 1)">
+        <img @click="clickNext" src="/assets/images/common/pagination_next.png" alt="arrow_next" />
+      </button>
     </li>
   </ul>
 </template>
 <script setup>
-
-import { useAboutStore } from '@/store/about';
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
 import { pagination } from '../../utils/pagination';
-
-const aboutStore = useAboutStore();
-const { locale } = useI18n();
 
 const props = defineProps({
   page: Number,
@@ -27,30 +24,28 @@ const props = defineProps({
   pageSize: Number
 });
 
-const page = ref(props.page);
+// // 페이지 이동
+// const clickPage = (event) => {
+//   const newPage = Number(event.currentTarget.innerText);
+//   page.value = newPage;
+//   aboutStore.newsAct(locale.value, page.value);
+// };
 
-// 페이지 이동
-const clickPage = (event) => {
-  const newPage = Number(event.currentTarget.innerText);
-  page.value = newPage;
-  aboutStore.newsAct(locale.value, page.value);
-}
+// // next 이동
+// const clickNext = () => {
+//   const endPage = pagination(page.value, props.totalPage, props.pageSize).endPage;
+//   const newPage = endPage + 1;
+//   page.value = newPage;
+//   aboutStore.newsAct(locale.value, page.value);
+// };
 
-// next 이동
-const clickNext = () => {
-  const endPage = pagination(page.value, props.totalPage, props.pageSize).endPage;
-  const newPage = endPage + 1;
-  page.value = newPage;
-  aboutStore.newsAct(locale.value, page.value);
-}
-
-// prev 이동
-const clickPrev = () => {
-  const startPage = pagination(page.value, props.totalPage, props.pageSize).startPage;
-  const newPage = startPage - props.pageSize;
-  page.value = newPage;
-  aboutStore.newsAct(locale.value, page.value);
-}
+// // prev 이동
+// const clickPrev = () => {
+//   const startPage = pagination(page.value, props.totalPage, props.pageSize).startPage;
+//   const newPage = startPage - props.pageSize;
+//   page.value = newPage;
+//   aboutStore.newsAct(locale.value, page.value);
+// };
 </script>
 <style scoped lang="scss">
 .news_pagination {
@@ -58,11 +53,6 @@ const clickPrev = () => {
   justify-content: center;
   margin-top: 63.5px;
   li {
-    &.active {
-      font-family: 'Noto Sans', sans-serif;
-      font-weight: bold;
-      color: #292929;
-    }
     &.number {
       font-family: 'Noto Sans', sans-serif;
       font-size: 12px;
@@ -70,6 +60,11 @@ const clickPrev = () => {
       color: #969696;
       margin-right: 20px;
       cursor: pointer;
+      .active {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        color: #292929;
+      }
     }
     &.arrow {
       cursor: pointer;
