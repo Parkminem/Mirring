@@ -62,7 +62,7 @@ const nowPage = ref(1);
 await contentsApi
   .getContents(locale.value, 1)
   .then((res) => {
-    contentsList.value = res.data.data.newsData;
+    contentsList.value = res.data.data.contentsData;
     totalPage.value = res.data.data.totalPageNum;
   })
   .catch((err) => console.log(err));
@@ -72,7 +72,7 @@ function movePage(page) {
   contentsApi
     .getContents(locale.value, page)
     .then((res) => {
-      contentsList.value = res.data.data.newsData;
+      contentsList.value = res.data.data.contentsData;
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
@@ -84,7 +84,7 @@ function movePrePage(page) {
   contentsApi
     .getContents(locale.value, page)
     .then((res) => {
-      contentsList.value = res.data.data.newsData;
+      contentsList.value = res.data.data.contentsData;
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
@@ -96,7 +96,7 @@ function moveNextPage(page) {
   contentsApi
     .getContents(locale.value, page)
     .then((res) => {
-      contentsApi.value = res.data.data.newsData;
+      contentsApi.value = res.data.data.contentsData;
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
