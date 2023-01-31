@@ -2,11 +2,22 @@
   <footer id="footer">
     <div class="container_1076">
       <p class="company">{{ t('common.footer.company') }}</p>
-      <p class="address">{{ t('common.footer.pangyo') }}</p>
-      <p class="address">{{ t('common.footer.yangjea') }}</p>
-      <p class="address">{{ t('common.footer.jeju') }}</p>
+      <p class="address" v-if="locale === 'kr'">{{ locations[0].road_address_kr + locations[0].detail_address_kr }}</p>
+      <p class="address" v-if="locale === 'kr'">{{ locations[1].road_address_kr + locations[1].detail_address_kr }}</p>
+      <p class="address" v-if="locale === 'kr'">{{ locations[2].road_address_kr + locations[2].detail_address_kr }}</p>
+      <p class="address" v-if="locale === 'id'">{{ locations[0].road_address_id }}</p>
+      <p class="address" v-if="locale === 'id'">{{ locations[1].road_address_id }}</p>
+      <p class="address" v-if="locale === 'id'">{{ locations[2].road_address_id }}</p>
+      <p class="address" v-if="locale === 'pt'">{{ locations[0].road_address_pt }}</p>
+      <p class="address" v-if="locale === 'pt'">{{ locations[1].road_address_pt }}</p>
+      <p class="address" v-if="locale === 'pt'">{{ locations[2].road_address_pt }}</p>
+      <p class="address" v-if="locale === 'en'">{{ locations[0].road_address_us }}</p>
+      <p class="address" v-if="locale === 'en'">{{ locations[1].road_address_us }}</p>
+      <p class="address" v-if="locale === 'en'">{{ locations[2].road_address_us }}</p>
       <ul class="contact_info">
-        <li class="tel"><b>Tel</b><span class="country_number">070-8825-5004</span></li>
+        <li class="tel">
+          <b>Tel</b><span class="country_number">{{ locations[0].contact }}</span>
+        </li>
         <li class="mail"><b>e-Mail</b><span>info@ideaconcert.com</span></li>
       </ul>
       <p class="copyright"><span onclick="location.href='/admin'"></span>{{ t('common.footer.copyright') }}</p>
@@ -27,8 +38,12 @@
   </footer>
 </template>
 <script setup>
+import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
-const { t } = useI18n();
+import { useMapStore } from '../../store/form';
+const { t, locale } = useI18n();
+const mapStore = useMapStore();
+const { locations } = storeToRefs(mapStore);
 </script>
 
 <style scoped lang="scss">

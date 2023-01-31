@@ -49,7 +49,10 @@ export const useMapStore = defineStore('map', {
     locationAct() {
       formApi
         .getLocation()
-        .then((res) => (this.locations = res.data.data))
+        .then((res) => {
+          this.locations = res.data.data;
+          console.log(this.locations);
+        })
         .catch((err) => console.log(err));
     }
   }

@@ -4,7 +4,7 @@
   </Transition>
   <Header />
   <router-view :key="$route.fullPath"></router-view>
-  <Footer />
+  <Footer v-if="locations" />
 </template>
 <script setup>
 import { watch } from 'vue';
@@ -13,9 +13,15 @@ import Header from '../components/common/Header.vue';
 import Footer from '../components/common/Footer.vue';
 import Modal from '../components/contact/Modal.vue';
 import { useModalStore } from '../store/modal';
+import { useMapStore } from '../store/form';
 
 const modalStore = useModalStore();
+const mapStore = useMapStore();
+const { locations } = storeToRefs(mapStore);
 const { infoModalState } = storeToRefs(modalStore);
+
+//위치 리스트 조회
+mapStore.locationAct();
 
 //모달창 on/off
 watch(infoModalState, (newInfoModalState) => {

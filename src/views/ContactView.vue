@@ -18,7 +18,4 @@ const text = t('contact.mainText');
 const bg = '/assets/images/contact/contact.jpg';
 const mapStore = useMapStore();
 const { locations } = storeToRefs(mapStore);
-
-//위치 리스트 조회
-mapStore.locationAct();
 </script>
