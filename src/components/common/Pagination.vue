@@ -18,34 +18,11 @@
 <script setup>
 import { pagination } from '../../utils/pagination';
 
-const props = defineProps({
+defineProps({
   page: Number,
   totalPage: Number,
   pageSize: Number
 });
-
-// // 페이지 이동
-// const clickPage = (event) => {
-//   const newPage = Number(event.currentTarget.innerText);
-//   page.value = newPage;
-//   aboutStore.newsAct(locale.value, page.value);
-// };
-
-// // next 이동
-// const clickNext = () => {
-//   const endPage = pagination(page.value, props.totalPage, props.pageSize).endPage;
-//   const newPage = endPage + 1;
-//   page.value = newPage;
-//   aboutStore.newsAct(locale.value, page.value);
-// };
-
-// // prev 이동
-// const clickPrev = () => {
-//   const startPage = pagination(page.value, props.totalPage, props.pageSize).startPage;
-//   const newPage = startPage - props.pageSize;
-//   page.value = newPage;
-//   aboutStore.newsAct(locale.value, page.value);
-// };
 </script>
 <style scoped lang="scss">
 .news_pagination {

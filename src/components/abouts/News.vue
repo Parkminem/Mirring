@@ -41,7 +41,15 @@
           <!-- //item -->
         </div>
         <!-- v-if로 컨텐츠 수가 8 개 미만일 때 숨겨주는 코드 작성해 주세용 -->
-        <Pagination v-if="totalPage >= 2" :page="1" :total-page="totalPage" :page-size="4" />
+        <Pagination
+          v-if="totalPage >= 2"
+          :page="nowPage"
+          :total-page="totalPage"
+          :page-size="4"
+          @goPrePage="(page) => movePrePage(page)"
+          @goPage="(page) => movePage(page)"
+          @goNextPage="(page) => moveNextPage(page)"
+        />
       </div>
     </div>
   </section>
@@ -58,9 +66,28 @@ const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
 const url = 'http://data.ideaconcert.com';
 const totalPage = aboutStore.totalPage;
+const nowPage = ref(1);
 
 // 뉴스리스트 불러오기
 aboutStore.newsAct(locale.value, 1);
+
+//페이지 이동
+function movePage(page) {
+  aboutStore.newsAct(locale.value, page);
+  nowPage.value = page;
+}
+
+//페이지 이전 버튼 클릭
+function movePrePage(page) {
+  aboutStore.newsAct(locale.value, page);
+  nowPage.value = page;
+}
+
+//페이지 다음 버튼 클릭
+function moveNextPage(page) {
+  aboutStore.newsAct(locale.value, page);
+  nowPage.value = page;
+}
 
 //박스 애니메이션
 const box = ref();
