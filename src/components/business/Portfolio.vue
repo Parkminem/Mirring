@@ -13,15 +13,15 @@
           ></iframe>
         </div>
         <!-- slide -->
-        <div class="slider_area">
+        <div class="slider_area" v-if="portfolioList">
           <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
             <Swiper
               :loop="true"
               :slides-per-view="2"
               :space-between="30"
               :allowTouchMove="true"
-              :looped-slides="portfolioList.length"
               :breakpoints="breakPoints"
+              :looped-slides="portfolioList.length"
               @swiper="onSwiper"
             >
               <SwiperSlide
