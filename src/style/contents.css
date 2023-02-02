@@ -29,7 +29,7 @@ strong {font-weight:bold;}
     margin: 0 auto;
 }
 .list_box_wrap {
-    min-height: 1393px;
+    min-height: calc(100vh - 400px - 180px);
 }
 .list_box_wrap ul{
     display: flex;
