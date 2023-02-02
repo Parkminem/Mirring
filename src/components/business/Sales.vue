@@ -112,7 +112,7 @@ onUnmounted(() => {
         background-color: #ffffff;
         @for $i from 1 through 4 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/business/sales_#{$i}.png);
+            background-image: url(@/assets/images/business/sales_#{$i}.png);
           }
         }
         &:last-child {

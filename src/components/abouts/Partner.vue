@@ -18,7 +18,7 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
-import { useAboutStore } from '../../store/about';
+import { useAboutStore } from '@/store/about';
 const aboutStore = useAboutStore();
 const { t, locale } = useI18n();
 const { partners } = storeToRefs(aboutStore);

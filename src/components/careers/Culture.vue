@@ -75,7 +75,7 @@ onUnmounted(() => {
 //박스 애니메이션 끝
 </script>
 <style scoped lang="scss">
-@import '../../style/animation.css';
+@import '../../assets/style/animation.css';
 .section {
   background-color: #ffffff;
   padding-bottom: 140px;
@@ -115,7 +115,7 @@ onUnmounted(() => {
         }
         @for $i from 1 through 5 {
           &:nth-child(#{$i}) .round {
-            background-image: url(/assets/images/careers/culture0#{$i}.png);
+            background-image: url(@/assets/images/careers/culture0#{$i}.png);
           }
         }
         p {

@@ -2,7 +2,7 @@
   <ul class="news_pagination">
     <li class="arrow prev" v-if="pagination(page, totalPage, pageSize).preBtn">
       <button @click="$emit('goPrePage', pagination(page, totalPage, pageSize).startPage - 1)">
-        <img @click="clickPrev" src="/assets/images/common/pagination_prev.png" alt="arrow_prev" />
+        <img @click="clickPrev" src="@/assets/images/common/pagination_prev.png" alt="arrow_prev" />
       </button>
     </li>
     <li @click="clickPage" v-for="i of pagination(page, totalPage, pageSize).pageArr" class="number">
@@ -10,13 +10,13 @@
     </li>
     <li class="arrow next" v-if="pagination(page, totalPage, pageSize).nextBtn">
       <button @click="$emit('goNextPage', pagination(page, totalPage, pageSize).endPage + 1)">
-        <img @click="clickNext" src="/assets/images/common/pagination_next.png" alt="arrow_next" />
+        <img @click="clickNext" src="@/assets/images/common/pagination_next.png" alt="arrow_next" />
       </button>
     </li>
   </ul>
 </template>
 <script setup>
-import { pagination } from '../../utils/pagination';
+import { pagination } from '@/utils/pagination';
 
 defineProps({
   page: Number,
@@ -53,6 +53,9 @@ defineProps({
       }
     }
   }
+}
+button {
+  background-color: transparent;
 }
 @media (max-width: 1024px) {
   .news_pagination {

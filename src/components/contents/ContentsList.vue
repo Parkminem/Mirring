@@ -4,7 +4,7 @@
       <ul>
         <li class="listbox" v-for="content in contentsList" :key="content.title">
           <div class="img_wrap">
-            <img :src="`http://data.ideaconcert.com${content.thumbnail_file_url}`" />
+            <img :src="'http://data.ideaconcert.com' + content.thumbnail_file_url" />
           </div>
           <dl>
             <dt v-if="locale === 'kr'">{{ content.title_kr }}</dt>
@@ -48,8 +48,8 @@
 </template>
 <script setup>
 import { ref } from 'vue';
-import Pagination from '../common/Pagination.vue';
-import contentsApi from '../../api/contents';
+import Pagination from '@/components/common/Pagination.vue';
+import contentsApi from '@/api/contents';
 import { useI18n } from 'vue-i18n';
 
 const { locale } = useI18n();
@@ -104,5 +104,5 @@ function moveNextPage(page) {
 }
 </script>
 <style>
-@import '../../style/contents.css';
+@import '../../assets/style/contents.css';
 </style>

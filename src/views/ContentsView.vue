@@ -5,23 +5,21 @@
       <ContentsList />
     </template>
     <template #fallback
-      ><div class="loading"><img src="/assets/images/common/spinner.gif" alt="loading" /></div
+      ><div class="loading"><img src="@/assets/images/common/spinner.gif" alt="loading" /></div
     ></template>
   </Suspense>
 </template>
 
 <script setup>
-import SubTitle from '../components/common/SubTitle.vue';
-import ContentsList from '../components/contents/ContentsList.vue';
+import SubTitle from '@/components/common/SubTitle.vue';
+import ContentsList from '@/components/contents/ContentsList.vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const title = t('contents.mainTitle');
 const subTitle = t('contents.subTitle');
 const text = t('contents.mainText');
-const bg = '/assets/images/contents/Contents.jpg';
-
-//컨텐츠리스트 조회
+const bg = '/src/assets/images/contents/Contents.jpg';
 </script>
 <style lang="scss" scoped>
 .loading {

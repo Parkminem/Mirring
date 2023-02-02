@@ -9,7 +9,7 @@
         <p class="text" v-html="t('home.mainText')"></p>
         <div class="img_box">
           <p class="bg_text">IDEACONCERT</p>
-          <img class="earth2" alt="IDEACONCERT" src="assets/images/home/run_half-earth.gif" />
+          <img class="earth2" alt="IDEACONCERT" src="@/assets/images/home/run_half-earth.gif" />
         </div>
       </div>
     </div>

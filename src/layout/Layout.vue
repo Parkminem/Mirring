@@ -3,17 +3,18 @@
     <Modal v-if="infoModalState" />
   </Transition>
   <Header />
+
   <router-view :key="$route.fullPath"></router-view>
   <Footer v-if="locations" />
 </template>
 <script setup>
 import { watch } from 'vue';
 import { storeToRefs } from 'pinia';
-import Header from '../components/common/Header.vue';
-import Footer from '../components/common/Footer.vue';
-import Modal from '../components/contact/Modal.vue';
-import { useModalStore } from '../store/modal';
-import { useMapStore } from '../store/form';
+import Header from '@/components/common/Header.vue';
+import Footer from '@/components/common/Footer.vue';
+import Modal from '@/components/contact/Modal.vue';
+import { useModalStore } from '@/store/modal';
+import { useMapStore } from '@/store/form';
 
 const modalStore = useModalStore();
 const mapStore = useMapStore();

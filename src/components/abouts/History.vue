@@ -37,7 +37,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
-import { useAboutStore } from '../../store/about';
+import { useAboutStore } from '@/store/about';
 const aboutStore = useAboutStore();
 const { historys } = storeToRefs(aboutStore);
 const { t, locale } = useI18n();
@@ -110,7 +110,7 @@ onUnmounted(() => {
         width: 35%;
         padding: 0 100px;
         margin-top: 150px;
-        background-image: url(/assets/images/about/history_dot.png);
+        background-image: url(@/assets/images/about/history_dot.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: top;
@@ -205,7 +205,7 @@ onUnmounted(() => {
           left: 40px;
           width: 1px;
           height: 100%;
-          background-image: url(/assets/images/about/123_t.png);
+          background-image: url(@/assets/images/about/123_t.png);
           background-repeat: repeat;
           background-size: 120%;
           background-position: top;

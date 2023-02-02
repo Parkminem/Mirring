@@ -4,7 +4,7 @@
     <div class="modal_box">
       <img
         class="close"
-        src="/assets/images/contact/close_gray.png"
+        src="@/assets/images/contact/close_gray.png"
         title="close"
         alt="close"
         @click="modalStore.infoModalClose"
@@ -652,7 +652,7 @@
   </div>
 </template>
 <script setup>
-import { useModalStore } from '../../store/modal';
+import { useModalStore } from '@/store/modal';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 const modalStore = useModalStore();

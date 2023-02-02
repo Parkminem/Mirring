@@ -21,7 +21,7 @@
         >
           <img
             class="character"
-            src="/assets/images/common/quick_banner/character_contact.png"
+            src="@/assets/images/common/quick_banner/character_contact.png"
             alt="character_contact"
           />
           <div class="box">
@@ -42,7 +42,7 @@
           </div>
           <img
             class="character"
-            src="/assets/images/common/quick_banner/character_careers.png"
+            src="@/assets/images/common/quick_banner/character_careers.png"
             alt="character_careers"
             title="character_careers"
           />
@@ -88,17 +88,17 @@ const actives = ref({
       background-position: center;
     }
     .contact {
-      background-image: url(/assets/images/common/quick_banner/contact.png);
+      background-image: url(@/assets/images/common/quick_banner/contact.png);
       background-position: right;
       &.active {
-        background-image: url(/assets/images/common/quick_banner/contact_over.png);
+        background-image: url(@/assets/images/common/quick_banner/contact_over.png);
       }
     }
     .careers {
-      background-image: url(/assets/images/common/quick_banner/careers.png);
+      background-image: url(@/assets/images/common/quick_banner/careers.png);
       background-position: left;
       &.active {
-        background-image: url(/assets/images/common/quick_banner/careers_over.png);
+        background-image: url(@/assets/images/common/quick_banner/careers_over.png);
       }
     }
   }
@@ -185,7 +185,7 @@ const actives = ref({
           }
           &.contact {
             .box {
-              background-image: url(/assets/images/common/quick_banner/contact_mobile.png);
+              background-image: url(@/assets/images/common/quick_banner/contact_mobile.png);
               background-position: left;
             }
           }
@@ -194,7 +194,7 @@ const actives = ref({
             overflow: hidden;
             .box {
               margin-left: 0;
-              background-image: url(/assets/images/common/quick_banner/careers_mobile.png);
+              background-image: url(@/assets/images/common/quick_banner/careers_mobile.png);
               background-position: right;
             }
           }

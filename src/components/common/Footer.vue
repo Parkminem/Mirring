@@ -105,7 +105,7 @@ const { locations } = storeToRefs(mapStore);
             }
             .arrow {
               transform: rotateZ(180deg);
-              background-image: url('/assets/images/common/arrow_up_black.png');
+              background-image: url('@/assets/images/common/arrow_up_black.png');
             }
           }
         }
@@ -140,7 +140,7 @@ const { locations } = storeToRefs(mapStore);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            background-image: url('/assets/images/common/arrow_up_gray.png');
+            background-image: url('@/assets/images/common/arrow_up_gray.png');
           }
         }
       }

@@ -8,11 +8,11 @@
           <ul class="arrow_box box_animation">
             <li class="boxAni" :class="{ box01: activeBox[1] }" ref="box01">
               <p class="regular_text">{{ t('business.source') }}</p>
-              <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
+              <img src="@/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
             </li>
             <li class="boxAni" :class="{ box02: activeBox[1] }">
               <p class="regular_text">{{ t('business.video') }}</p>
-              <img src="/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
+              <img src="@/assets/images/business/cost_arrow_2.png" alt="arrow" title="arrow" />
             </li>
           </ul>
           <ul :class="['bold_text_box', 'box_animation', locale]">
@@ -23,14 +23,14 @@
         </div>
         <ul class="white_box_list box_animation">
           <li class="box boxAni" ref="box03" :class="{ box01: activeBox[3] }">
-            <img class="images" src="/assets/images/business/cost_1.png" alt="cost_1" title="cost_1" />
+            <img class="images" src="@/assets/images/business/cost_1.png" alt="cost_1" title="cost_1" />
             <p class="text" v-html="t('business.creatorBox')"></p>
           </li>
           <li class="box boxAni" :class="{ box01: activeBox[3] }">
-            <img class="images" src="/assets/images/business/cost_2.png" alt="cost_2" title="cost_2" />
+            <img class="images" src="@/assets/images/business/cost_2.png" alt="cost_2" title="cost_2" />
           </li>
           <li class="box boxAni" :class="{ box01: activeBox[3] }">
-            <img class="images" src="/assets/images/business/cost_3.png" alt="cost_3" title="cost_3" />
+            <img class="images" src="@/assets/images/business/cost_3.png" alt="cost_3" title="cost_3" />
             <p class="text" v-html="t('business.platformBox')"></p>
           </li>
         </ul>
@@ -42,11 +42,11 @@
           </ul>
           <ul class="arrow_box box_animation">
             <li class="boxAni" ref="box05" :class="{ box01: activeBox[5] }">
-              <img src="/assets/images/business/cost_arrow_3.png" alt="arrow" title="arrow" />
+              <img src="@/assets/images/business/cost_arrow_3.png" alt="arrow" title="arrow" />
               <p class="regular_text">{{ t('business.share') }}</p>
             </li>
             <li class="boxAni" :class="{ box01: activeBox[5] }">
-              <img src="/assets/images/business/cost_arrow_3.png" alt="arrow" title="arrow" />
+              <img src="@/assets/images/business/cost_arrow_3.png" alt="arrow" title="arrow" />
               <p class="regular_text">{{ t('business.share') }}</p>
             </li>
           </ul>
@@ -207,7 +207,7 @@ onUnmounted(() => {
                 transform: translateY(-50%);
                 width: 108.8px;
                 height: 38.6px;
-                background-image: url(/assets/images/business/cost_arrow_1.png);
+                background-image: url(@/assets/images/business/cost_arrow_1.png);
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;

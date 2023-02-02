@@ -58,9 +58,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import Pagination from '../common/Pagination.vue';
-import { useAboutStore } from '../../store/about';
-import { changeDate } from '../../utils/util';
+import Pagination from '@/components/common/Pagination.vue';
+import { useAboutStore } from '@/store/about';
+import { changeDate } from '@/utils/util';
 
 const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
