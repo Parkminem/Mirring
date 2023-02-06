@@ -28,7 +28,6 @@ export const useCareersStore = defineStore('careers', {
         .getCareersDetail(pk)
         .then((res) => {
           this.careersDetail = res.data.data;
-          console.log(this.careersDetail.length);
         })
         .catch((err) => router.replace('/notfound'));
     }
