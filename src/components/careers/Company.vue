@@ -22,13 +22,13 @@
               class="css"
               v-for="image in careersDetail"
               :key="image.image_save_name"
+              :looped-slides="careersDetail.length"
               :style="{
                 backgroundImage: `url(${url + image.img_url})`,
                 height: calcHeight() + 'px',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
               }"
-              :looped-slides="careersDetail.length"
             >
             </SwiperSlide>
             <div
