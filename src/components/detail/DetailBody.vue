@@ -43,7 +43,7 @@ await aboutApi
   .then((res) => {
     detailNews.value = res.data.data;
   })
-  .catch((err) => console.log(err));
+  .catch((err) => router.replace('/notfound'));
 
 //목록 클릭 시 뉴스 컴포넌트로 이동
 function goNews() {

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import careersApi from '@/api/careers';
+import router from '@/routes';
 
 export const useCareersStore = defineStore('careers', {
   state: () => ({
@@ -16,7 +17,7 @@ export const useCareersStore = defineStore('careers', {
         .then((res) => {
           this.careersList = res.data.data;
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     },
 
     /**
@@ -29,7 +30,7 @@ export const useCareersStore = defineStore('careers', {
           this.careersDetail = res.data.data;
           console.log(this.careersDetail.length);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     }
   }
 });

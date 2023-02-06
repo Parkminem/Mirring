@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import formApi from './../api/form';
+import router from '@/routes';
 
 export const useFormStore = defineStore('form', {
   state: () => ({
@@ -35,7 +36,7 @@ export const useFormStore = defineStore('form', {
           }
         })
         .catch((err) => {
-          console.log(err);
+          router.replace('/notfound');
         });
     }
   }
@@ -52,7 +53,7 @@ export const useMapStore = defineStore('map', {
         .then((res) => {
           this.locations = res.data.data;
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     }
   }
 });

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import aboutApi from './../api/about';
+import router from '@/routes';
 
 export const useAboutStore = defineStore('about', {
   state: () => ({
@@ -42,7 +43,7 @@ export const useAboutStore = defineStore('about', {
               break;
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     },
     /**
      * 뉴스리스트 액션(언어코드, 페이지 번호)
@@ -55,7 +56,7 @@ export const useAboutStore = defineStore('about', {
           this.newsList = res.data.data.newsData;
           this.totalPage = res.data.data.totalPageNum;
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     },
     /**
      * 연혁 액션(언어코드)
@@ -87,7 +88,7 @@ export const useAboutStore = defineStore('about', {
           }
           this.historys = result;
         })
-        .catch((err) => console.log(err));
+        .catch((err) => router.replace('/notfound'));
     }
   }
 });

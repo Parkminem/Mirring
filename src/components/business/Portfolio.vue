@@ -75,7 +75,8 @@ import { useI18n } from 'vue-i18n';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { ref } from 'vue';
-import businessApi from '../../api/business';
+import businessApi from '@/api/business';
+import router from '@/routes';
 
 const { t } = useI18n();
 const swiper = ref(null);
@@ -97,7 +98,7 @@ businessApi
     portfolioList.value = res.data.data;
   })
   .catch((err) => {
-    console.log(err);
+    router.replace('/notfound');
   });
 </script>
 <style scoped lang="scss">

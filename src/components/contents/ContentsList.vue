@@ -51,6 +51,7 @@ import { ref } from 'vue';
 import Pagination from '@/components/common/Pagination.vue';
 import contentsApi from '@/api/contents';
 import { useI18n } from 'vue-i18n';
+import router from '@/routes';
 
 const { locale } = useI18n();
 
@@ -65,7 +66,7 @@ await contentsApi
     contentsList.value = res.data.data.contentsData;
     totalPage.value = res.data.data.totalPageNum;
   })
-  .catch((err) => console.log(err));
+  .catch((err) => router.replace('/notfound'));
 
 //페이지 이동
 function movePage(page) {
@@ -76,7 +77,7 @@ function movePage(page) {
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => router.replace('/notfound'));
 }
 
 //페이지 이전 버튼 클릭
@@ -88,7 +89,7 @@ function movePrePage(page) {
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => router.replace('/notfound'));
 }
 
 //페이지 다음 버튼 클릭
@@ -100,7 +101,7 @@ function moveNextPage(page) {
       totalPage.value = res.data.data.totalPageNum;
       nowPage.value = page;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => router.replace('/notfound'));
 }
 </script>
 <style>
