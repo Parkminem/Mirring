@@ -11,11 +11,12 @@ import Map from '@/components/contact/Map.vue';
 import { useI18n } from 'vue-i18n';
 import { useMapStore } from '@/store/form';
 import { storeToRefs } from 'pinia';
+import bg from '@/assets/images/contact/contact.jpg';
+
 const { t } = useI18n();
 const title = t('contact.mainTitle');
 const subTitle = t('contact.subTitle');
 const text = t('contact.mainText');
-const bg = '/src/assets/images/contact/contact.jpg';
 const mapStore = useMapStore();
 const { locations } = storeToRefs(mapStore);
 </script>

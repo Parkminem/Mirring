@@ -20,13 +20,13 @@ import Translate from '@/components/tech/Translate.vue';
 import ContentViewer from '@/components/tech/Contentviewer.vue';
 import Damda from '@/components/tech/Damda.vue';
 import Toonibe from '@/components/tech/Toonibe.vue';
+import bg from '@/assets/images/ourTech/banner.png';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const title = t('tech.mainTitle');
 const subTitle = t('tech.subTitle');
 const text = t('tech.mainText');
-const bg = '/src/assets/images/ourTech/banner.png';
 </script>
 
 <style>

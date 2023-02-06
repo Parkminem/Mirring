@@ -14,12 +14,12 @@
 import SubTitle from '@/components/common/SubTitle.vue';
 import ContentsList from '@/components/contents/ContentsList.vue';
 import { useI18n } from 'vue-i18n';
+import bg from '@/assets/images/contents/Contents.jpg';
 const { t } = useI18n();
 
 const title = t('contents.mainTitle');
 const subTitle = t('contents.subTitle');
 const text = t('contents.mainText');
-const bg = '/src/assets/images/contents/Contents.jpg';
 </script>
 <style lang="scss" scoped>
 .loading {

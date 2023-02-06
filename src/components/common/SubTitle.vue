@@ -2,7 +2,7 @@
   <section
     :class="[path == '/contact' || path == '/careers' ? ['section', 'widePadding'] : 'section']"
     data-name="banner"
-    :style="{ backgroundImage: `url('${bg}')` }"
+    :style="{ backgroundImage: `url(${bg})` }"
   >
     <div class="container_1076">
       <p class="title" v-html="title"></p>
@@ -16,12 +16,13 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const path = route.path;
 
-defineProps({
+const props = defineProps({
   bg: String,
   title: String,
   subTitle: String,
   text: String
 });
+// console.log(typeof props.bg);
 </script>
 <style scoped lang="scss">
 .section {

@@ -16,6 +16,7 @@ import History from '@/components/abouts/History.vue';
 import News from '@/components/abouts/News.vue';
 import Partner from '@/components/abouts/Partner.vue';
 import QuickBanner from '@/components/common/QuickBanner.vue';
+import bg from '@/assets/images/about/banner.png';
 import { useI18n } from 'vue-i18n';
 import { useAboutStore } from '@/store/about';
 
@@ -23,7 +24,6 @@ const { t, locale } = useI18n();
 const title = t('about.mainTitle');
 const subTitle = t('about.subTitle');
 const text = t('about.mainText');
-const bg = '/src/assets/images/about/banner.png';
 
 const aboutStore = useAboutStore();
 

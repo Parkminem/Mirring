@@ -22,7 +22,7 @@
       <div class="container_1076">
         <ul class="content box_animation" v-if="actives.contents">
           <li class="box boxAni" :class="{ box01: activeBox[1] }" ref="box01">
-            <div class="round" style="background-image: url(/src/assets/images/business/list_1_1.png)"></div>
+            <div class="round" style="background-image: url('/src/assets/images/business/list_1_1.png')"></div>
             <div class="text_box">
               <p class="title">{{ t('business.produceBox01Title') }}</p>
               <p class="text">
