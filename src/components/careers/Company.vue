@@ -3,116 +3,45 @@
     <div class="container_1076">
       <p class="title">{{ t('careers.place') }}</p>
       <div class="swiper_area">
-        <ul class="swiper_menu">
-          <li :class="{ active: pangyo }" data-name="pangyo" @click="activeTab(true, false, false)">판교</li>
-          <li :class="{ active: yangjae }" data-name="yangjae" @click="activeTab(false, true, false)">양재</li>
-          <li :class="{ active: jeju }" data-name="jeju" @click="activeTab(false, false, true)">제주</li>
+        <ul class="swiper_menu" v-if="careersList">
+          <li
+            :class="{ active: index === activeClass }"
+            v-for="(career, index) in careersList"
+            :key="career.id"
+            @click="selectedLocation(career.id, index)"
+          >
+            <p v-if="locale === 'kr'">{{ career.nameKr }}</p>
+            <p v-if="locale === 'en'">{{ career.nameUs }}</p>
+            <p v-if="locale === 'id'">{{ career.nameId }}</p>
+            <p v-if="locale === 'pt'">{{ career.namePt }}</p>
+          </li>
         </ul>
-        <!-- pangyo -->
-        <Swiper @swiper="pangyoSwiper" data-name="pangyo" v-if="pangyo" :loop="true">
-          <SwiperSlide
-            :style="{ backgroundImage: `url('/src/assets/images/careers/pangyo_1.jpg')`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="0"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/pangyo_2.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="1"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/pangyo_3.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="2"
-          ></SwiperSlide>
-          <div
-            class="swiper-button-next btns"
-            tabindex="0"
-            role="button"
-            aria-label="Next slide"
-            @click="swiper.slideNext()"
-          ></div>
-          <div
-            class="swiper-button-prev btns"
-            tabindex="0"
-            role="button"
-            aria-label="Previous slide"
-            @click="swiper.slidePrev()"
-          ></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </Swiper>
-        <!-- //pangyo -->
-        <!-- yangjae -->
-        <Swiper @swiper="yangjaeSwiper" data-name="yangjae" v-if="yangjae" :loop="true">
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_1.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="0"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_2.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="1"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_3.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="2"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_4.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="3"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/yangjae_5.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="4"
-          ></SwiperSlide>
-          <div
-            class="swiper-button-next btns"
-            tabindex="0"
-            role="button"
-            aria-label="Next slide"
-            @click="swiper.slideNext()"
-          ></div>
-          <div
-            class="swiper-button-prev btns"
-            tabindex="0"
-            role="button"
-            aria-label="Previous slide"
-            @click="swiper.slidePrev()"
-          ></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </Swiper>
-        <!-- //yangjae -->
-        <!-- jeju -->
-        <Swiper @swiper="jejuSwiper" data-name="jeju" v-if="jeju" :loop="true">
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_1.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="0"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_2.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="1"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_3.jpg)`, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="2"
-          ></SwiperSlide>
-          <SwiperSlide
-            :style="{ backgroundImage: `url(/src/assets/images/careers/jeju_4.jpg) `, height: calcHeight() + 'px' }"
-            data-swiper-slide-index="3"
-          ></SwiperSlide>
-          <div
-            class="swiper-button-next btns"
-            tabindex="0"
-            role="button"
-            aria-label="Next slide"
-            @click="swiper.slideNext()"
-          ></div>
-          <div
-            class="swiper-button-prev btns"
-            tabindex="0"
-            role="button"
-            aria-label="Previous slide"
-            @click="swiper.slidePrev()"
-          ></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </Swiper>
-        <!-- //jeju -->
+        <div class="swiper-container swiper-container-initialized swiper-container-horizontal" v-if="careersDetail">
+          <Swiper :loop="true" @swiper="onSwiper">
+            <SwiperSlide
+              class="css"
+              v-for="image in careersDetail"
+              :key="image.image_save_name"
+              :style="{ backgroundImage: `url(${url + image.img_url})`, height: calcHeight() + 'px' }"
+            >
+            </SwiperSlide>
+            <div
+              class="swiper-button-next btns"
+              tabindex="0"
+              role="button"
+              aria-label="Next slide"
+              @click="swiper.slideNext()"
+            ></div>
+            <div
+              class="swiper-button-prev btns"
+              tabindex="0"
+              role="button"
+              aria-label="Previous slide"
+              @click="swiper.slidePrev()"
+            ></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </Swiper>
+        </div>
       </div>
     </div>
   </section>
@@ -122,38 +51,43 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-const { t } = useI18n();
-const pangyo = ref(true);
-const yangjae = ref(false);
-const jeju = ref(false);
+import { useCareersStore } from '@/store/careers';
+import { storeToRefs } from 'pinia';
+
+const { t, locale } = useI18n();
 const swiper = ref(null);
 const width = ref(innerWidth);
+const url = 'http://data.ideaconcert.com';
+const activeClass = ref(0);
+const careersStore = useCareersStore();
+const { careersList, careersDetail } = storeToRefs(careersStore);
 
-const pangyoSwiper = (swiperInstance) => {
+// 위치를 불러오는 액션
+await careersStore.careersListAct();
+
+const defaultLocation = careersList.value[0].id;
+await careersStore.careersDetailAct(defaultLocation);
+
+const onSwiper = (swiperInstance) => {
   swiper.value = swiperInstance;
 };
-const yangjaeSwiper = (swiperInstance) => {
-  swiper.value = swiperInstance;
-};
-const jejuSwiper = (swiperInstance) => {
-  swiper.value = swiperInstance;
-};
+
+// 위치를 선택하면 사진을 불러오는 함수
+function selectedLocation(pk, index) {
+  activeClass.value = index;
+  careersStore.careersDetailAct(pk);
+}
 
 const calcHeight = () => {
   if (width.value > 500) return 498;
   else return 298;
 };
+
 onMounted(() => {
   window.addEventListener('resize', () => {
     width.value = innerWidth;
   });
 });
-
-function activeTab(first, second, third) {
-  pangyo.value = first;
-  yangjae.value = second;
-  jeju.value = third;
-}
 </script>
 <style scoped lang="scss">
 .section {

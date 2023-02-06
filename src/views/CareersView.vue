@@ -1,7 +1,14 @@
 <template>
   <SubTitle :title="title" :subTitle="subTitle" :text="text" :bg="bg" />
   <Apply />
-  <Company />
+  <Suspense>
+    <template #default>
+      <Company />
+    </template>
+    <template #fallback>
+      <div class="loading"><img src="@/assets/images/common/spinner.gif" alt="loading" /></div>
+    </template>
+  </Suspense>
   <Culture />
 </template>
 
@@ -11,6 +18,7 @@ import Apply from '@/components/careers/Apply.vue';
 import Company from '@/components/careers/Company.vue';
 import Culture from '@/components/careers/Culture.vue';
 import { useI18n } from 'vue-i18n';
+
 const { t } = useI18n();
 
 const title = t('careers.mainTitle');
