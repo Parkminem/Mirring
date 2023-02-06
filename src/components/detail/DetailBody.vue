@@ -1,5 +1,5 @@
 <template>
-  <section class="section" data-name="about_detail_news">
+  <section class="section detail_section" data-name="about_detail_news">
     <div class="container_1076">
       <div class="notice_head">
         <div class="title" v-if="locale === 'kr'">{{ detailNews.title_kr }}</div>
@@ -57,8 +57,8 @@ const goPage = (num) => {
   window.location.href = `/detail?pk=${num}`;
 };
 </script>
-<style lang="scss" scoped>
-.section {
+<style lang="scss">
+.detail_section {
   padding: 106px 0 136px 0;
   .notice_head {
     display: flex;
@@ -199,8 +199,9 @@ const goPage = (num) => {
     }
   }
 }
+
 @media (max-width: 1024px) {
-  .section {
+  .detail_section {
     padding: 46px 0 57px 0;
     .notice_head {
       margin-bottom: 10px;
