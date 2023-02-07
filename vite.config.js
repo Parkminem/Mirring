@@ -30,8 +30,8 @@ export default defineConfig({
           }
           return `static/user/${extType}/[name]-[hash][extname]`;
         },
-        chunkFileNames: 'static/js/[name]-[hash].js',
-        entryFileNames: 'static/js/[name]-[hash].js'
+        chunkFileNames: 'static/user/js/[name]-[hash].js',
+        entryFileNames: 'static/user/js/[name]-[hash].js'
       }
     }
   }
