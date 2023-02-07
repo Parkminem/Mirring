@@ -39,11 +39,11 @@
           >, <span>{{ t('privacy.sub01-3-2') }}</span
           >.<br />4. <span>{{ t('privacy.sub01-4-1') }}</span
           >. <span>{{ t('privacy.sub01-4-2') }}</span
-          >(http://ideaconcert.com)<span>{{ t('privacy.sub01-4-3') }}</span
+          >(https://ideaconcert.com)<span>{{ t('privacy.sub01-4-3') }}</span
           >.<br />5. <span>{{ t('privacy.sub01-5-1') }}</span
           >, <span>{{ t('privacy.sub01-5-2') }}</span
           >, <span>{{ t('privacy.sub01-5-3') }}</span
-          >(http://ideaconcert.com), <span>{{ t('privacy.sub01-5-4') }}</span> 30<span>{{
+          >(https://ideaconcert.com), <span>{{ t('privacy.sub01-5-4') }}</span> 30<span>{{
             t('privacy.sub01-5-5')
           }}</span
           >. <span>{{ t('privacy.sub01-5-6') }}</span
@@ -628,7 +628,7 @@
           >, <span>{{ t('privacy.sub11-01-05') }}</span
           ><br /><span>{{ t('privacy.na') }}</span
           >. <span>{{ t('privacy.sub11-01-06') }}</span
-          >/<span>{{ t('privacy.sub11-01-07') }} </span> : http://privacy.kisa.or.kr / (<span>{{
+          >/<span>{{ t('privacy.sub11-01-07') }} </span> : https://privacy.kisa.or.kr / (<span>{{
             t('privacy.sub11-01-08')
           }}</span
           >)118<br />2. <span>{{ t('privacy.sub11-02-01') }}</span

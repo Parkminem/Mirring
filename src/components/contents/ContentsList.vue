@@ -26,10 +26,10 @@
           </dl>
           <ul class="btn_wrap">
             <li>
-              <a target="blank" :href="`http://data.ideaconcert.com${content.file_url_kr}`">작품소개서</a>
+              <a target="blank" :href="`https://data.ideaconcert.com${content.file_url_kr}`">작품소개서</a>
             </li>
             <li>
-              <a target="blank" :href="`http://data.ideaconcert.com${content.file_url_us}`">Introduction</a>
+              <a target="blank" :href="`https://data.ideaconcert.com${content.file_url_us}`">Introduction</a>
             </li>
           </ul>
         </li>

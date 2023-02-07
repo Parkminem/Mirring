@@ -22,7 +22,7 @@ import { useAboutStore } from '@/store/about';
 const aboutStore = useAboutStore();
 const { t, locale } = useI18n();
 const { partners } = storeToRefs(aboutStore);
-const url = 'http://data.ideaconcert.com';
+const url = 'https://data.ideaconcert.com';
 
 //파트너사 리스트 받아오기
 aboutStore.partnerAct(locale.value);

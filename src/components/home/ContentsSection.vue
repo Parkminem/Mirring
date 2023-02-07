@@ -98,7 +98,7 @@ const router = useRouter();
 const { t, locale } = useI18n();
 const swiper = ref(null);
 const aboutStore = useAboutStore();
-const url = 'http://data.ideaconcert.com';
+const url = 'https://data.ideaconcert.com';
 
 //뉴스리스트 불러오기
 aboutStore.newsAct(locale.value, 1);
