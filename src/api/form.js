@@ -6,7 +6,20 @@ import instance from './axiosInstance';
 function getTypeList() {
   return instance.get('/question/type/list');
 }
+/**
+ * 문의 하기
+ * @param object(question_type_pk, name, company, department_position, phone, email, content)
+ */
+function fetchContact(obj) {
+  return instance.post('question/', obj);
+}
 
-const formApi = { getTypeList };
+/**
+ * 위치 조회
+ */
+function getLocation() {
+  return instance.get('/location/list');
+}
+const formApi = { getTypeList, getLocation, fetchContact };
 
 export default formApi;

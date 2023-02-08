@@ -8,9 +8,9 @@
     :key="$route.fullPath"
   >
     <div class="container_1076">
-      <div :class="['content position', lang]">
+      <div :class="['content position', locale]">
         <div class="container_1096">
-          <div class="images" style="background-image: url(/assets/images/home/technology_1.png)"></div>
+          <div class="images" style="background-image: url(/src/assets/images/home/technology_1.png)"></div>
           <div class="box">
             <p class="title" v-html="t('home.connectTitle')"></p>
             <p class="sub_title">{{ t('home.connectSubTitle') }}</p>
@@ -44,15 +44,9 @@
   </section>
 </template>
 <script setup>
-import { ref, onMounted, watch, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import i18n from '../../i18n';
-const { t } = useI18n();
-const lang = i18n.global.locale;
-
-watch(lang, (newLang) => {
-  lang = newLang;
-});
+const { t, locale } = useI18n();
 
 //박스 애니메이션 & 섹션 슬라이드업 애니메이션
 const section = ref();

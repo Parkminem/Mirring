@@ -3,7 +3,6 @@
     <div class="container">
       <h2 class="content__title">{{ t('tech.separateTitle') }}</h2>
       <p class="content__subtitle" v-html="t('tech.separateText')"></p>
-
       <div class="cut__images">
         <div id="first__notice" class="content__notice">{{ t('tech.separateBtn') }}</div>
         <div class="cut__image"></div>
@@ -40,7 +39,6 @@
 </template>
 <script setup>
 import { useI18n } from 'vue-i18n';
-
 const { t } = useI18n();
 </script>
-<style scoped></style>
+<style scoped lang="scss"></style>

@@ -11,7 +11,7 @@
       <div class="content">
         <img
           class="character mobile"
-          src="/assets/images/home/character_about.png"
+          src="@/assets/images/home/character_about.png"
           alt="character_about"
           title="character_about"
         />
@@ -23,7 +23,7 @@
         </div>
         <img
           class="character"
-          src="/assets/images/home/character_about.png"
+          src="@/assets/images/home/character_about.png"
           alt="character_about"
           title="character_about"
         />
@@ -37,72 +37,25 @@
           :slides-per-view="4"
           :space-between="0"
           :touch-ratio="0"
+          :looped-slides="8"
           :breakpoints="breakPoints"
           @swiper="onSwiper"
           class="box_animation"
         >
-          <SwiperSlide data-swiper-slide-index="0" class="css">
-            <router-link to="">
+          <SwiperSlide
+            :data-swiper-slide-index="idx"
+            class="css"
+            v-for="(news, idx) of aboutStore.newsList"
+            :key="news.news_pk"
+          >
+            <router-link :to="{ path: '/detail', query: { pk: news.news_pk } }">
               <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202208051658270390.jpg)"></div>
+                <div class="image_box" :style="{ backgroundImage: `url('${url}${news.thumbnail_file_url}')` }"></div>
               </div>
-              <p class="title ellipsis_line_2">2022 K-콘텐츠엑스포 in 싱가포르</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="1" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061019000082.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">2022 국제전자제품박람회 CES</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="2" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061016010506.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">2021 메타버스 허브 &amp; DCC 글로벌 데모데이</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="3" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061013540754.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">틱톡, 아이디어콘서트 MOU체결</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="4" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061010530051.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">메타버스 허브 ‘툰트라’ 인터뷰 진행</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="5" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061008420593.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">2021 넥스트콘텐츠페어</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="6" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061006550349.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">2021 제주만화 · 웹툰피칭데이</p>
-            </router-link>
-          </SwiperSlide>
-          <SwiperSlide data-swiper-slide-index="7" class="css">
-            <router-link to="">
-              <div class="effect_area">
-                <div class="image_box" style="background-image: url(/assets/images/home/202205061002070942.jpg)"></div>
-              </div>
-              <p class="title ellipsis_line_2">2021 경기국제웹툰페어</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'kr'">{{ news.title_kr }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'en'">{{ news.title_us }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'id'">{{ news.title_id }}</p>
+              <p class="title ellipsis_line_2" v-if="locale == 'pt'">{{ news.title_pt }}</p>
             </router-link>
           </SwiperSlide>
         </Swiper>
@@ -112,7 +65,7 @@
       <img
         @click="swiper.slidePrev()"
         class="swiper-button-prev swiper_navigation"
-        src="/assets/images/home/swiper_prev.png"
+        src="@/assets/images/home/swiper_prev.png"
         alt="prev"
         title="prev"
         tabindex="0"
@@ -122,7 +75,7 @@
       <img
         @click="swiper.slideNext()"
         class="swiper-button-next swiper_navigation"
-        src="/assets/images/home/swiper_next.png"
+        src="@/assets/images/home/swiper_next.png"
         alt="next"
         title="next"
         tabindex="0"
@@ -140,10 +93,15 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
+import { useAboutStore } from '@/store/about';
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const swiper = ref(null);
+const aboutStore = useAboutStore();
+const url = 'https://ideaconcert.com';
 
+//뉴스리스트 불러오기
+aboutStore.newsAct(locale.value, 1);
 const breakPoints = {
   1024: {
     spaceBetween: 28,
@@ -164,12 +122,11 @@ function goNews() {
 const section = ref();
 const activeSection = ref(false);
 function sectionAnimation() {
-  if (innerHeight > section.value.offsetTop) return (activeSection.value = true);
+  if (innerHeight + scrollY > section.value.offsetTop) return (activeSection.value = true);
 }
 onMounted(() => {
-  if (innerWidth < 1025) {
-    window.addEventListener('scroll', sectionAnimation);
-  } else sectionAnimation();
+  if (innerWidth > 1280) activeSection.value = true;
+  window.addEventListener('scroll', sectionAnimation);
 });
 onUnmounted(() => {
   window.removeEventListener('scroll', sectionAnimation);

@@ -11,7 +11,7 @@
       <div class="content">
         <img
           class="character mobile"
-          src="/assets/images/home/character_contact.png"
+          src="@/assets/images/home/character_contact.png"
           alt="character_contact"
           title="character_contact"
         />
@@ -23,7 +23,7 @@
         </div>
         <img
           class="character"
-          src="/assets/images/home/character_contact.png"
+          src="@/assets/images/home/character_contact.png"
           alt="character_contact"
           title="character_contact"
         />

@@ -380,5 +380,12 @@
     "tel": "Por favor, insira suas informações de contato",
     "mail": "Por favor introduza o seu e-mail",
     "desc": "Por favor, insira os detalhes da sua consulta"
+  },
+  "detail": {
+    "title": "News",
+    "text": "Confira as novidades da IDEACONCERT",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "list": "Lista"
   }
 }
