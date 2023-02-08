@@ -4,7 +4,7 @@
       <ul>
         <li class="listbox" v-for="content in contentsList" :key="content.title">
           <div class="img_wrap">
-            <img :src="'http://ideaconcert.com' + content.thumbnail_file_url" />
+            <img :src="'https://ideaconcert.com' + content.thumbnail_file_url" />
           </div>
           <dl>
             <dt v-if="locale === 'kr'">{{ content.title_kr }}</dt>
