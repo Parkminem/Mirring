@@ -14,10 +14,10 @@
 #first__notice { position: absolute; margin-top: 0; top: 0; left: 10.8%; }
 #first__notice.content__notice { width: 29%; display: block; padding: 4px 0; background-color: #ff943a; font-family: NotoSans; font-size: 1.2rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: center; color: #ffffff; margin-top: 15px }
 .reditoon__image { padding-bottom: 41.8%; margin-top: 70px;}
-.reditoon__image.kr { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(국문).png") center center no-repeat ; }
-.reditoon__image.en { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
-.reditoon__image.pt { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
-.reditoon__image.id { background : url("@/assets/images/ourTech/흑백만화-자동-웹툰화툴(영문).png") center center no-repeat; }
+.reditoon__image.kr { background : url("@/assets/images/ourTech/webtoonTool_kr.png") center center no-repeat ; }
+.reditoon__image.en { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
+.reditoon__image.pt { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
+.reditoon__image.id { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
 .content .cut__images { margin: 70px 0; display: flex; position: relative; padding-top: 52px; box-sizing: border-box; }
 .cut__images .cut__image { width: 51.7%; padding-bottom: 41.8%; background : url("@/assets/images/ourTech/image.png") no-repeat; background-position: center; background-size: cover; margin-right: 22px; }
 .cut__images .cut__process { position: absolute; top: 0; left: 51.7%; width : 48.7%; display: flex;  flex-wrap: wrap; }
@@ -59,27 +59,27 @@
 /*viewer*/ 
 .content .viewer__images { max-width: 100%; margin: 85px 0 183px; display: flex; align-items: center; }
 .viewer__images .viewer__process { width : 48.7%; display: flex; flex-wrap: wrap; margin-right: 5.8%; }
-.viewer__process .process:nth-child(1) .process__image { background: url("@/assets/images/ourTech/가로세로_01@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(1) .process__image { background: url("@/assets/images/ourTech/tech_01_2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(1) .process__text span { max-width: 165px; }
-.viewer__process .process:nth-child(2) .process__image { background: url("@/assets/images/ourTech/가로세로_02@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(2) .process__image { background: url("@/assets/images/ourTech/tech_02_2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(2) .process__text span { max-width: 165px; }
-.viewer__process .process:nth-child(3) .process__image { background: url("@/assets/images/ourTech/가로세로_03@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(3) .process__image { background: url("@/assets/images/ourTech/tech_03_2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(3) .process__text span { max-width: 180px; }
-.viewer__process .process:nth-child(4) .process__image { background: url("@/assets/images/ourTech/가로세로_04@2x.png") no-repeat; background-position: center; background-size: cover; }
+.viewer__process .process:nth-child(4) .process__image { background: url("@/assets/images/ourTech/tech_04_2x.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__process .process:nth-child(4) .process__text span { max-width: 180px; }
 .viewer__images .viewer__image { width: 45.5%; }
 .viewer__images .viewer__process .process { width: 47.3%; margin-right: 5.4%; }
 .viewer__images .viewer__process .process:nth-child(2n) { margin-right: 0; }
-.viewer__image .horizon { width: 100%; padding-bottom: 52%; margin-bottom: 22.2px; background: url("@/assets/images/ourTech/캡처.PNG") no-repeat; background-position: center; background-size: cover; }
+.viewer__image .horizon { width: 100%; padding-bottom: 52%; margin-bottom: 22.2px; background: url("@/assets/images/ourTech/capture.png") no-repeat; background-position: center; background-size: cover; }
 .viewer__image p { font-family: NotoSans; font-size: 1rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #292929; }
 /*damda */
 .damda .damda__images { display: flex; margin: 74px 0 70.4px; align-items: center; }
-.damda .main__image { width: 61.5%; padding-bottom: 36%; margin-right: 1%; background: url("@/assets/images/ourTech/담다메인.png") no-repeat; background-position: center; background-size: cover; }
-.damda .sub__image { width: 37.5%; padding-bottom: 44.4%; background: url("@/assets/images/ourTech/담다서브.png") no-repeat; background-position: center; background-size: cover; }
+.damda .main__image { width: 61.5%; padding-bottom: 36%; margin-right: 1%; background: url("@/assets/images/ourTech/damda_main.png") no-repeat; background-position: center; background-size: cover; }
+.damda .sub__image { width: 37.5%; padding-bottom: 44.4%; background: url("@/assets/images/ourTech/damda_sub.png") no-repeat; background-position: center; background-size: cover; }
 /*toonibe*/
 .toonibe .toonibe__images { display: flex; margin-top: 26.7px; align-items: center; position: relative; margin-bottom: 229px; }
-.toonibe .steps { background: url("@/assets/images/ourTech/투니비서브.png") no-repeat; background-position: center; background-size: cover; width: 43.6%; padding-bottom: 26.8%; margin-right: 2.7%; }
-.toonibe .sub__image { background: url("@/assets/images/ourTech/투니비메인.PNG") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
+.toonibe .steps { background: url("@/assets/images/ourTech/toonivi_sub.png") no-repeat; background-position: center; background-size: cover; width: 43.6%; padding-bottom: 26.8%; margin-right: 2.7%; }
+.toonibe .sub__image { background: url("@/assets/images/ourTech/toonivi_main.PNG") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
 .toonibe__text { position: absolute; top: 100%; left: 0; max-width: 43%; height: 75px; text-align: left; }
 .toonibe__text .material-icons { display: inline-block; width: 10px; height: 8px; color: #969696; font-size: 18px; }
 .toonibe__text p { max-width: 475px; font-family: NotoSans; font-size: 0.9rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: left; color: #969696;}
