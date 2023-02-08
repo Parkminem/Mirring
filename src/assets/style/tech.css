@@ -79,7 +79,7 @@
 /*toonibe*/
 .toonibe .toonibe__images { display: flex; margin-top: 26.7px; align-items: center; position: relative; margin-bottom: 229px; }
 .toonibe .steps { background: url("@/assets/images/ourTech/toonivi_sub.png") no-repeat; background-position: center; background-size: cover; width: 43.6%; padding-bottom: 26.8%; margin-right: 2.7%; }
-.toonibe .sub__image { background: url("@/assets/images/ourTech/toonivi_main.PNG") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
+.toonibe .sub__image { background: url("@/assets/images/ourTech/toonivi_main.png") no-repeat; background-position: center; background-size: cover; width: 53.7%; padding-bottom: 32%; }
 .toonibe__text { position: absolute; top: 100%; left: 0; max-width: 43%; height: 75px; text-align: left; }
 .toonibe__text .material-icons { display: inline-block; width: 10px; height: 8px; color: #969696; font-size: 18px; }
 .toonibe__text p { max-width: 475px; font-family: NotoSans; font-size: 0.9rem; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: left; color: #969696;}
