@@ -63,7 +63,7 @@ import { storeToRefs } from 'pinia';
 const { t, locale } = useI18n();
 const swiper = ref(null);
 const width = ref(innerWidth);
-const url = 'https://data.ideaconcert.com';
+const url = 'https://ideaconcert.com';
 const activeClass = ref(0);
 const careersStore = useCareersStore();
 const { careersList, careersDetail } = storeToRefs(careersStore);

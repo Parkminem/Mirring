@@ -4,7 +4,7 @@
       <ul>
         <li class="listbox" v-for="content in contentsList" :key="content.title">
           <div class="img_wrap">
-            <img :src="'http://data.ideaconcert.com' + content.thumbnail_file_url" />
+            <img :src="'http://ideaconcert.com' + content.thumbnail_file_url" />
           </div>
           <dl>
             <dt v-if="locale === 'kr'">{{ content.title_kr }}</dt>
@@ -26,10 +26,10 @@
           </dl>
           <ul class="btn_wrap">
             <li>
-              <a target="blank" :href="`https://data.ideaconcert.com${content.file_url_kr}`">작품소개서</a>
+              <a target="blank" :href="`https://ideaconcert.com${content.file_url_kr}`">작품소개서</a>
             </li>
             <li>
-              <a target="blank" :href="`https://data.ideaconcert.com${content.file_url_us}`">Introduction</a>
+              <a target="blank" :href="`https://ideaconcert.com${content.file_url_us}`">Introduction</a>
             </li>
           </ul>
         </li>

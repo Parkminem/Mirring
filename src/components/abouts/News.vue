@@ -64,7 +64,7 @@ import { changeDate } from '@/utils/util';
 
 const { t, locale } = useI18n();
 const aboutStore = useAboutStore();
-const url = 'https://data.ideaconcert.com';
+const url = 'https://ideaconcert.com';
 const totalPage = aboutStore.totalPage;
 const nowPage = ref(1);
 
