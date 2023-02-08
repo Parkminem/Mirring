@@ -1,6 +1,6 @@
 <template>
   <Transition name="infoModal">
-    <Modal v-if="infoModalState" />
+    <ModalContact v-if="infoModalState" />
   </Transition>
   <Header />
 
@@ -12,7 +12,7 @@ import { watch } from 'vue';
 import { storeToRefs } from 'pinia';
 import Header from '@/components/common/Header.vue';
 import Footer from '@/components/common/Footer.vue';
-import Modal from '@/components/contact/Modal.vue';
+import ModalContact from '@/components/contact/ModalContact.vue';
 import { useModalStore } from '@/store/modal';
 import { useMapStore } from '@/store/form';
 

@@ -18,7 +18,7 @@ import Team from '@/components/business/Team.vue';
 import Cost from '@/components/business/Cost.vue';
 import Portfolio from '@/components/business/Portfolio.vue';
 import QuickBanner from '@/components/common/QuickBanner.vue';
-import bg from '@/assets/images/business/business.jpg';
+import bg from '@/assets/images/business/business_bg.jpg';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
