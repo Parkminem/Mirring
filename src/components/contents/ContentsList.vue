@@ -54,6 +54,7 @@ import { useI18n } from 'vue-i18n';
 import router from '@/routes';
 
 const { locale } = useI18n();
+// 수정중
 
 const contentsList = ref();
 const totalPage = ref();
