@@ -21,7 +21,12 @@
                 <li @click="resetType" class="placeholder" :class="{ active: placeholder }">
                   {{ t('contact.typePlaceHolder') }}
                 </li>
-                <li v-for="i in types" :key="i" @click="selectType(i.type)" :class="{ active: typeNo[i.type] }">
+                <li
+                  v-for="(i, idx) in types"
+                  :key="i"
+                  @click="selectType(idx + 1)"
+                  :class="{ active: typeNo[idx + 1] }"
+                >
                   {{ i.name }}
                 </li>
               </ul>
@@ -144,7 +149,12 @@ let typeNo = ref({
   2: false,
   3: false,
   4: false,
-  5: false
+  5: false,
+  6: false,
+  7: false,
+  8: false,
+  9: false,
+  10: false
 });
 
 //데이터 전송
