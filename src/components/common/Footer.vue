@@ -2,9 +2,15 @@
   <footer id="footer">
     <div class="container_1076">
       <p class="company">{{ t('common.footer.company') }}</p>
-      <p class="address" v-if="locale === 'kr'">{{ locations[0].road_address_kr + locations[0].detail_address_kr }}</p>
-      <p class="address" v-if="locale === 'kr'">{{ locations[1].road_address_kr + locations[1].detail_address_kr }}</p>
-      <p class="address" v-if="locale === 'kr'">{{ locations[2].road_address_kr + locations[2].detail_address_kr }}</p>
+      <p class="address" v-if="locale === 'kr'">
+        {{ locations[0].road_address_kr }}&nbsp;&nbsp;{{ locations[0].detail_address_kr }}
+      </p>
+      <p class="address" v-if="locale === 'kr'">
+        {{ locations[1].road_address_kr }}&nbsp;&nbsp;{{ locations[1].detail_address_kr }}
+      </p>
+      <p class="address" v-if="locale === 'kr'">
+        {{ locations[2].road_address_kr }}&nbsp;&nbsp;{{ locations[2].detail_address_kr }}
+      </p>
       <p class="address" v-if="locale === 'id'">{{ locations[0].road_address_id }}</p>
       <p class="address" v-if="locale === 'id'">{{ locations[1].road_address_id }}</p>
       <p class="address" v-if="locale === 'id'">{{ locations[2].road_address_id }}</p>
