@@ -34,6 +34,7 @@ export const useFormStore = defineStore('form', {
                 this.types.push({ type: el.question_type_pk, name: el.name_id });
               });
           }
+          console.log(this.types);
         })
         .catch((err) => {
           router.replace('/notfound');
