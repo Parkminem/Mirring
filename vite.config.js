@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
+import path from 'node:path';
+import vitePrerender from 'vite-plugin-prerender';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vitePrerender({
+      staticDir: path.join(__dirname, 'dist/index.html'),
+      routes: ['/', '/about', '/business', '/careers', '/contact', '/contents', '/tech', '/detail']
+    })
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
