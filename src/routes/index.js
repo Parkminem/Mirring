@@ -66,6 +66,7 @@ const routes = [
 ];
 
 const router = createRouter({
+  mode: history,
   history: createWebHistory(),
   routes,
   //뒤로가기 시 이동 전 스크롤로 뒤로가게 됨, 그 이외는 스크롤탑 0
