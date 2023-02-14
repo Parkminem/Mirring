@@ -1,42 +1,10 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
-import path from 'node:path';
-import vitePrerender from 'vite-plugin-prerender';
 
-const Renderer = vitePrerender.PuppeteerRenderer;
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vitePrerender({
-      staticDir: path.join(__dirname, 'dist'),
-      indexPath: path.join(__dirname, 'dist', 'index.html'),
-      routes: ['/', '/about', '/business', '/careers', '/contact', '/contents', '/tech', '/detail'],
-      postProcess(renderedRoute) {
-        // Ignore any redirects.
-        renderedRoute.route = renderedRoute.originalRoute;
-        // Basic whitespace removal. (Don't use this in production.)
-        renderedRoute.html = renderedRoute.html.split(/>[\s]+</gim).join('><');
-        // Remove /index.html from the output path if the dir name ends with a .html file extension.
-        // For example: /dist/dir/special.html/index.html -> /dist/dir/special.html
-        if (renderedRoute.route.endsWith('.html')) {
-          renderedRoute.outputPath = path.join(__dirname, 'dist', renderedRoute.route);
-        }
-        return renderedRoute;
-      },
-      minify: {
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        decodeEntities: true,
-        keepClosingSlash: true,
-        sortAttributes: true
-      },
-      renderer: new Renderer({
-        renderAfterElementExists: '#app'
-      })
-    })
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
