@@ -71,6 +71,8 @@ onMounted(() => {
     for (let key of Object.keys(activeBox.value)) {
       activeBox.value[key] = true;
     }
+  } else {
+    window.addEventListener('scroll', scrollEvent);
   }
   //모바일 박스애니메이션
   if (window.innerWidth < 1025) window.addEventListener('scroll', scrollEvent);
