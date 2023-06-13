@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="content__title">{{ t('tech.toonivieTitle') }}</h2>
       <p class="content__subtitle" v-html="t('tech.toonivieText')"></p>
-      <div class="content__notice">{{ t('tech.toonivieBtn') }}</div>
+      <div class="content__notice"><a href="https://toonivie.com/" target="_blank">{{ t('tech.toonivieBtn') }}</a></div>
       <div class="toonibe__images">
         <div class="steps"></div>
         <div class="sub__image"></div>
