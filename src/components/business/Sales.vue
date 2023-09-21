@@ -41,7 +41,7 @@
         <a
           class="page_move"
           style="width: 248px; height: 46px; margin-top: 50px"
-          href="./아이디어콘서트_회사소개서_2023년 ver.pdf"
+          href="/아이디어콘서트_회사소개서_2023년 ver.pdf"
           target="_blank"
           >{{ t('common.button.brochure') }}</a
         >
