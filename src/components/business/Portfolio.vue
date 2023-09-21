@@ -22,6 +22,7 @@
               :allowTouchMove="true"
               :breakpoints="breakPoints"
               :looped-slides="portfolioList.length"
+              height="auto"
               @swiper="onSwiper"
             >
               <SwiperSlide

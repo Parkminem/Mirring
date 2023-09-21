@@ -29,7 +29,9 @@ export const useCareersStore = defineStore('careers', {
         .then((res) => {
           this.careersDetail = res.data.data;
         })
-        .catch((err) => router.replace('/notfound'));
+        .catch((err) => {
+          router.replace('/notfound');
+        });
     }
   }
 });
