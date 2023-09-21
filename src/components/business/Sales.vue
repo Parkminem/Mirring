@@ -41,7 +41,7 @@
         <a
           class="page_move"
           style="width: 248px; height: 46px; margin-top: 50px"
-          href="/brochure_2023.pdf"
+          href="/resources/common/images/tech/brochure_2023.pdf"
           target="_blank"
           >{{ t('common.button.brochure') }}</a
         >
