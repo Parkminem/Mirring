@@ -3,9 +3,9 @@
     <div class="container">
       <h2 class="content__title">{{ t('tech.viewerTItle') }}</h2>
       <p class="content__subtitle" v-html="t('tech.viewerText')"></p>
-      <div class="content__notice">
+      <!-- <div class="content__notice">
         <a style="color: white; font-family: NotoSans" href="https://222.239.218.187:5009">{{ t('tech.viewerBtn') }}</a>
-      </div>
+      </div> -->
       <div class="viewer__images">
         <ul class="viewer__process">
           <li class="process process1 shadow">

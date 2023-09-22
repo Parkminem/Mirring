@@ -5,7 +5,9 @@
       <p id="translate__subtitle" class="content__subtitle" v-html="t('tech.translateText')"></p>
       <div class="content__notice">
         <!-- 2021년 상용화 준비 중 -->
-        <a style="color: white; font-family: NotoSans" href="https://dev.toontra.com" target="_blank">{{ t('tech.translateBtn') }}</a>
+        <a style="color: white; font-family: NotoSans" href="https://beta.toontra.com/" target="_blank">{{
+          t('tech.translateBtn')
+        }}</a>
       </div>
       <div class="translate__main"></div>
       <div class="slide__container">
