@@ -169,7 +169,7 @@ onUnmounted(() => {
           .info {
             display: flex;
             flex-direction: column;
-            height: calc(100% - 248px);
+            /* height: calc(100% - 248px); */
             padding: 11px 15px 16.6px 15px;
             .date {
               font-family: 'Noto Sans', sans-serif;
