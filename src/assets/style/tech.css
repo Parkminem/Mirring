@@ -37,7 +37,7 @@
 /* translate */
 .cartoon__translate .translate__main { max-width: 85.6%; padding-bottom: 50%; margin: 70px auto 16.8px; background: url("@/assets/images/ourTech/translateMain.png") no-repeat; background-position: center; background-size: cover; }
 .translate__sub .swiper-wrapper {max-width: 100%; display: flex; flex-wrap: wrap;}
-.translate__sub .subimage { width: 48.7% !important; padding-bottom: 32%; margin-right: 2.6%; margin-bottom: 60px; position: relative; }
+.translate__sub .subimage { height: 1px; width: 48.7% !important; padding-bottom: 32%; margin-right: 2.6%; margin-bottom: 60px; position: relative; }
 .translate__sub .subimage::before { content : ""; position: absolute; top: 0; left: 5px; width: 30px; height: 30px; background-color: #ec6c00; font-family: NotoSans; font-size: 1rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.38; letter-spacing: normal; color: #f9f9f9; display: flex; align-items: center; justify-content: center; }
 .translate__sub .subimage:nth-child(1)::before { content : "1"; }
 .translate__sub .subimage:nth-child(2)::before { content : "2"; }
@@ -136,7 +136,7 @@ cursor : pointer; } */
 #slider.animated { transition : left 0.3s ease; }
 .translate__sub .subimage { padding-bottom: 0; }
 .translate__sub .swiper-wrapper { flex-wrap: nowrap;}
-.subimage.slide { width : 66% !important;  height: 100%; text-align: center; overflow : hidden; margin-left: 17% ; margin-right: 17% !important;}
+.subimage.slide { width : 66% !important;  height: 100% !important; text-align: center; overflow : hidden; margin-left: 17% ; margin-right: 17% !important;}
 #prev, #next { display: block; position: absolute; top: 50%; left: 50%; transform : translate(-50%, -50%); z-index : 999; display: inline-block; font-size: 35px; transition : all 0.3 ease; }
 #prev { margin-left: -33%; transform : translate(-150%, -50%); }
 #next { margin-left: 33%; transform : translate(50%, -50%); }

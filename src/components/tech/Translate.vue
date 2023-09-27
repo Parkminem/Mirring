@@ -4,7 +4,6 @@
       <h2 class="content__title">{{ t('tech.translateTitle') }}</h2>
       <p id="translate__subtitle" class="content__subtitle" v-html="t('tech.translateText')"></p>
       <div class="content__notice">
-        <!-- 2021년 상용화 준비 중 -->
         <a style="color: white; font-family: NotoSans" href="https://beta.toontra.com/" target="_blank">{{
           t('tech.translateBtn')
         }}</a>
@@ -73,3 +72,11 @@ function preBtn() {
   }
 }
 </script>
+<style lang="scss" scoped>
+/* 배포 시 slide의 크기가 임의로 잡히는 에러를 방지하기 위해 삽입 */
+.translate__sub {
+  .subimage {
+    height: 1px;
+  }
+}
+</style>
