@@ -168,6 +168,9 @@ onMounted(() => {
       }
     }
   }
+  .swiper {
+    height: fit-content;
+  }
 }
 @media (max-width: 1024px) {
   .section {
