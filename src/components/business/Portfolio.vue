@@ -22,7 +22,6 @@
               :allowTouchMove="true"
               :breakpoints="breakPoints"
               :looped-slides="portfolioList.length"
-              height="auto"
               @swiper="onSwiper"
             >
               <SwiperSlide
@@ -173,6 +172,9 @@ businessApi
         margin: 60px auto 0 auto;
       }
     }
+  }
+  .swiper {
+    height: fit-content;
   }
 }
 @media (max-width: 1280px) {
