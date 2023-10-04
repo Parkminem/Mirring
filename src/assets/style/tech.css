@@ -136,7 +136,7 @@ cursor : pointer; } */
 #slider.animated { transition : left 0.3s ease; }
 .translate__sub .subimage { padding-bottom: 0; }
 .translate__sub .swiper-wrapper { flex-wrap: nowrap;}
-.subimage.slide { width : 66% !important;  height: 100%; text-align: center; overflow : hidden; margin-left: 17% ; margin-right: 17% !important;}
+.subimage.slide { width : 66% !important;  height: 100% !important; text-align: center; overflow : hidden; margin-left: 17% ; margin-right: 17% !important;}
 #prev, #next { display: block; position: absolute; top: 50%; left: 50%; transform : translate(-50%, -50%); z-index : 999; display: inline-block; font-size: 35px; transition : all 0.3 ease; }
 #prev { margin-left: -33%; transform : translate(-150%, -50%); }
 #next { margin-left: 33%; transform : translate(50%, -50%); }
