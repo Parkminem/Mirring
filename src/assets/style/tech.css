@@ -14,10 +14,10 @@
 #first__notice { position: absolute; margin-top: 0; top: 0; left: 10.8%; }
 #first__notice.content__notice { width: 29%; display: block; padding: 4px 0; background-color: #ff943a; font-family: NotoSans; font-size: 1.2rem; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.36; letter-spacing: normal; text-align: center; color: #ffffff; margin-top: 15px }
 .reditoon__image { padding-bottom: 41.8%; margin-top: 70px;}
-.reditoon__image.kr { background : url("@/assets/images/ourTech/webtoonTool_kr.png") center center no-repeat ; }
-.reditoon__image.en { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
-.reditoon__image.pt { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
-.reditoon__image.id { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; }
+.reditoon__image.kr { background : url("@/assets/images/ourTech/webtoonTool_kr.png") center center no-repeat ; background-size: contain;}
+.reditoon__image.en { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; background-size: contain;}
+.reditoon__image.pt { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; background-size: contain;}
+.reditoon__image.id { background : url("@/assets/images/ourTech/webtoonTool_en.png") center center no-repeat; background-size: contain;}
 .content .cut__images { margin: 70px 0; display: flex; position: relative; padding-top: 52px; box-sizing: border-box; }
 .cut__images .cut__image { width: 51.7%; padding-bottom: 41.8%; background : url("@/assets/images/ourTech/image.png") no-repeat; background-position: center; background-size: cover; margin-right: 22px; }
 .cut__images .cut__process { position: absolute; top: 0; left: 51.7%; width : 48.7%; display: flex;  flex-wrap: wrap; }
