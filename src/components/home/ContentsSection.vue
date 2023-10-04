@@ -19,7 +19,9 @@
           <p class="title" v-html="t('home.contentsTitle')"></p>
           <p class="sub_title" v-html="t('home.contentsSubTitle')"></p>
           <p class="text" v-html="t('home.contentsText')"></p>
-          <a class="page_move" href="https://makevu.me/d355cee78b" target="_blank">{{ t('common.button.brochure') }}</a>
+          <a class="page_move" href="/resources/common/images/tech/brochure_2023.pdf" target="_blank">{{
+            t('common.button.brochure')
+          }}</a>
         </div>
         <img
           class="character"

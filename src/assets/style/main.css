@@ -214,6 +214,8 @@ left: 50px;}
 	.section[data-name="main_about"] .swiper-container .swiper-slide {width: 49% !important; margin-right: 1% !important; margin-top: 1%; min-height: 0;}
 	.section[data-name="main_about"] .image_box {width: 100%;}
 	.section[data-name="main_about"] .swiper-container .swiper-slide:nth-child(n+5) {display: none;}
+	.section[data-name="main_about"] .position .swiper-button-prev {display: none;}
+.section[data-name="main_about"] .position .swiper-button-next {display: none;}
 	.section[data-name="main_about"] .position .more {display: none;}
 	.section[data-name="main_about"] .swiper-container .swiper-slide .title {font-size: 12px; padding: 10px;}
 	
