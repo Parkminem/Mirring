@@ -132,3 +132,8 @@ onUnmounted(() => {
   window.removeEventListener('scroll', sectionAnimation);
 });
 </script>
+<style lang="scss" scoped>
+.swiper {
+  height: fit-content;
+}
+</style>
