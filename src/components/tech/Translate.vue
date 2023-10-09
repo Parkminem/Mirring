@@ -79,4 +79,7 @@ function preBtn() {
     height: 1px;
   }
 }
+.swiper {
+  height: fit-content;
+}
 </style>
