@@ -16,53 +16,55 @@ import { createRouter, createWebHistory } from 'vue-router';
 // import DetailNewsView from '@/views/DetailNewsView.vue';
 
 const routes = [
-  {
-    path: '/',
-    name: 'layout',
-    component: () => import('@/layout/Layout.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Home',
-        component: () => import('@/views/MainView.vue')
-      },
-      {
-        path: '/about',
-        component: () => import('@/views/AboutUsView.vue')
-      },
-      {
-        path: '/business',
-        component: () => import('@/views/BusinessView.vue')
-      },
-      {
-        path: '/careers',
-        component: () => import('@/views/CareersView.vue')
-      },
-      {
-        path: '/contact',
-        component: () => import('@/views/ContactView.vue')
-      },
-      {
-        path: '/contents',
-        component: () => import('@/views/ContentsView.vue')
-      },
-      {
-        path: '/tech',
-        component: () => import('@/views/OurTechView.vue')
-      },
-      {
-        path: '/detail',
-        component: () => import('@/views/DetailNewsView.vue'),
-        name: 'detail'
-      }
-    ]
-  },
-  {
-    path: '/notfound',
-    name: '404',
-    component: () => import('@/layout/ErrorLayout.vue')
-  },
-  { path: '/:pathMatch(.*)*', redirect: '/notfound' }
+  // {
+  //   path: '/',
+  //   name: 'layout',
+  //   component: () => import('@/layout/Layout.vue'),
+  //   children: [
+  //     {
+  //       path: '',
+  //       name: 'Home',
+  //       component: () => import('@/views/MainView.vue')
+  //     },
+  //     {
+  //       path: '/about',
+  //       component: () => import('@/views/AboutUsView.vue')
+  //     },
+  //     {
+  //       path: '/business',
+  //       component: () => import('@/views/BusinessView.vue')
+  //     },
+  //     {
+  //       path: '/careers',
+  //       component: () => import('@/views/CareersView.vue')
+  //     },
+  //     {
+  //       path: '/contact',
+  //       component: () => import('@/views/ContactView.vue')
+  //     },
+  //     {
+  //       path: '/contents',
+  //       component: () => import('@/views/ContentsView.vue')
+  //     },
+  //     {
+  //       path: '/tech',
+  //       component: () => import('@/views/OurTechView.vue')
+  //     },
+  //     {
+  //       path: '/detail',
+  //       component: () => import('@/views/DetailNewsView.vue'),
+  //       name: 'detail'
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/notfound',
+  //   name: '404',
+  //   component: () => import('@/layout/ErrorLayout.vue')
+  // }
+  { path: '/ready', name: 'ready', component: () => import('@/views/ReadyView.vue') },
+  { path: '/:pathMatch(.*)*', redirect: '/ready' }
+  // { path: '/:pathMatch(.*)*', redirect: '/notfound' }
 ];
 
 const router = createRouter({
